@@ -1,0 +1,204 @@
+{
+    "schema_version": 1,
+    "run_id": "20261014T182958Z-darwin-system-ffd173",
+    "suite": "system",
+    "filter": null,
+    "started_at_utc": "2026-10-14T18:29:58+00:00",
+    "status": "Passed",
+    "exit_code": 0,
+    "phpunit_exit_code": 0,
+    "counts": {
+        "total": 20,
+        "passed": 20,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+    },
+    "cases": [
+        {
+            "id": "TC01",
+            "name": "testTC01NameIsNonEmptyString",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 400,
+            "seconds": 0.006237
+        },
+        {
+            "id": "TC02",
+            "name": "testTC02EmailHasValidSyntax",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 200,
+            "seconds": 0.018382
+        },
+        {
+            "id": "TC03",
+            "name": "testTC03AddressIsNonEmptyString",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 500,
+            "seconds": 0.00166
+        },
+        {
+            "id": "TC04",
+            "name": "testTC04PhoneNumberHasBasicFormat",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 600,
+            "seconds": 0.000881
+        },
+        {
+            "id": "TC05",
+            "name": "testTC05IntegersStayWithinOneToOneHundred",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 2500,
+            "seconds": 0.003751
+        },
+        {
+            "id": "TC06",
+            "name": "testTC06EqualIntegerBoundsReturnThatValue",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 4,
+            "seconds": 5.9e-5
+        },
+        {
+            "id": "TC07",
+            "name": "testTC07FloatRangeAndPrecision",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 3500,
+            "seconds": 0.003771
+        },
+        {
+            "id": "TC08",
+            "name": "testTC08DocumentedNumericBoundaries",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 1200,
+            "seconds": 0.001122
+        },
+        {
+            "id": "TC09",
+            "name": "testTC09DateHasRequestedFormatAndIsValid",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 500,
+            "seconds": 0.000882
+        },
+        {
+            "id": "TC10",
+            "name": "testTC10DatesStayInExplicitInterval",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 600,
+            "seconds": 0.001023
+        },
+        {
+            "id": "TC11",
+            "name": "testTC11Ipv4IsSyntacticallyValid",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 200,
+            "seconds": 0.000168
+        },
+        {
+            "id": "TC12",
+            "name": "testTC12UuidHasVersionThreeAndRfcVariant",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 100,
+            "seconds": 0.000225
+        },
+        {
+            "id": "TC13",
+            "name": "testTC13EnUsUsesLocaleProvidersAndPostalFormat",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 602,
+            "seconds": 0.000845
+        },
+        {
+            "id": "TC14",
+            "name": "testTC14FiFiUsesLocaleProvidersAndUtf8",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 902,
+            "seconds": 0.001944
+        },
+        {
+            "id": "TC15",
+            "name": "testTC15FixedSeedReproducesWholeSequence",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 3,
+            "seconds": 0.00126
+        },
+        {
+            "id": "TC16",
+            "name": "testTC16UniqueValuesAndExhaustion",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 503,
+            "seconds": 0.004406
+        },
+        {
+            "id": "TC17",
+            "name": "testTC17InvalidParameterRaisesSpecificException",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 2,
+            "seconds": 6.1e-5
+        },
+        {
+            "id": "TC18",
+            "name": "testTC18UnknownFormatterHasClearException",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 2,
+            "seconds": 6.3e-5
+        },
+        {
+            "id": "TC19",
+            "name": "testTC19ThousandCompositeRecordsRemainValid",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 11000,
+            "seconds": 0.029499
+        },
+        {
+            "id": "TC20",
+            "name": "testTC20PerformanceIsMeasuredWithValidatedOutput",
+            "class": "FakerTesting\\System\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 18004,
+            "seconds": 0.044493
+        }
+    ],
+    "report_error": null,
+    "counts_source": "JUnit",
+    "finished_at_utc": "2026-10-14T18:29:59+00:00",
+    "elapsed_seconds": 0.673224925994873,
+    "evidence_path": "results/evidence/20261014T182958Z-darwin-system-ffd173"
+}

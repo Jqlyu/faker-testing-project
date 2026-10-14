@@ -1,0 +1,168 @@
+{
+  "captured_at_utc": "2026-10-14T18:30:51.685956+00:00",
+  "os": "macOS",
+  "purpose": "Reporting/tool verification, separate from Faker course cases",
+  "checks": [
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "scripts/archive-evidence.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in scripts/archive-evidence.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "scripts/case-catalog.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in scripts/case-catalog.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "scripts/common.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in scripts/common.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "scripts/compare-results.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in scripts/compare-results.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "scripts/download-tools.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in scripts/download-tools.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "scripts/fetch-upstream.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in scripts/fetch-upstream.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "scripts/install.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in scripts/install.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "scripts/run-tests.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in scripts/run-tests.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "tests/Infrastructure/ReportingTest.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in tests/Infrastructure/ReportingTest.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "tests/System/FakerSystemTest.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in tests/System/FakerSystemTest.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "tests/bootstrap.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in tests/bootstrap.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "-l",
+        "tests/upstream-bootstrap.php"
+      ],
+      "exit_code": 0,
+      "stdout": "No syntax errors detected in tests/upstream-bootstrap.php\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "tools/composer.phar",
+        "validate"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "./composer.json is valid, but with a few warnings\nSee https://getcomposer.org/doc/04-schema.md for details on the schema\n# General warnings\n- require.fzaninotto/faker : exact version constraints (1.9.2) should be avoided if the package follows semantic versioning\n"
+    },
+    {
+      "arguments": [
+        "/tmp/faker-actionlint/actionlint",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "1.7.12\ninstalled by downloading from release page\nbuilt with go1.26.1 compiler for darwin/arm64\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/tmp/faker-actionlint/actionlint",
+        ".github/workflows/cross-platform.yml"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "/opt/homebrew/opt/php@7.4/bin/php",
+        "vendor/bin/phpunit",
+        "-c",
+        "phpunit-infrastructure.xml",
+        "--log-junit",
+        "/Users/jiaqinglyu/Desktop/Faker-Testing-Project/results/evidence/validation/infrastructure-junit.xml"
+      ],
+      "exit_code": 0,
+      "stdout": "PHPUnit 9.6.38 by Sebastian Bergmann and contributors.\n\n......                                                              6 / 6 (100%)\n\nTime: 00:00.090, Memory: 6.00 MB\n\nOK (6 tests, 20 assertions)\n",
+      "stderr": ""
+    }
+  ]
+}

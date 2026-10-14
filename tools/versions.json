@@ -1,0 +1,14 @@
+{
+    "composer": {
+        "version": "2.10.3",
+        "filename": "composer.phar",
+        "url": "https://getcomposer.org/download/2.10.3/composer.phar",
+        "sha256": "7a2d379d5b8ffdaa028580ef26494c36d2feef4b178d3dd1473a4dbc5e17c8d6"
+    },
+    "upstream_phpunit": {
+        "version": "5.7.27",
+        "filename": "phpunit-5.7.27.phar",
+        "url": "https://phar.phpunit.de/phpunit-5.7.27.phar",
+        "sha256": "f0300a13f2653bee10b0ce24dbc8d94e65dc9be8966d822b9e455b6b294be16e"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "schema_version": 1,
+    "case_id": "TC24",
+    "generated_at_utc": "2026-10-14T18:30:59+00:00",
+    "status": "Not Run",
+    "reasons": [
+        "Missing Windows execution evidence",
+        "Missing Linux execution evidence"
+    ],
+    "platform_cases": {
+        "TC21": {
+            "status": "Not Run",
+            "actual": "No full Windows run available"
+        },
+        "TC22": {
+            "status": "Passed",
+            "actual": "Darwin: 20/20 passed; exit 0"
+        },
+        "TC23": {
+            "status": "Not Run",
+            "actual": "No full Linux run available"
+        }
+    },
+    "sources": {
+        "Darwin": {
+            "run_id": "20261014T182959Z-darwin-system-ae2849",
+            "summary": "results/final-comparison-input/20261014T182959Z-darwin-system-ae2849/summary.json",
+            "junit_sha256": "f367adafc955da2dbac89adb78038d57ac8c89e8c9a889cbc48ce5c0310159be"
+        }
+    },
+    "comparison_policy": "Compare case identities/statuses and controlled versions; do not compare random rows or performance times."
+}

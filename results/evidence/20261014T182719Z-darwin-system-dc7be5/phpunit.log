@@ -1,0 +1,27 @@
+PHPUnit 9.6.38 by Sebastian Bergmann and contributors.
+
+Faker System (FakerTesting\System\FakerSystem)
+ ✔ T c 01 name is non empty string
+ ✔ T c 02 email has valid syntax
+ ✔ T c 03 address is non empty string
+ ✔ T c 04 phone number has basic format
+ ✔ T c 05 integers stay within one to one hundred
+ ✔ T c 06 equal integer bounds return that value
+ ✔ T c 07 float range and precision
+ ✔ T c 08 documented numeric boundaries
+ ✔ T c 09 date has requested format and is valid
+ ✔ T c 10 dates stay in explicit interval
+ ✔ T c 11 ipv 4 is syntactically valid
+ ✔ T c 12 uuid has version three and rfc variant
+ ✔ T c 13 en us uses locale providers and postal format
+ ✔ T c 14 fi fi uses locale providers and utf 8
+ ✔ T c 15 fixed seed reproduces whole sequence
+ ✔ T c 16 unique values and exhaustion
+ ✔ T c 17 invalid parameter raises specific exception
+ ✔ T c 18 unknown formatter has clear exception
+ ✔ T c 19 thousand composite records remain valid
+ ✔ T c 20 performance is measured with validated output
+
+Time: 00:00.119, Memory: 8.00 MB
+
+OK (20 tests, 41322 assertions)

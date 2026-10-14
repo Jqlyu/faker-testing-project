@@ -1,0 +1,4 @@
+RuntimeException: JUnit report is invalid XML. in /Users/jiaqinglyu/Desktop/Faker-Testing-Project/scripts/common.php:91
+Stack trace:
+#0 /Users/jiaqinglyu/Desktop/Faker-Testing-Project/scripts/run-tests.php(108): readJunit('/Users/jiaqingl...')
+#1 {main}

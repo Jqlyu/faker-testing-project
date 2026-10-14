@@ -1,0 +1,11 @@
+{
+    "repository": "https://github.com/fzaninotto/Faker",
+    "package": "fzaninotto/faker",
+    "version": "1.9.2",
+    "tag": "v1.9.2",
+    "commit": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+    "source_tree_sha256": "fc7b3e5cee6e6973db4d182c33b4006ab66e04d1f8e99967284e846760558b91",
+    "source_tree_hash_algorithm": "scripts/common.php treeHash: SHA256 of sorted relative-path to file-SHA256 JSON",
+    "archived_at": "2020-12-11",
+    "initially_inspected_master_commit": "5ffe7db6c80f441f150fc88008d64e64af66634b"
+}

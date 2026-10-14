@@ -1,0 +1,25 @@
+{
+    "case_id": "TC20",
+    "seed": 4160,
+    "warmup_rows": 100,
+    "rows_per_sample": 1000,
+    "samples": 3,
+    "formatters_per_row": [
+        "name",
+        "email",
+        "uuid"
+    ],
+    "generation_operations": 9000,
+    "assertions_inside_timing": false,
+    "seconds_per_sample": [
+        0.0110075,
+        0.01094025,
+        0.011552708
+    ],
+    "median_seconds": 0.0110075,
+    "rows_per_second_at_median": 90847.14967067908,
+    "peak_process_memory_bytes": 8388608,
+    "output_sha256": "a3964d4dc351f55ea6dfa99ebcc600cdb197a6e1b424bd4e864398b043831d0b",
+    "threshold": null,
+    "environment_file": "environment.json"
+}

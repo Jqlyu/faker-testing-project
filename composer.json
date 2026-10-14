@@ -1,0 +1,31 @@
+{
+    "name": "lut/faker-system-testing",
+    "description": "Reproducible system tests for the archived fzaninotto/Faker project",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "~7.4.0",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "ext-xmlwriter": "*",
+        "fzaninotto/faker": "1.9.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.6.38"
+    },
+    "autoload-dev": {
+        "psr-4": { "FakerTesting\\": "tests/" }
+    },
+    "config": {
+        "platform": { "php": "7.4.33" },
+        "sort-packages": true,
+        "allow-plugins": false
+    },
+    "scripts": {
+        "test": "@php scripts/run-tests.php",
+        "test:upstream": "@php scripts/run-tests.php --suite=upstream",
+        "compare": "@php scripts/compare-results.php results/imported results/comparison"
+    }
+}

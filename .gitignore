@@ -1,0 +1,9 @@
+/vendor/
+/upstream/
+/tools/*.phar
+/.phpunit.result.cache
+/results/*/
+/results/*.xml
+!/results/evidence/
+!/results/evidence/**
+.DS_Store
