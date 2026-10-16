@@ -1,3 +1,5 @@
 * text=auto eol=lf
 *.phar binary
 *.png binary
+# Archived runtime output retains native line endings and exact bytes.
+/results/evidence/** -text
