@@ -1,4 +1,4 @@
-name: Faker cross-platform system tests
+name: Faker cross-platform report tests
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   test:
-    name: TC21-TC23 (${{ matrix.os }})
+    name: F01-F22 and N01-N02 (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     strategy:
@@ -31,8 +31,11 @@ jobs:
         run: php scripts/download-tools.php
       - name: Install exact locked dependencies and check real platform requirements
         run: php scripts/install.php
-      - name: Execute TC01-TC20 and capture evidence
-        run: php scripts/run-tests.php
+      - name: Execute all 24 report cases and capture current platform evidence
+        run: php scripts/run-tests.php --suite=report
+      - name: Verify reporting and comparison infrastructure
+        if: always()
+        run: php vendor/phpunit/phpunit/phpunit --configuration phpunit-infrastructure.xml --colors=never --log-junit results/infrastructure-junit.xml
       - name: Upload this platform's logs and reports even on failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -40,12 +43,12 @@ jobs:
           name: faker-results-${{ matrix.os }}
           path: |
             results/
-            !results/evidence/
+            !results/evidence/**
           if-no-files-found: error
           retention-days: 30
 
   compare:
-    name: TC24 compare three operating systems
+    name: Compare GitHub Actions results from three operating systems
     needs: test
     if: always()
     runs-on: ubuntu-latest
@@ -65,8 +68,8 @@ jobs:
           pattern: faker-results-*
           path: results/imported
           merge-multiple: false
-      - name: Require complete and consistent results
-        run: php scripts/compare-results.php results/imported results/comparison
+      - name: Require complete and consistent GitHub Actions report results
+        run: php scripts/compare-results.php results/imported results/comparison --context=github-actions
       - name: Upload comparison evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
