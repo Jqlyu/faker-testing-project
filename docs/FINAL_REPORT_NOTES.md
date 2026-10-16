@@ -1,50 +1,50 @@
 # Final Report Notes — LUT CT60A4160
 
-本文是可核对的报告素材，不是代表全组三平台工作已完成的最终结论。填写成员分工、真实设备记录和 GitHub run URL 后再提交。
+按最新 PDF 的 F01–F22/N01–N02 组织报告，引用本次实际证据并注明这是根据报告设计的新实现。原成员 F 编号代码未随当前仓库提供，不能把重实现写成其原程序复跑。PDF 保持原样；应修改的论述列在 [REPORT_CORRECTIONS.md](REPORT_CORRECTIONS.md)。执行方法见 [RUN_GUIDE.md](RUN_GUIDE.md)。
 
 ## 1. Software and testing scope
 
-对象：fzaninotto/Faker v1.9.2，MIT，固定 commit `848d8125239d7dbf8ab25cb7f054f1a630e68c2e`。以开发者作为用户，安装和使用公共 API 为系统边界。覆盖基础个人数据、数字/日期/网络数据、两个地区、seed/unique、异常、稳定性、性能和平台安装。未覆盖范围引用 TEST_PLAN.md，不将格式正确写成真实有效数据。
+对象为 fzaninotto/Faker v1.9.2，MIT，commit `848d8125239d7dbf8ab25cb7f054f1a630e68c2e`。系统边界是开发者安装并使用真实公共 API。报告主套件为 22 个功能用例和 2 个非功能用例；不把旧 TC 平台场景、原有测试或工具检查加进这 24 项。范围和限制见 [TEST_PLAN.md](TEST_PLAN.md)。
 
 ## 2. Testing strategy
 
-消费者视角、实际依赖、无 mock；类型/格式/范围断言；边界值和等价类；每个方法重新 seed；固定 UTC、日期范围、lock 和版本。TC01–TC20 是功能及非功能自动化方法，TC21–TC24 是平台及比较场景。
+类型/格式/区间/结构约束、等价类、边界值、独立 IP/Luhn/EAN 校验、固定版本/时区和每项 seed。输入没有在 PDF 明确的地方采用事先公开的选择，见 [REPORT_CASE_MAPPING.md](REPORT_CASE_MAPPING.md)。F13/F14/F16 复用相关旧约束但单独执行，F15 独立调用 safeEmail；旧 TC02 的 email 结果不能作 F15 证据。
 
 ## 3. Testing environment and tools
 
-本机 macOS 26.3 / arm64 / PHP 7.4.33 / Composer 2.10.3 / PHPUnit 9.6.38。Faker 原有测试独立 PHPUnit 5.7.27。所有 29 个依赖版本在 composer.lock、DEPENDENCIES.md 和 environment.json。记录版本、commit、SHA256 和实际环境；Windows/Linux 设备信息尚未取得，不填写虚构值。
+新实现基线为 PHP 7.4.33、Composer 2.10.3、PHPUnit 9.6.38 和锁定 29 个依赖；upstream 独立 PHPUnit 5.7.27。以对应 `environment.json` 写实际 OS、架构、PHP binary/build、执行上下文和版本。PDF 的 Linux VM、Windows CI、Windows 11 standalone 和本机 macOS 分开，不能从成员责任倒推出执行环境。详见 [ENVIRONMENT.md](ENVIRONMENT.md)。
 
 ## 4. Existing tests
 
-130 个测试 PHP 文件，2078 个测试实例；本机实际结果 2076 passed、2 skipped、0 failed、0 errors。两项 skip：上游禁用的图片下载和未实现的 et_EE bankAccountNumber。引用 EXISTING_TESTS.md、原生 JUnit/JSON 和日志。默认 128M 曾内存中断，调整资源后重跑，完整保存前后证据。
+明确区分两项研究：PDF 在 Linux/PHPUnit 9.6.38 下选两个文件（87 tests、127 assertions、16 errors、21 warnings），以及本仓库历史 macOS/PHPUnit 5.7.27 完整运行（2078 实例，2076 passed、2 skipped、0 failed/errors）。后者不是前者的复现，也不证明 PDF 的错误消失。原有用例未修改，框架兼容错误不直接视作 Faker 产品缺陷。详见 [EXISTING_TESTS.md](EXISTING_TESTS.md)。
 
 ## 5. Written tests
 
-20 个系统测试方法及其预期约束在 tests/System/FakerSystemTest.php 和 TEST_CASES.md。TC17 用实际 API 会抛出的非法 strict 参数；TC12 验证原实现 UUID v3。TC19 验证每条记录五种字段。TC20 100 行预热、3x1000 行、9000 次计时调用，断言在计时外；成功表示获得有效测量和合法输出，不表示满足任何尚未定义的速度 SLA。
+报告方法在 `tests/Report/FirstFunctionalReportTest.php`、`AdditionalFunctionalReportTest.php` 和 `NonFunctionalReportTest.php`，共对应 24 个 F/N ID；公共证据辅助在 `tests/Support/ReportTestCase.php`。旧 20 个方法位于 `tests/Supplemental/FakerSystemTest.php`，通过 `--suite=supplemental` 单独运行。上游和报告基础设施也单独运行、单独计数。
 
-另有 6 个报告工具检查，验证失败原因、无用例/损坏报告、子进程非零退出、缺失三平台和旧 JSON skipped 计数。合成报告夹具是基础设施自检，不算 Faker 的测试或平台通过证据。
+N01 为 100 行预热、3×1000 行，每行 name/email/uuid，生成/retention 计时外做校验；记录各批 seconds、median_seconds、records_per_second。N02 必须是新的 256M PHP worker，使用同工作负载并记录 peak_allocated_memory_bytes 和 peak_allocated_memory_mib。报告 `memory_limit`、retention 和 worker/validation 口径：worker 加载 Composer/Faker/PHPUnit Assert 及依赖，不启动 PHPUnit runner；峰值不是 Faker 独占内存或 OS RSS。每个 worker 的 27,000 校验断言与父 JUnit 断言分开，不能混作一个原生 PHPUnit 总数。成功表示测量有效，performance criteria not assessed；不存在预设的速度/内存 SLA，256M 不是内存目标。
 
-## 6. Test cases and results
+## 6. Test cases and actual results
 
-当前可靠表述：本机 macOS 完整新增测试 **20/20 passed，41322 assertions，0 failed/errors/skipped**；同代码重复执行仍通过，固定 seed 输出摘要一致（具体次数、运行编号、耗时由 evidence index 给出）。TC22 passed；TC21、TC23、TC24 Not Run。测试计划设计了 24 场景，已完成场景数不能写成 24/24 passed。
+文档迁移时，新报告实现的实际总数、断言数、运行时间和 N01/N02 数值待真实执行；不能从 PDF 或历史 TC 表填写。最终以一份明确的完整 run ID 或三平台比较报告更新 [TEST_CASES.md](TEST_CASES.md)。筛选六项/单项运行只支持自己的范围，不应累计成未经完整执行的 24/24。
 
-JUnit/summary.json、performance.json、environment.json、installation.json 和日志为附件。性能数值从对应真实运行提取，不将不同机器或不同随机数据的时间直接比较。最终表引用某个明确的 run ID 或三平台 comparison，不混用多次运行。
+英文八列表头为 ID | Tester | Feature being tested | Preconditions | Inputs | Expected Output | Actual Output | Purpose and notes。Actual Output 只引用实际 JUnit/summary、observations、measurements 和日志；未运行为 Not Run，中断/损坏报告无法确认计数为 null。报告人员负责分组与实际执行上下文分别记录。
 
-待完成后再填写：
+原有 `results/evidence/` 保持历史快照，其中 TC01–TC20 的 20/20、41322 assertions 及 TC21–TC24 状态只适用于当时执行，不可改名成 F/N 结果。PDF 的 2685 assertions、0.031s 和 8 MB 也不是本次的数字。
 
-- Windows 真实环境、安装结果、执行日期、run ID、20 用例结果。
-- Linux 相同字段。
-- GitHub Actions URL 和三个 Artifacts 及 TC24 对比结果。
-- 三台实体设备与托管 runner 的差异、失败原因和复测。
+提交前需要据实补齐：
 
-## 7. Remaining risks and testing limitations
+- 本次完整报告 run ID、日期、OS/context、24 项身份/状态、JUnit 断言与失败/错误/跳过数。
+- N01 三次时间、中位数及 records/second；N02 独立 worker 的 peak bytes/MiB、memory limit 和测量范围。
+- 原生 Windows 六项截图及完整运行目录；F14/F15 自己的功能样本和 JUnit 记录。
+- 真实 Windows/Linux 全套运行、三平台比较和对应 GitHub workflow URL/artifacts；缺失项保留 Not Run。
 
-Faker 归档、PHP 历史版本、旧测试框架、随机抽样有限、只覆盖 en_US/fi_FI、没有所有 API/ORM/在线服务/32 位及大端/安全审计。性能是本机短测量，没有同硬件多负载场景。最新 runner 标签和安装源会变化，依赖锁不能冻结底层系统镜像，报告要记录实际镜像。
+## 7. Bugs, risks and limitations
 
-没有找到 Bug 不等于证明软件无 Bug。现有内存限制属于环境观察；上游 skip 是未覆盖区域。测试工具静态检查不能替代实际 Windows/Linux 执行。
+确认缺陷需要可复现的实际行为与预期依据；暂未发现不等于证明无缺陷。PDF 的 F18 曾因 optional 整数权重 1 的错误预期而失败，修正预期后通过，不应报告为已修复 Faker Bug。本仓库历史 upstream 128M 内存中断属于环境/资源观察，不能写成 N02 的隔离峰值。详见 [BUG_REPORT.md](BUG_REPORT.md)。
 
-## 8. Conclusion
+抽样有限，重复 API 不等于独立的全部 API 覆盖；归档库和历史 PHP 不支持现代运行时/生产安全推论。未测源代码覆盖率，不用文件数、测试数、assertion 数推算覆盖率。不同机器时间和随机输出不能直接作性能/功能退化判据。
 
-可写：已建立可重复的公共 API 自动化套件、固定依赖、保存真实 macOS 证据及三系统工作流配置；本机新增套件和已执行的原有用例没有失败。
+## 8. Supported conclusion
 
-暂不可写：全部三个系统兼容、TC24 通过、所有地区/版本支持、生产安全、性能达到某个 SLA、全部原有 2078 测试通过。取得对应真实证据后再更新结论。
+只陈述对应真实运行完成了哪些 F/N 用例、其约束和测量结果，并限定版本、工作负载和 OS/context。不得沿用 PDF 前文“all 24 passed”的笼统结论；其 N01 数值、N02 Not Run、F14/F15 Windows CI 待确认与该结论冲突。新 macOS 重跑即使全部通过，也不能认证历史 Windows CI 或原生 Windows 11。未有三份完整兼容报告前不声明三平台全套兼容；没有 SLA 就不宣称性能达标。

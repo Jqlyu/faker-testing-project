@@ -1,20 +1,31 @@
 # Existing Faker Tests
 
-研究范围：固定 v1.9.2 的 `test/Faker/`、`src/Faker/`、`composer.json`、`phpunit.xml.dist`、`readme.md`。GitHub 页面当前 master 与 release 的依赖约束存在差异，本文以固定 release 为准。
+研究基线为固定 Faker v1.9.2 的 `test/Faker/`、`src/Faker/`、`composer.json`、`phpunit.xml.dist` 和上游自己的 `readme.md`。上游文件保持原样；项目根 README 的移除不涉及这些文件。当前运行入口见 [RUN_GUIDE.md](RUN_GUIDE.md)。
 
 ## Structure and framework
 
-- `test/Faker/` 有 130 个 `*Test.php` 文件（加上数据提供器后，实际执行 2078 个测试实例）；`test/` 总计 132 个文件，其他包含辅助代码。
-- 原有开发依赖要求 PHPUnit `^4.8.35 || ^5.7`、ext-intl 和 PHPCS `^2.9.2`。
-- `phpunit.xml.dist` 使用 vendor/autoload.php，测试目录为 test/Faker，并配置旧版 coverage whitelist。
-- 源码核心：Factory 选择及回退本地化 provider；Generator 管理 provider 和 formatter；UniqueGenerator/ValidGenerator/DefaultGenerator 为修饰器；Calculator 有校验算法；Provider 为基础和本地化生成器；ORM 目录为外部数据层适配器。
-- 覆盖 Generator/Factory、Base 数字与字符串、日期、Internet、地址、人名、电话、支付、条码、UUID、各地区 provider、唯一值/有效值修饰器和校验算法。覆盖不能推导为所有公开 API、所有 OS、所有依赖的系统兼容性验证。
+- 固定源码有 130 个 `*Test.php` 文件；PDF 静态统计 415 个显式 test 方法，不能等同于数据提供器展开后的实际执行数量。
+- 原有开发依赖要求 PHPUnit `^4.8.35 || ^5.7`、ext-intl 和 PHPCS `^2.9.2`；`phpunit.xml.dist` 使用其 vendor/autoload.php 和旧 coverage whitelist。
+- 核心包括 Factory/Generator、UniqueGenerator/ValidGenerator/DefaultGenerator、Calculator、通用和地区 provider、外部 ORM 适配器。
+- 覆盖 provider/算法/地区的源码组织和测试文件数不等于源代码覆盖率，也不能证明所有公开 API/OS 组合经过验证。
 
-源码不依赖 PHPUnit；新增项目只安装 Faker 的运行包和独立 PHPUnit 9.6.38。上游的 `setUp()` 无返回类型、`assertInternalType`、`setExpectedException` 和 `@expectedException` 等旧写法不能直接作为 PHPUnit 9 测试运行，因此原有套件固定使用独立 PHPUnit 5.7.27，不对原有测试作语法改写。
+上游的无返回类型 setUp、assertInternalType、setExpectedException 和 @expectedException 等与新 PHPUnit 不完全兼容。当前仓库完整 upstream 执行使用独立 PHPUnit 5.7.27；新报告和 supplemental 使用 PHPUnit 9.6.38。没有为兼容新 runner 改写上游断言。
 
-## Execution and results
+## PDF: selected Linux study with PHPUnit 9.6.38
 
-本机 macOS 26.3 / arm64 / PHP 7.4.33 / intl 已加载。我们用单独 bootstrap 加载 Composer 正式包及原有 test namespace；没有编辑 Faker 源文件或原有测试。执行：
+PDF 第 7–11 页记录 Ubuntu 24.04.5 LTS ARM64 VM、PHP 7.4.33 下的两个文件研究：
+
+| Original file | Tests | Assertions | Errors | Warnings | Reported outcome |
+|---|---:|---:|---:|---:|---|
+| DefaultGeneratorTest.php | 3 | 4 | 0 | 0 | Pass, exit 0 |
+| BaseTest.php | 84 | 123 | 16 | 21 | Fail, exit 2 |
+| Total | 87 | 127 | 16 | 21 | Not fully passed |
+
+这是 PDF 的历史结果，原始 Linux 执行文件/日志未随当前代码提供，不是本次新执行。报告把错误归为移除的 assertInternalType、assertContains 参数兼容性和旧 @expectedException；assertRegExp 产生弃用警告。这些主要描述旧测试与新 runner 的兼容性，不能单凭 error/warning 认定 Faker 生成逻辑有 Bug。仅两文件不能推导完整上游通过率。
+
+## Repository: historical full macOS study with PHPUnit 5.7.27
+
+本仓库已有的独立完整运行来自 macOS 26.3 / arm64 / PHP 7.4.33 / intl，使用同 commit 的安装包和单独 bootstrap 加载原有 test namespace：
 
 ```bash
 php scripts/fetch-upstream.php
@@ -22,25 +33,19 @@ php scripts/download-tools.php
 php scripts/run-tests.php --suite=upstream
 ```
 
-真实最终运行：**2078 个实例；2076 passed；0 failed；0 errors；2 skipped**。详细运行编号和原始日志见 [evidence index](../results/evidence/README.md)。这是无失败但有明确跳过的执行，不能称为 2078 个全部通过。
+不可改写的 [evidence index](../results/evidence/README.md) 记录 **2078 个实例，2076 passed，0 failed，0 errors，2 skipped**。这不是 2078 全部通过，也不是上述 Linux/PHPUnit 9.6 两文件研究的复现。不要把两个环境的计数合并。
 
-跳过项由原仓库主动设置：
-
-| Test | Actual reason | Interpretation |
+| Skipped test | Upstream reason | Remaining limitation |
 |---|---|---|
-| ImageTest::testDownloadWithDefaults | Skipped due to unstable service prior 1.9.0 release | 没有验证图片下载服务的当前可用性 |
-| PaymentTest::testBankAccountNumber, et_EE data set | bankAccountNumber not implemented for et_EE | 不把未实现地区的方法当作已验证通过 |
+| ImageTest::testDownloadWithDefaults | Skipped due to unstable service prior 1.9.0 release | 未验证在线图片服务当前可用性 |
+| PaymentTest::testBankAccountNumber, et_EE data set | bankAccountNumber not implemented for et_EE | 未验证该地区未实现的方法 |
 
-首次用默认 128M 内存运行，在 Text provider 构建词链表时内存耗尽，JUnit 未完成。重跑时只调整 PHP 测试进程 `memory_limit=512M`，未删除测试或改变任何断言。最终峰值约 168.53 MB（PHPUnit 原生输出）；环境限制及失败日志保留在证据目录，不作为已确认 Faker 功能 Bug。
+历史首次在默认 128M 下于 Text provider 词链表分配时内存耗尽，JUnit 未完成。只把测试子进程限制改为 512M 后完整运行，原生 PHPUnit 峰值约 168.53 MB；前后日志保留。这是该完整测试进程的资源观察，不是 N02 工作负载隔离测量，也不是所有 Faker 调用都需该内存。
 
-PHPUnit 5 的 JUnit 省略 skipped，用其原生 `--log-json` 保存名字与原因；该旧 JSON listener 本身会产生弃用提示，原样留在 phpunit.log。summary 的 2078 总数来自 JUnit 的 2076 记录加原生事件的 2 个 skipped，未重新开发测试逻辑。
+PHPUnit 5 JUnit 未包含两个 skipped，runner 使用其原生 `--log-json` 事件补全名称和原因；旧 JSON listener 弃用提示保留在日志。summary 的 2078 为 2076 JUnit 记录加两个原生 skipped，不能从部分 JUnit 猜测其他结果。
 
-## Differences from written tests
+## Relation to the current report cases
 
-上游主要按 provider、算法及地区组织，许多直接调用 provider；我们新增 20 个系统方法从 Factory 初始化后的消费者 API 验证端到端约束，另外由自动化环境与报告比较覆盖 TC21–TC24。重点新增锁定运行环境、安装检查、持续混合数据生成、可复现 seed、性能基线及三平台证据管理。
+新 `tests/Report/` 按 F01–F22/N01–N02 设计消费者 API 检查，原 TC01–TC20 移到 supplemental 套件独立保存。其行为映射见 [REPORT_CASE_MAPPING.md](REPORT_CASE_MAPPING.md)。上游、supplemental、报告 24 项和报告工具自检分别计数；合成基础设施夹具不证明 Faker 或 OS 执行。
 
-报告基础设施有另一个配置、6 个自检；这些使用明确标注的临时合成 XML/事件，验证错误处理和跳过计数，不作为 Faker 或 OS 的执行证据。
-
-## Remaining limitations in existing tests
-
-例如 TextTest::testTextMaxLength 的断言直接比较 `$length` 与生成的字符串，未显式使用 strlen；这反映其测试断言质量的局限，不等同于证实 realText 业务缺陷。本项目的约束断言独立编写，不假定上游通过就意味着所有功能正确。
+例如上游 TextTest::testTextMaxLength 的断言直接比较 `$length` 与字符串而非显式 strlen，是断言质量限制，不能直接写成已确认 realText 缺陷。当前新实现使用独立约束，不假定上游通过就代表所有功能正确。任何新 upstream 运行均应引用新的 run ID 和实际 runner，保留旧结果。

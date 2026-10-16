@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace FakerTesting\System;
+namespace FakerTesting\Supplemental;
 
 use Faker\Factory;
 use Faker\Generator;
 use PHPUnit\Framework\TestCase;
 
-/** System tests call the public API as a consumer, without mocking Faker. */
+/** Legacy TC checks are supplemental; they are not the report F/N cases. */
 final class FakerSystemTest extends TestCase
 {
     private Generator $faker;

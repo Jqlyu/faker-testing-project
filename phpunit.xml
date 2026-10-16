@@ -4,8 +4,8 @@
          bootstrap="tests/bootstrap.php" colors="true" failOnWarning="true"
          failOnRisky="true" cacheResult="false" convertDeprecationsToExceptions="true">
     <testsuites>
-        <testsuite name="Faker System Tests">
-            <directory suffix="Test.php">tests/System</directory>
+        <testsuite name="Report cases F01-F22 and N01-N02">
+            <directory suffix="Test.php">tests/Report</directory>
         </testsuite>
     </testsuites>
     <php>

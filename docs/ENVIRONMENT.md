@@ -1,45 +1,47 @@
 # Testing Environment
 
-## Recorded baseline and compatibility
+当前固定基线和实际运行环境必须分别记录。最新 PDF 提及的历史设备/结果属于报告来源，不能填写为新实现的环境；状态矛盾见 [REPORT_CORRECTIONS.md](REPORT_CORRECTIONS.md)。安装和执行命令已从项目根 README 迁到 [RUN_GUIDE.md](RUN_GUIDE.md)。
 
-| Component | Baseline | Evidence/status |
+## Baseline for the new report implementation
+
+| Component | Required baseline / control | Evidence source |
 |---|---|---|
-| Faker repository | fzaninotto/Faker | 克隆及阅读完成；未修改业务源码 |
-| Faker release | v1.9.2 | `848d8125239d7dbf8ab25cb7f054f1a630e68c2e` |
-| PHP | 7.4.33 NTS, 64 bit | 本机已实际安装运行 |
-| Composer | 2.10.3 | PHAR SHA256 验证；lock 安装完成 |
-| New-test PHPUnit | 9.6.38 | Composer dev dependency |
-| Upstream PHPUnit | 5.7.27 | 独立 PHAR，SHA256 验证 |
-| Dependencies | 29 packages total | `composer.lock`；每次 environment.json 列出全部版本/引用 |
-| Timezone / locale | UTC / C | 日期最大值固定；TC14 单独 fi_FI |
-| Random seed | 4160 before every system method | seed 可重复性另含 4161 对照 |
-| Memory limit | 新增 256M；原有 512M | 原有默认 128M 曾中断，日志保留 |
+| Software under test | fzaninotto/Faker v1.9.2 | `sut.json`, installed package |
+| Faker commit | `848d8125239d7dbf8ab25cb7f054f1a630e68c2e` | source tree identity / environment snapshot |
+| PHP | 7.4.33, 64 bit | actual `PHP_VERSION`, binary, OS/architecture |
+| Composer | 2.10.3 | verified PHAR, installation logs |
+| Report and supplemental PHPUnit | 9.6.38 | Composer dependency / actual runner |
+| Original upstream PHPUnit | 5.7.27 | separate verified PHAR |
+| Dependencies | 29 locked packages | `composer.lock`, [DEPENDENCIES.md](DEPENDENCIES.md), `environment.json` |
+| Process timezone / locale | UTC / C | actual runtime controls |
+| Faker locale | en_US by default; F05 fi_FI | per-case observation |
+| Seeds | F01–F12: 740001–740012; F13–F16: 4160; F20: 1234; other choices documented | [REPORT_CASE_MAPPING.md](REPORT_CASE_MAPPING.md), observation/measurement metadata |
+| Memory configuration | report/supplemental 256M; upstream 512M; N02 fresh worker 256M | actual ini/worker snapshot; configuration is not a measured result |
 
-正式版 v1.9.2 的 composer.json 要求 `^5.3.3 || ^7.0`，不是任意 PHP >=5.3.3，也不包含 PHP 8。克隆最初看到的 master HEAD `5ffe7db6c80f441f150fc88008d64e64af66634b` 增加了 `^8.0`；为稳定测试基线，本项目选正式版 1.9.2，而非随 master 变化。没有运行 PHP 8 兼容性测试，不把 Composer 拒绝不支持的 PHP 版本归类为 Faker 功能缺陷。
+Faker 1.9.2 declares PHP `^5.3.3 || ^7.0`; that does not include PHP 8. The initial master HEAD `5ffe7db6c80f441f150fc88008d64e64af66634b` had different constraints, so the fixed release/commit is the authority here. No PHP 8 compatibility conclusion follows from this baseline. Faker's archived repository and PHP 7.4 are historical course dependencies; no replacement with fakerphp/faker is implied.
 
-GitHub 仓库于 2020-12-11 归档，Composer 标识该包 abandoned；本次安装成功，没有替换为 fakerphp/faker。归档信息来自 [原仓库](https://github.com/fzaninotto/Faker)，版本约束以本地固定 release 的 composer.json 为准。PHP 7.4 已不在 [PHP 常规支持版本](https://www.php.net/supported-versions.php)中。
+## Separate execution contexts
 
-## Real devices and CI
+| Context | Available information | Interpretation |
+|---|---|---|
+| Historical repository macOS evidence | macOS 26.3 (25D125), Darwin 25.3.0, arm64, PHP 7.4.33; TC supplemental/upstream runs | See immutable [evidence index](../results/evidence/README.md); predates this report implementation |
+| PDF macOS F01–F06 | reports six passes / 2685 assertions | Original report statement only; original member implementation is unavailable here |
+| PDF Linux F07–F12 / selected upstream study | reports Ubuntu 24.04.5 LTS ARM64 VM, PHP 7.4.33, PHPUnit 9.6.38 | Do not transfer the VM identity or reported results to this Mac |
+| PDF Windows CI F13–F16 / N01 | reported CI context; F14/F15 details need confirmation; N01 numeric values absent | CI evidence requires exact workflow/run artifacts; not proof of native Windows 11 |
+| PDF Windows 11 F17–F22 | reports standalone PHP script, PHP 7.4.33 | Separate from PHPUnit CI; original script/device evidence absent from current code |
+| New report F01–F22 / N01–N02 implementation | Actual run directories pending at documentation migration | Record runtime/context from each new run; no inherited PASS/timing/Windows identity |
+| New native Windows / Linux execution and three-platform comparison | Pending actual complete reports | Setup instructions and workflow configuration alone are not execution |
 
-| Platform | Actual local environment | Execution status | Planned CI |
-|---|---|---|---|
-| macOS | macOS 26.3 (25D125), Darwin 25.3.0, arm64 | TC01–TC20、TC22 已执行 | macos-latest / PHP 7.4.33 |
-| Windows | 未获得真实设备环境信息 | Not Run | windows-latest / PHP 7.4.33 |
-| Linux | 未获得真实设备环境信息 | Not Run | ubuntu-latest / PHP 7.4.33 |
-| Three-OS comparison | 当前仅有 macOS 报告 | Not Run | 独立 compare job |
+The historical Mac PHP came from `shivammathur/php/php@7.4`, Homebrew formula revision `7.4.33_15`, build date Oct 9 2026. Its path is a machine fact, not a portable project setting. Newly generated `environment.json` is the authority for later execution, including actual PHP binary/build and architecture.
 
-本机 PHP 来自 `shivammathur/php/php@7.4`，Homebrew formula 修订 `7.4.33_15`，PHP 构建日期 Oct 9 2026。安装位置是本机事实，不是项目源码中的写死路径。新机器使用自己的 PATH/显式 PHP 程序。
-
-操作系统版本和架构来自 PHP 的 php_uname；macOS 产品版本通过可选 sw_vers 补充。失败或不适用的可选信息保存 null，不补写虚构值。CPU 型号、全机总内存及容器/虚拟化详细配置没有自动采集，不能用这些数据作性能归因。
-
-真实设备安装与复制即可运行的 macOS、Windows PowerShell、Ubuntu 命令见 [README](../README.md)。运行同一脚本、同一 lock；Ubuntu 显式用 php7.4，Windows 用 PHP 解释器执行 vendor/bin/phpunit。手动安装步骤不能代替实际执行结果。
+OS/architecture originate from PHP and optional native OS commands. Unavailable optional fields remain null. CPU model, total RAM and virtualization details must be added from actual machine evidence if they are needed to discuss performance; do not infer hardware from an OS label. A tester responsibility selection does not establish who operated the computer or which historical machine was used.
 
 ## CI controls and limitations
 
-三系统使用统一 PHP 7.4.33、精确 Composer 2.10.3、Composer lock 及 LF 行尾。记录 runner OS/image/run ID/commit（若可获得）。Action 本身固定 commit，Artifact 保存 30 天。安装失败会停止该平台执行；已有结果始终尝试上传；缺报告的比较返回非零。
+The workflow **Faker cross-platform report tests** targets Windows/macOS/Ubuntu with the fixed PHP/Composer/lock and records actual runner/run/commit context when available. Fixed Action references and LF source files improve reproducibility, but `*-latest` does not freeze OS image, hardware or installation-source availability. Preserve failed setup/test logs as well as successful artifacts. Missing, filtered or incompatible reports cannot support a three-platform pass.
 
-GitHub remote 为 https://github.com/Jqlyu/faker-testing-project.git，远程执行状态见 [Actions](https://github.com/Jqlyu/faker-testing-project/actions)。本文件的本机结果和归档用例表属于上传前的执行记录；获得远程三平台结果后再更新，不提前报告三个平台通过。setup-php 或最新 runner 未来可能改变对旧 PHP 的支持；实际失败时记录环境错误并重新选择支持的兼容环境，不绕过平台要求。
+Remote execution can be inspected on the repository's [Actions page](https://github.com/Jqlyu/faker-testing-project/actions); this document does not assert any new remote run happened. The six platform keys are `local-Windows`, `local-Darwin`, `local-Linux`, `github-Windows`, `github-Darwin`, `github-Linux`; Darwin means macOS. Comparison defaults to `--context=github-actions` and requires one workflow run/commit; `--context=local-device` separately requires three local OS reports. The contexts cannot be combined to fill gaps. WSL/Linux and a Linux VM remain Linux executions, so their machine/virtualization details should also be recorded. The source PDF's common-version table is a stated baseline, not evidence that every historical run used every listed tool.
 
-## Dependency inventory
+N01 records generation/retention timing and throughput; N02 records fresh-worker PHP allocated peak bytes/MiB, not total OS RSS or Faker-exclusive memory. The worker loads Composer, Faker, PHPUnit assertion classes and their dependencies but does not start a PHPUnit runner; its 27,000 validation assertions per workload are recorded separately from parent JUnit assertions. Workload, retention, worker overhead and validation affect interpretation. `memory_limit=256M` describes execution configuration and does not define a memory acceptance criterion. No speed/memory SLA has been specified.
 
-全部 29 个精确版本在 [DEPENDENCIES.md](DEPENDENCIES.md)。从 lock 安装而非反复 update；需要升级工具时应重建基线、重跑三个平台并重新归档。
+Historical evidence may contain the deleted root README link. Those snapshots are preserved unchanged; current instructions are in [RUN_GUIDE.md](RUN_GUIDE.md).

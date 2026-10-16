@@ -10,9 +10,60 @@ function projectRoot(): string
 
 function writeJson(string $path, array $data): void
 {
-    if (file_put_contents($path, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE |
+    if (file_put_contents($path, json_encode($data, JSON_PRETTY_PRINT | JSON_PRESERVE_ZERO_FRACTION | JSON_UNESCAPED_UNICODE |
         JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR) . PHP_EOL) === false) {
         throw new RuntimeException('Cannot write ' . $path);
+    }
+}
+
+/** Validate persisted benchmark evidence independently of a PHPUnit PASS label. */
+function validateBenchmarkMeasurement(array $measurement, string $id): void
+{
+    $fixed = ['schema_version' => 1, 'case_id' => $id, 'measurement_status' => 'completed',
+        'performance_acceptance' => 'not_assessed', 'locale' => 'en_US', 'timezone' => 'UTC',
+        'locale_setting' => 'C', 'seed' => 4160, 'warmup_seed' => 4160, 'seed_reset_after_warmup' => true,
+        'timer' => 'hrtime(true)', 'worker_php_version' => '7.4.33', 'memory_limit' => '256M',
+        'memory_limit_bytes' => 268435456, 'worker_validation_assertions' => 27000];
+    foreach ($fixed as $key => $value) {
+        if (($measurement[$key] ?? null) !== $value) { throw new RuntimeException($id . ' incomplete or incompatible benchmark field: ' . $key); }
+    }
+    $workload = ['fields' => ['name', 'email', 'uuid'], 'warmup_rows' => 100, 'warmup_generation_calls' => 300,
+        'batch_count' => 3, 'rows_per_batch' => 1000, 'measured_rows' => 3000, 'validated_rows' => 3000,
+        'generation_calls' => 9000, 'max_retained_measured_rows' => 1000];
+    foreach ($workload as $key => $value) {
+        if (($measurement['workload'][$key] ?? null) !== $value) { throw new RuntimeException($id . ' incomplete benchmark workload: ' . $key); }
+    }
+    $scope = ['composer_autoloader_loaded' => true, 'phpunit_assert_class_loaded' => true,
+        'phpunit_runner_started' => false, 'loaded_phpunit_runner_classes' => []];
+    foreach ($scope as $key => $value) {
+        if (($measurement['framework_scope'][$key] ?? null) !== $value) { throw new RuntimeException($id . ' incomplete framework scope: ' . $key); }
+    }
+    foreach (['timing_scope', 'memory_metric', 'peak_capture_point', 'worker_assertion_scope', 'captured_at_utc', 'worker_php_binary'] as $key) {
+        if (!is_string($measurement[$key] ?? null) || trim($measurement[$key]) === '') { throw new RuntimeException($id . ' missing measurement scope/provenance: ' . $key); }
+    }
+    foreach ([$measurement['workload']['retention'] ?? null, $measurement['framework_scope']['description'] ?? null,
+        $measurement['framework_scope']['memory_includes'] ?? null] as $description) {
+        if (!is_string($description) || trim($description) === '') { throw new RuntimeException($id . ' missing workload/framework description.'); }
+    }
+    if (!is_int($measurement['worker_pid'] ?? null) || $measurement['worker_pid'] <= 0 ||
+        !is_int($measurement['peak_allocated_memory_bytes'] ?? null) ||
+        !is_string($measurement['validated_outputs_sha256'] ?? null) ||
+        !preg_match('/^[a-f0-9]{64}$/D', $measurement['validated_outputs_sha256'])) {
+        throw new RuntimeException($id . ' incomplete process/memory/output evidence.');
+    }
+    $batches = $measurement['batch_seconds'] ?? null;
+    if (!is_array($batches) || count($batches) !== 3) { throw new RuntimeException($id . ' needs three batch measurements.'); }
+    foreach (array_merge($batches, [$measurement['median_seconds'] ?? null, $measurement['records_per_second'] ?? null,
+        $measurement['peak_allocated_memory_bytes'], $measurement['peak_allocated_memory_mib'] ?? null]) as $number) {
+        if ((!is_int($number) && !is_float($number)) || !is_finite((float) $number) || $number <= 0) {
+            throw new RuntimeException($id . ' has a missing/invalid numeric measurement.');
+        }
+    }
+    sort($batches, SORT_NUMERIC);
+    if (abs($batches[1] - $measurement['median_seconds']) > 1.0e-12 ||
+        abs(1000 / $measurement['median_seconds'] - $measurement['records_per_second']) > $measurement['records_per_second'] * 1.0e-12 ||
+        abs($measurement['peak_allocated_memory_bytes'] / 1048576 - $measurement['peak_allocated_memory_mib']) > 1.0e-9) {
+        throw new RuntimeException($id . ' measurement arithmetic is inconsistent.');
     }
 }
 
@@ -77,7 +128,10 @@ function contractHash(): string
 {
     $root = projectRoot();
     $files = ['tests' => treeHash($root . '/tests'), 'scripts' => treeHash($root . '/scripts'),
-        'phpunit.xml' => hash_file('sha256', $root . '/phpunit.xml')];
+        'phpunit.xml' => hash_file('sha256', $root . '/phpunit.xml'),
+        'phpunit-supplemental.xml' => hash_file('sha256', $root . '/phpunit-supplemental.xml'),
+        'phpunit-infrastructure.xml' => hash_file('sha256', $root . '/phpunit-infrastructure.xml'),
+        'report_source' => hash_file('sha256', $root . '/docs/REPORT_SOURCE.json')];
     return hash('sha256', json_encode($files, JSON_THROW_ON_ERROR));
 }
 
@@ -100,13 +154,13 @@ function readJunit(string $path): array
     foreach ($xpath->query('//testcase') as $node) {
         $status = 'Passed';
         $reasons = [];
-        foreach (['failure' => 'Failed', 'error' => 'Error', 'skipped' => 'Skipped'] as $tag => $label) {
+        foreach (['skipped' => 'Skipped', 'failure' => 'Failed', 'error' => 'Error'] as $tag => $label) {
             foreach ($node->getElementsByTagName($tag) as $problem) {
                 $status = $label;
                 $reasons[] = trim($problem->textContent) ?: $problem->getAttribute('message');
             }
         }
-        preg_match('/\btest(TC\d{2})/', $node->getAttribute('name'), $matches);
+        preg_match('/\btest((?:F|N|TC)[0-9]{2})(?=[A-Z_ ]|$)/', $node->getAttribute('name'), $matches);
         $class = $node->getAttribute('class') ?: $node->getAttribute('classname');
         if ($class === '') {
             $class = explode('::', $node->parentNode->getAttribute('name'))[0];

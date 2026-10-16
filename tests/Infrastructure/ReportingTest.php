@@ -3,31 +3,9 @@ declare(strict_types=1);
 
 namespace FakerTesting\Infrastructure;
 
-use PHPUnit\Framework\TestCase;
-
-require_once dirname(__DIR__, 2) . '/scripts/common.php';
-
 /** Synthetic reporting fixtures are never presented as Faker or OS execution evidence. */
-final class ReportingTest extends TestCase
+final class ReportingTest extends SyntheticFixtureTestCase
 {
-    private string $temporary;
-
-    protected function setUp(): void
-    {
-        $this->temporary = sys_get_temp_dir() . '/faker-reporting-' . bin2hex(random_bytes(6));
-        mkdir($this->temporary);
-    }
-
-    protected function tearDown(): void
-    {
-        $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->temporary,
-            \FilesystemIterator::SKIP_DOTS), \RecursiveIteratorIterator::CHILD_FIRST);
-        foreach ($iterator as $file) {
-            $file->isDir() ? rmdir($file->getPathname()) : unlink($file->getPathname());
-        }
-        rmdir($this->temporary);
-    }
-
     public function testJunitPreservesFailureErrorAndSkipReasons(): void
     {
         $path = $this->temporary . '/synthetic.xml';
@@ -42,6 +20,56 @@ final class ReportingTest extends TestCase
         $this->assertSame('Expected range; got 999', $parsed['cases'][1]['failure_reason']);
         $this->assertSame('Dependency unavailable', $parsed['cases'][2]['failure_reason']);
         $this->assertSame('Feature unavailable', $parsed['cases'][3]['failure_reason']);
+        $this->assertSame(['Passed', 'Failed', 'Error', 'Skipped'], array_column($parsed['cases'], 'status'));
+        $this->assertSame(1, $parsed['cases'][0]['assertions']);
+        $this->assertSame(0.1, $parsed['cases'][0]['seconds']);
+        $this->assertNull($parsed['cases'][0]['failure_reason']);
+    }
+
+    public function testJunitSeparatesReportIdsFromSupplementalTcIds(): void
+    {
+        $names = ['testF01Names', 'testF22DateRange', 'testN01Throughput', 'testN02Memory',
+            'testTC01LegacyName', 'testF010WrongWidth', 'contestF01Names', 'testNames',
+            'testF09 with data set "synthetic"'];
+        $xml = '<testsuites><testsuite name="SyntheticFallbackClass::suite">';
+        foreach ($names as $index => $name) {
+            $xml .= '<testcase name="' . htmlspecialchars($name, ENT_XML1 | ENT_QUOTES, 'UTF-8') . '"' .
+                ($index === 0 ? ' class="SyntheticExplicitClass"' : '') .
+                ($index === 1 ? ' classname="SyntheticAlternateClass"' : '') . '/>';
+        }
+        $parsed = \readJunit($this->fixture('synthetic-identities.xml', $xml . '</testsuite></testsuites>'));
+        $this->assertSame(['F01', 'F22', 'N01', 'N02', 'TC01', null, null, null, 'F09'],
+            array_column($parsed['cases'], 'id'));
+        $this->assertSame('SyntheticExplicitClass', $parsed['cases'][0]['class']);
+        $this->assertSame('SyntheticAlternateClass', $parsed['cases'][1]['class']);
+        $this->assertSame('SyntheticFallbackClass', $parsed['cases'][2]['class']);
+    }
+
+    public function testJunitCountsObservedCasesInsteadOfTrustingSuiteTotals(): void
+    {
+        $path = $this->fixture('synthetic-untrusted-totals.xml',
+            '<testsuites tests="24" failures="0"><testsuite tests="24" failures="0">' .
+            '<testcase name="testF01Synthetic"><failure message="actual failure"/></testcase>' .
+            '<testcase name="testN02Synthetic"><skipped message="not executed"/></testcase>' .
+            '</testsuite></testsuites>');
+        $parsed = \readJunit($path);
+        $this->assertSame(['total' => 2, 'passed' => 0, 'failed' => 1, 'errors' => 0, 'skipped' => 1], $parsed['counts']);
+        $this->assertSame('actual failure', $parsed['cases'][0]['failure_reason']);
+        $this->assertSame('not executed', $parsed['cases'][1]['failure_reason']);
+    }
+
+    public function testJunitErrorCannotBeHiddenByASkipOrFailureNode(): void
+    {
+        $path = $this->fixture('synthetic-overlapping-status.xml',
+            '<testsuites><testsuite><testcase name="testF15Synthetic">' .
+            '<error>Worker crashed</error><skipped>Also marked skipped</skipped>' .
+            '<failure>Also marked failed</failure></testcase></testsuite></testsuites>');
+        $parsed = \readJunit($path);
+        $this->assertSame('Error', $parsed['cases'][0]['status']);
+        $this->assertSame(['total' => 1, 'passed' => 0, 'failed' => 0, 'errors' => 1, 'skipped' => 0], $parsed['counts']);
+        foreach (['Worker crashed', 'Also marked skipped', 'Also marked failed'] as $reason) {
+            $this->assertStringContainsString($reason, $parsed['cases'][0]['failure_reason']);
+        }
     }
 
     public function testZeroCasesCannotBecomeSuccessfulExecution(): void
@@ -62,25 +90,18 @@ final class ReportingTest extends TestCase
         \readJunit($path);
     }
 
+    public function testMissingReportCannotBecomeSuccessfulExecution(): void
+    {
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('JUnit report missing');
+        \readJunit($this->temporary . '/synthetic-missing.xml');
+    }
+
     public function testChildExitCodeIsPreserved(): void
     {
         $result = \command([PHP_BINARY, '-r', 'fwrite(STDERR, "intentional reporting self-check"); exit(7);'], $this->temporary);
         $this->assertSame(7, $result['exit_code']);
         $this->assertSame('intentional reporting self-check', $result['output']);
-    }
-
-    public function testMissingThreePlatformEvidenceFailsComparison(): void
-    {
-        mkdir($this->temporary . '/empty-input');
-        $result = \command([PHP_BINARY, \projectRoot() . '/scripts/compare-results.php',
-            $this->temporary . '/empty-input', $this->temporary . '/comparison'], \projectRoot());
-        $this->assertSame(1, $result['exit_code']);
-        $comparison = json_decode(file_get_contents($this->temporary . '/comparison/comparison.json'), true);
-        $this->assertSame('Not Run', $comparison['status']);
-        $this->assertCount(3, $comparison['reasons']);
-        foreach ($comparison['platform_cases'] as $case) {
-            $this->assertSame('Not Run', $case['status']);
-        }
     }
 
     public function testLegacyNativeEventsRetainSkippedCases(): void
