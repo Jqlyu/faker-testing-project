@@ -1,0 +1,11 @@
+{
+    "started_at_utc": "2026-10-16T19:20:40+00:00",
+    "os": "Darwin",
+    "os_version": "25.6.0",
+    "architecture": "arm64",
+    "php_version": "7.4.33",
+    "exit_code": 0,
+    "composer_version": "Composer version 2.10.3 2026-08-27 13:34:23\nPHP version 7.4.33 (/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php)\nRun the \"diagnose\" command to get more detailed diagnostics output.",
+    "lock_sha256": "7aae265501eaedeb48c37792effcc4fc7ffa10325c3a3ef5e59910ec45f42aa1",
+    "finished_at_utc": "2026-10-16T19:20:43+00:00"
+}

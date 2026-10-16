@@ -1,0 +1,63 @@
+{
+    "case_id": "N02",
+    "observed_at_utc": "2026-10-16T19:14:33+00:00",
+    "data": {
+        "schema_version": 1,
+        "case_id": "N02",
+        "measurement_status": "completed",
+        "performance_acceptance": "not_assessed",
+        "locale": "en_US",
+        "timezone": "UTC",
+        "locale_setting": "C",
+        "seed": 4160,
+        "warmup_seed": 4160,
+        "seed_reset_after_warmup": true,
+        "workload": {
+            "fields": [
+                "name",
+                "email",
+                "uuid"
+            ],
+            "warmup_rows": 100,
+            "warmup_generation_calls": 300,
+            "batch_count": 3,
+            "rows_per_batch": 1000,
+            "measured_rows": 3000,
+            "validated_rows": 3000,
+            "generation_calls": 9000,
+            "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+            "max_retained_measured_rows": 1000
+        },
+        "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+        "timer": "hrtime(true)",
+        "batch_seconds": [
+            0.017500417,
+            0.021688125,
+            0.02849575
+        ],
+        "median_seconds": 0.021688125,
+        "records_per_second": 46108.18132042304,
+        "worker_validation_assertions": 27000,
+        "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+        "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+        "memory_limit": "256M",
+        "memory_limit_bytes": 268435456,
+        "peak_allocated_memory_bytes": 6291456,
+        "peak_allocated_memory_mib": 6,
+        "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+        "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+        "worker_pid": 2957,
+        "worker_php_binary": "/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php",
+        "worker_php_version": "7.4.33",
+        "framework_scope": {
+            "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+            "composer_autoloader_loaded": true,
+            "phpunit_assert_class_loaded": true,
+            "phpunit_runner_started": false,
+            "loaded_phpunit_runner_classes": [],
+            "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+        },
+        "captured_at_utc": "2026-10-16T19:14:33+00:00"
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

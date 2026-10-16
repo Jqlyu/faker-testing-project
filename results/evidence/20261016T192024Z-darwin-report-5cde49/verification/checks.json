@@ -1,0 +1,49 @@
+{
+  "syntax": {
+    "files": 20,
+    "exit_code": 0
+  },
+  "composer-validate": {
+    "exit_code": 0,
+    "arguments": [
+      "/opt/homebrew/opt/php@7.4/bin/php",
+      "tools/composer.phar",
+      "validate"
+    ]
+  },
+  "platform-requirements": {
+    "exit_code": 0,
+    "arguments": [
+      "/opt/homebrew/opt/php@7.4/bin/php",
+      "tools/composer.phar",
+      "check-platform-reqs"
+    ]
+  },
+  "infrastructure": {
+    "exit_code": 0,
+    "arguments": [
+      "/opt/homebrew/opt/php@7.4/bin/php",
+      "vendor/phpunit/phpunit/phpunit",
+      "--configuration",
+      "phpunit-infrastructure.xml",
+      "--colors=never",
+      "--log-junit",
+      "/Users/jiaqinglyu/Desktop/Faker-Testing-Project/results/20261016T192024Z-darwin-report-5cde49/verification/infrastructure-junit.xml"
+    ]
+  },
+  "actionlint": {
+    "exit_code": 0,
+    "arguments": [
+      "/tmp/faker-actionlint/actionlint",
+      ".github/workflows/cross-platform.yml"
+    ]
+  },
+  "historical_integrity": {
+    "unchanged_evidence_files": 46,
+    "baseline_commit": "a2148a9",
+    "dependency_and_SUT_manifests_unchanged": true,
+    "root_README_absent": true
+  },
+  "source_PDF_sha256": "b30906b79ead0de7af84df27fe2ca142333551da5408e4c234ac1fde16e082bc",
+  "scope": "Local macOS verification;73 infrastructure tests/308 assertions use synthetic temporary fixtures, not OS execution evidence. Composer exact-version warning intentional. SUT source hashing stays strict; contract ignores only Finder/Explorer metadata."
+}

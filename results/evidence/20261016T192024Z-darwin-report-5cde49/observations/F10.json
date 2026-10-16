@@ -1,0 +1,49 @@
+{
+    "case_id": "F10",
+    "observed_at_utc": "2026-10-16T19:20:25+00:00",
+    "data": {
+        "seed": 740010,
+        "locale": "en_US",
+        "validated_count": 100,
+        "cards": {
+            "Visa": {
+                "validated_count": 25,
+                "format": "/\\A4[0-9]{15}\\z/",
+                "examples": [
+                    "4556808551867571",
+                    "4539129898437495",
+                    "4994965526698489"
+                ]
+            },
+            "MasterCard": {
+                "validated_count": 25,
+                "format": "/\\A(?:5[1-5][0-9]{14}|(?:2221|2720)[0-9]{12}|2[3-6][0-9]{14})\\z/",
+                "examples": [
+                    "5396560945542755",
+                    "2720529928863854",
+                    "5255330282885542"
+                ]
+            },
+            "American Express": {
+                "validated_count": 25,
+                "format": "/\\A3[47][0-9]{13}\\z/",
+                "examples": [
+                    "348335386145487",
+                    "346414429031061",
+                    "342148963705730"
+                ]
+            },
+            "Discover Card": {
+                "validated_count": 25,
+                "format": "/\\A6011[0-9]{12}\\z/",
+                "examples": [
+                    "6011621962808363",
+                    "6011610147161525",
+                    "6011324257468809"
+                ]
+            }
+        },
+        "checksum_validator": "independent Luhn implementation"
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

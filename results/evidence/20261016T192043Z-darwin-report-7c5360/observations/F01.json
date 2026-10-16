@@ -1,0 +1,22 @@
+{
+    "case_id": "F01",
+    "observed_at_utc": "2026-10-16T19:20:43+00:00",
+    "data": {
+        "seed": 740001,
+        "locale": "en_US",
+        "genders": [
+            null,
+            "male",
+            "female"
+        ],
+        "samples_per_gender": 20,
+        "validated_count": 60,
+        "replay_identical": true,
+        "examples": [
+            "Mr. Demarco Quitzon V",
+            "Bianka Smith",
+            "Triston Treutel"
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

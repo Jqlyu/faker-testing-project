@@ -1,0 +1,31 @@
+{
+    "case_id": "F19",
+    "observed_at_utc": "2026-10-16T19:20:31+00:00",
+    "data": {
+        "seed": 4160,
+        "validated_count": 20,
+        "values": [
+            6,
+            4,
+            0,
+            6,
+            4,
+            2,
+            0,
+            2,
+            2,
+            0,
+            4,
+            2,
+            6,
+            0,
+            0,
+            0,
+            0,
+            2,
+            6,
+            2
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

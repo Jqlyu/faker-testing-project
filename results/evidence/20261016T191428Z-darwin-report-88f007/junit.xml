@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="600" errors="0" warnings="0" failures="0" skipped="0" time="0.004672">
+    <testsuite name="Report cases F01-F22 and N01-N02" tests="1" assertions="600" errors="0" warnings="0" failures="0" skipped="0" time="0.004672">
+      <testsuite name="FakerTesting\Report\AdditionalFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/AdditionalFunctionalReportTest.php" tests="1" assertions="600" errors="0" warnings="0" failures="0" skipped="0" time="0.004672">
+        <testcase name="testF13UtcDateRangeOneHundredSamples" class="FakerTesting\Report\AdditionalFunctionalReportTest" classname="FakerTesting.Report.AdditionalFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/AdditionalFunctionalReportTest.php" line="11" assertions="600" time="0.004672"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

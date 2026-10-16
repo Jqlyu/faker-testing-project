@@ -1,0 +1,11 @@
+ext-dom       20031129   success 
+ext-filter    7.4.33     success 
+ext-json      7.4.33     success 
+ext-libxml    7.4.33     success 
+ext-mbstring  7.4.33     success 
+ext-phar      7.4.33     success 
+ext-tokenizer 7.4.33     success 
+ext-xml       7.4.33     success 
+ext-xmlwriter 7.4.33     success 
+php           7.4.33     success 
+Checking platform requirements for packages in the vendor dir

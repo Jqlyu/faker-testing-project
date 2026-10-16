@@ -1,0 +1,28 @@
+{
+    "case_id": "F09",
+    "observed_at_utc": "2026-10-16T19:20:31+00:00",
+    "data": {
+        "seed": 740009,
+        "locale": "en_US",
+        "validated_count": 200,
+        "address_versions": {
+            "ipv4": {
+                "validated_count": 100,
+                "examples": [
+                    "247.156.230.188",
+                    "9.27.197.73",
+                    "89.145.242.28"
+                ]
+            },
+            "ipv6": {
+                "validated_count": 100,
+                "examples": [
+                    "3902:397a:969f:c74b:2b50:ec0a:24db:f6de",
+                    "fa2f:daa8:7e5c:af40:4a46:e360:6178:1bfe",
+                    "9c24:1c3c:1c7b:4bf6:3d76:9ae1:f714:a34e"
+                ]
+            }
+        }
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

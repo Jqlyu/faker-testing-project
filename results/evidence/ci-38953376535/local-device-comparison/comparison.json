@@ -1,0 +1,929 @@
+{
+    "schema_version": 2,
+    "generated_at_utc": "2026-10-16T19:17:55+00:00",
+    "status": "Not Run",
+    "required_execution_context": "local-device",
+    "required_platform_keys": [
+        "local-Windows",
+        "local-Darwin",
+        "local-Linux"
+    ],
+    "reasons": [
+        "Missing local-Windows execution evidence",
+        "Missing local-Linux execution evidence"
+    ],
+    "ignored_sources": [
+        {
+            "summary": "results/evidence/20261014T181459Z-darwin-upstream-79ccc2/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        },
+        {
+            "summary": "results/evidence/20261014T182958Z-darwin-system-ffd173/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        },
+        {
+            "summary": "results/evidence/20261014T182959Z-darwin-system-ae2849/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        },
+        {
+            "summary": "results/evidence/20261014T181847Z-darwin-upstream-0202a6/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        },
+        {
+            "summary": "results/evidence/20261014T182719Z-darwin-system-dc7be5/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        },
+        {
+            "summary": "results/evidence/20261016T190913Z-darwin-supplemental-bc813e/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        },
+        {
+            "summary": "results/evidence/20261016T191428Z-darwin-report-88f007/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        },
+        {
+            "summary": "results/evidence/20261016T191428Z-darwin-report-e11a77/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        },
+        {
+            "summary": "results/evidence/20261014T182720Z-darwin-system-bfba19/summary.json",
+            "reason": "Legacy, filtered, supplemental or upstream result; not a current full report execution"
+        }
+    ],
+    "platform_results": {
+        "local-Windows": {
+            "status": "Not Run",
+            "actual": "No current full report evidence supplied",
+            "required": true,
+            "versions": null,
+            "counts": null
+        },
+        "local-Darwin": {
+            "status": "Passed",
+            "actual": "Local macOS: 24/24 passed; exit 0",
+            "required": true,
+            "versions": {
+                "php": "7.4.33",
+                "phpunit": "PHPUnit 9.6.38 by Sebastian Bergmann and contributors.",
+                "faker": {
+                    "package": "fzaninotto/faker",
+                    "version": "1.9.2",
+                    "commit": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                    "src_sha256": "fc7b3e5cee6e6973db4d182c33b4006ab66e04d1f8e99967284e846760558b91"
+                },
+                "os_version": "25.3.0",
+                "architecture": "arm64"
+            },
+            "counts": {
+                "total": 24,
+                "passed": 24,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+            },
+            "measurements": {
+                "N01": {
+                    "schema_version": 1,
+                    "case_id": "N01",
+                    "measurement_status": "completed",
+                    "performance_acceptance": "not_assessed",
+                    "locale": "en_US",
+                    "timezone": "UTC",
+                    "locale_setting": "C",
+                    "seed": 4160,
+                    "warmup_seed": 4160,
+                    "seed_reset_after_warmup": true,
+                    "workload": {
+                        "fields": [
+                            "name",
+                            "email",
+                            "uuid"
+                        ],
+                        "warmup_rows": 100,
+                        "warmup_generation_calls": 300,
+                        "batch_count": 3,
+                        "rows_per_batch": 1000,
+                        "measured_rows": 3000,
+                        "validated_rows": 3000,
+                        "generation_calls": 9000,
+                        "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                        "max_retained_measured_rows": 1000
+                    },
+                    "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                    "timer": "hrtime(true)",
+                    "batch_seconds": [
+                        0.010850542,
+                        0.010588834,
+                        0.01108925
+                    ],
+                    "median_seconds": 0.010850542,
+                    "records_per_second": 92161.29479983581,
+                    "worker_validation_assertions": 27000,
+                    "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                    "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                    "memory_limit": "256M",
+                    "memory_limit_bytes": 268435456,
+                    "peak_allocated_memory_bytes": 6291456,
+                    "peak_allocated_memory_mib": 6,
+                    "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                    "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                    "worker_pid": 49860,
+                    "worker_php_binary": "/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php",
+                    "worker_php_version": "7.4.33",
+                    "framework_scope": {
+                        "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                        "composer_autoloader_loaded": true,
+                        "phpunit_assert_class_loaded": true,
+                        "phpunit_runner_started": false,
+                        "loaded_phpunit_runner_classes": [],
+                        "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                    },
+                    "captured_at_utc": "2026-10-16T19:14:28+00:00"
+                },
+                "N02": {
+                    "schema_version": 1,
+                    "case_id": "N02",
+                    "measurement_status": "completed",
+                    "performance_acceptance": "not_assessed",
+                    "locale": "en_US",
+                    "timezone": "UTC",
+                    "locale_setting": "C",
+                    "seed": 4160,
+                    "warmup_seed": 4160,
+                    "seed_reset_after_warmup": true,
+                    "workload": {
+                        "fields": [
+                            "name",
+                            "email",
+                            "uuid"
+                        ],
+                        "warmup_rows": 100,
+                        "warmup_generation_calls": 300,
+                        "batch_count": 3,
+                        "rows_per_batch": 1000,
+                        "measured_rows": 3000,
+                        "validated_rows": 3000,
+                        "generation_calls": 9000,
+                        "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                        "max_retained_measured_rows": 1000
+                    },
+                    "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                    "timer": "hrtime(true)",
+                    "batch_seconds": [
+                        0.011135333,
+                        0.010710917,
+                        0.011323791
+                    ],
+                    "median_seconds": 0.011135333,
+                    "records_per_second": 89804.22947387383,
+                    "worker_validation_assertions": 27000,
+                    "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                    "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                    "memory_limit": "256M",
+                    "memory_limit_bytes": 268435456,
+                    "peak_allocated_memory_bytes": 6291456,
+                    "peak_allocated_memory_mib": 6,
+                    "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                    "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                    "worker_pid": 49867,
+                    "worker_php_binary": "/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php",
+                    "worker_php_version": "7.4.33",
+                    "framework_scope": {
+                        "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                        "composer_autoloader_loaded": true,
+                        "phpunit_assert_class_loaded": true,
+                        "phpunit_runner_started": false,
+                        "loaded_phpunit_runner_classes": [],
+                        "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                    },
+                    "captured_at_utc": "2026-10-16T19:14:28+00:00"
+                }
+            },
+            "statistics": {
+                "designed_report_cases": 24,
+                "selected_report_cases": 24,
+                "executed_report_cases": 24,
+                "phpunit_test_methods": 24,
+                "parent_phpunit_assertions": 5973,
+                "benchmark_worker_assertions": 54000,
+                "platform_executions_in_this_run": 1
+            },
+            "github": {
+                "run_id": null,
+                "run_attempt": null,
+                "sha": null,
+                "runner_os": null,
+                "runner_image": null,
+                "runner_image_version": null
+            }
+        },
+        "local-Linux": {
+            "status": "Not Run",
+            "actual": "No current full report evidence supplied",
+            "required": true,
+            "versions": null,
+            "counts": null
+        },
+        "github-Windows": {
+            "status": "Passed",
+            "actual": "GitHub Windows CI: 24/24 passed; exit 0",
+            "required": false,
+            "versions": {
+                "php": "7.4.33",
+                "phpunit": "PHPUnit 9.6.38 by Sebastian Bergmann and contributors.",
+                "faker": {
+                    "package": "fzaninotto/faker",
+                    "version": "1.9.2",
+                    "commit": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                    "src_sha256": "fc7b3e5cee6e6973db4d182c33b4006ab66e04d1f8e99967284e846760558b91"
+                },
+                "os_version": "10.0",
+                "architecture": "AMD64"
+            },
+            "counts": {
+                "total": 24,
+                "passed": 24,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+            },
+            "measurements": {
+                "N01": {
+                    "schema_version": 1,
+                    "case_id": "N01",
+                    "measurement_status": "completed",
+                    "performance_acceptance": "not_assessed",
+                    "locale": "en_US",
+                    "timezone": "UTC",
+                    "locale_setting": "C",
+                    "seed": 4160,
+                    "warmup_seed": 4160,
+                    "seed_reset_after_warmup": true,
+                    "workload": {
+                        "fields": [
+                            "name",
+                            "email",
+                            "uuid"
+                        ],
+                        "warmup_rows": 100,
+                        "warmup_generation_calls": 300,
+                        "batch_count": 3,
+                        "rows_per_batch": 1000,
+                        "measured_rows": 3000,
+                        "validated_rows": 3000,
+                        "generation_calls": 9000,
+                        "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                        "max_retained_measured_rows": 1000
+                    },
+                    "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                    "timer": "hrtime(true)",
+                    "batch_seconds": [
+                        0.0295328,
+                        0.0290971,
+                        0.0293102
+                    ],
+                    "median_seconds": 0.0293102,
+                    "records_per_second": 34117.8156409714,
+                    "worker_validation_assertions": 27000,
+                    "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                    "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                    "memory_limit": "256M",
+                    "memory_limit_bytes": 268435456,
+                    "peak_allocated_memory_bytes": 6291456,
+                    "peak_allocated_memory_mib": 6,
+                    "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                    "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                    "worker_pid": 3260,
+                    "worker_php_binary": "C:\\tools\\php\\php.exe",
+                    "worker_php_version": "7.4.33",
+                    "framework_scope": {
+                        "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                        "composer_autoloader_loaded": true,
+                        "phpunit_assert_class_loaded": true,
+                        "phpunit_runner_started": false,
+                        "loaded_phpunit_runner_classes": [],
+                        "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                    },
+                    "captured_at_utc": "2026-10-16T19:14:34+00:00"
+                },
+                "N02": {
+                    "schema_version": 1,
+                    "case_id": "N02",
+                    "measurement_status": "completed",
+                    "performance_acceptance": "not_assessed",
+                    "locale": "en_US",
+                    "timezone": "UTC",
+                    "locale_setting": "C",
+                    "seed": 4160,
+                    "warmup_seed": 4160,
+                    "seed_reset_after_warmup": true,
+                    "workload": {
+                        "fields": [
+                            "name",
+                            "email",
+                            "uuid"
+                        ],
+                        "warmup_rows": 100,
+                        "warmup_generation_calls": 300,
+                        "batch_count": 3,
+                        "rows_per_batch": 1000,
+                        "measured_rows": 3000,
+                        "validated_rows": 3000,
+                        "generation_calls": 9000,
+                        "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                        "max_retained_measured_rows": 1000
+                    },
+                    "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                    "timer": "hrtime(true)",
+                    "batch_seconds": [
+                        0.029307,
+                        0.028634,
+                        0.0292842
+                    ],
+                    "median_seconds": 0.0292842,
+                    "records_per_second": 34148.10717041954,
+                    "worker_validation_assertions": 27000,
+                    "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                    "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                    "memory_limit": "256M",
+                    "memory_limit_bytes": 268435456,
+                    "peak_allocated_memory_bytes": 6291456,
+                    "peak_allocated_memory_mib": 6,
+                    "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                    "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                    "worker_pid": 8780,
+                    "worker_php_binary": "C:\\tools\\php\\php.exe",
+                    "worker_php_version": "7.4.33",
+                    "framework_scope": {
+                        "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                        "composer_autoloader_loaded": true,
+                        "phpunit_assert_class_loaded": true,
+                        "phpunit_runner_started": false,
+                        "loaded_phpunit_runner_classes": [],
+                        "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                    },
+                    "captured_at_utc": "2026-10-16T19:14:34+00:00"
+                }
+            },
+            "statistics": {
+                "designed_report_cases": 24,
+                "selected_report_cases": 24,
+                "executed_report_cases": 24,
+                "phpunit_test_methods": 24,
+                "parent_phpunit_assertions": 5973,
+                "benchmark_worker_assertions": 54000,
+                "platform_executions_in_this_run": 1
+            },
+            "github": {
+                "run_id": "38953376535",
+                "run_attempt": "1",
+                "sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+                "runner_os": "Windows",
+                "runner_image": "win25-vs2026",
+                "runner_image_version": "20261007.264.1"
+            }
+        },
+        "github-Darwin": {
+            "status": "Passed",
+            "actual": "GitHub macOS CI: 24/24 passed; exit 0",
+            "required": false,
+            "versions": {
+                "php": "7.4.33",
+                "phpunit": "PHPUnit 9.6.38 by Sebastian Bergmann and contributors.",
+                "faker": {
+                    "package": "fzaninotto/faker",
+                    "version": "1.9.2",
+                    "commit": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                    "src_sha256": "fc7b3e5cee6e6973db4d182c33b4006ab66e04d1f8e99967284e846760558b91"
+                },
+                "os_version": "25.6.0",
+                "architecture": "arm64"
+            },
+            "counts": {
+                "total": 24,
+                "passed": 24,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+            },
+            "measurements": {
+                "N01": {
+                    "schema_version": 1,
+                    "case_id": "N01",
+                    "measurement_status": "completed",
+                    "performance_acceptance": "not_assessed",
+                    "locale": "en_US",
+                    "timezone": "UTC",
+                    "locale_setting": "C",
+                    "seed": 4160,
+                    "warmup_seed": 4160,
+                    "seed_reset_after_warmup": true,
+                    "workload": {
+                        "fields": [
+                            "name",
+                            "email",
+                            "uuid"
+                        ],
+                        "warmup_rows": 100,
+                        "warmup_generation_calls": 300,
+                        "batch_count": 3,
+                        "rows_per_batch": 1000,
+                        "measured_rows": 3000,
+                        "validated_rows": 3000,
+                        "generation_calls": 9000,
+                        "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                        "max_retained_measured_rows": 1000
+                    },
+                    "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                    "timer": "hrtime(true)",
+                    "batch_seconds": [
+                        0.023542042,
+                        0.017288708,
+                        0.027963791
+                    ],
+                    "median_seconds": 0.023542042,
+                    "records_per_second": 42477.19887680092,
+                    "worker_validation_assertions": 27000,
+                    "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                    "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                    "memory_limit": "256M",
+                    "memory_limit_bytes": 268435456,
+                    "peak_allocated_memory_bytes": 6291456,
+                    "peak_allocated_memory_mib": 6,
+                    "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                    "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                    "worker_pid": 2946,
+                    "worker_php_binary": "/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php",
+                    "worker_php_version": "7.4.33",
+                    "framework_scope": {
+                        "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                        "composer_autoloader_loaded": true,
+                        "phpunit_assert_class_loaded": true,
+                        "phpunit_runner_started": false,
+                        "loaded_phpunit_runner_classes": [],
+                        "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                    },
+                    "captured_at_utc": "2026-10-16T19:14:32+00:00"
+                },
+                "N02": {
+                    "schema_version": 1,
+                    "case_id": "N02",
+                    "measurement_status": "completed",
+                    "performance_acceptance": "not_assessed",
+                    "locale": "en_US",
+                    "timezone": "UTC",
+                    "locale_setting": "C",
+                    "seed": 4160,
+                    "warmup_seed": 4160,
+                    "seed_reset_after_warmup": true,
+                    "workload": {
+                        "fields": [
+                            "name",
+                            "email",
+                            "uuid"
+                        ],
+                        "warmup_rows": 100,
+                        "warmup_generation_calls": 300,
+                        "batch_count": 3,
+                        "rows_per_batch": 1000,
+                        "measured_rows": 3000,
+                        "validated_rows": 3000,
+                        "generation_calls": 9000,
+                        "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                        "max_retained_measured_rows": 1000
+                    },
+                    "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                    "timer": "hrtime(true)",
+                    "batch_seconds": [
+                        0.017500417,
+                        0.021688125,
+                        0.02849575
+                    ],
+                    "median_seconds": 0.021688125,
+                    "records_per_second": 46108.18132042304,
+                    "worker_validation_assertions": 27000,
+                    "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                    "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                    "memory_limit": "256M",
+                    "memory_limit_bytes": 268435456,
+                    "peak_allocated_memory_bytes": 6291456,
+                    "peak_allocated_memory_mib": 6,
+                    "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                    "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                    "worker_pid": 2957,
+                    "worker_php_binary": "/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php",
+                    "worker_php_version": "7.4.33",
+                    "framework_scope": {
+                        "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                        "composer_autoloader_loaded": true,
+                        "phpunit_assert_class_loaded": true,
+                        "phpunit_runner_started": false,
+                        "loaded_phpunit_runner_classes": [],
+                        "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                    },
+                    "captured_at_utc": "2026-10-16T19:14:33+00:00"
+                }
+            },
+            "statistics": {
+                "designed_report_cases": 24,
+                "selected_report_cases": 24,
+                "executed_report_cases": 24,
+                "phpunit_test_methods": 24,
+                "parent_phpunit_assertions": 5973,
+                "benchmark_worker_assertions": 54000,
+                "platform_executions_in_this_run": 1
+            },
+            "github": {
+                "run_id": "38953376535",
+                "run_attempt": "1",
+                "sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+                "runner_os": "macOS",
+                "runner_image": "macos26",
+                "runner_image_version": "20261013.0424.1"
+            }
+        },
+        "github-Linux": {
+            "status": "Passed",
+            "actual": "GitHub Linux CI: 24/24 passed; exit 0",
+            "required": false,
+            "versions": {
+                "php": "7.4.33",
+                "phpunit": "PHPUnit 9.6.38 by Sebastian Bergmann and contributors.",
+                "faker": {
+                    "package": "fzaninotto/faker",
+                    "version": "1.9.2",
+                    "commit": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                    "src_sha256": "fc7b3e5cee6e6973db4d182c33b4006ab66e04d1f8e99967284e846760558b91"
+                },
+                "os_version": "6.17.0-1022-azure",
+                "architecture": "x86_64"
+            },
+            "counts": {
+                "total": 24,
+                "passed": 24,
+                "failed": 0,
+                "errors": 0,
+                "skipped": 0
+            },
+            "measurements": {
+                "N01": {
+                    "schema_version": 1,
+                    "case_id": "N01",
+                    "measurement_status": "completed",
+                    "performance_acceptance": "not_assessed",
+                    "locale": "en_US",
+                    "timezone": "UTC",
+                    "locale_setting": "C",
+                    "seed": 4160,
+                    "warmup_seed": 4160,
+                    "seed_reset_after_warmup": true,
+                    "workload": {
+                        "fields": [
+                            "name",
+                            "email",
+                            "uuid"
+                        ],
+                        "warmup_rows": 100,
+                        "warmup_generation_calls": 300,
+                        "batch_count": 3,
+                        "rows_per_batch": 1000,
+                        "measured_rows": 3000,
+                        "validated_rows": 3000,
+                        "generation_calls": 9000,
+                        "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                        "max_retained_measured_rows": 1000
+                    },
+                    "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                    "timer": "hrtime(true)",
+                    "batch_seconds": [
+                        0.026879418,
+                        0.025046731,
+                        0.026943458
+                    ],
+                    "median_seconds": 0.026879418,
+                    "records_per_second": 37203.18646780225,
+                    "worker_validation_assertions": 27000,
+                    "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                    "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                    "memory_limit": "256M",
+                    "memory_limit_bytes": 268435456,
+                    "peak_allocated_memory_bytes": 6291456,
+                    "peak_allocated_memory_mib": 6,
+                    "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                    "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                    "worker_pid": 2761,
+                    "worker_php_binary": "/usr/bin/php7.4",
+                    "worker_php_version": "7.4.33",
+                    "framework_scope": {
+                        "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                        "composer_autoloader_loaded": true,
+                        "phpunit_assert_class_loaded": true,
+                        "phpunit_runner_started": false,
+                        "loaded_phpunit_runner_classes": [],
+                        "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                    },
+                    "captured_at_utc": "2026-10-16T19:14:15+00:00"
+                },
+                "N02": {
+                    "schema_version": 1,
+                    "case_id": "N02",
+                    "measurement_status": "completed",
+                    "performance_acceptance": "not_assessed",
+                    "locale": "en_US",
+                    "timezone": "UTC",
+                    "locale_setting": "C",
+                    "seed": 4160,
+                    "warmup_seed": 4160,
+                    "seed_reset_after_warmup": true,
+                    "workload": {
+                        "fields": [
+                            "name",
+                            "email",
+                            "uuid"
+                        ],
+                        "warmup_rows": 100,
+                        "warmup_generation_calls": 300,
+                        "batch_count": 3,
+                        "rows_per_batch": 1000,
+                        "measured_rows": 3000,
+                        "validated_rows": 3000,
+                        "generation_calls": 9000,
+                        "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                        "max_retained_measured_rows": 1000
+                    },
+                    "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                    "timer": "hrtime(true)",
+                    "batch_seconds": [
+                        0.025924873,
+                        0.024854562,
+                        0.027323137
+                    ],
+                    "median_seconds": 0.025924873,
+                    "records_per_second": 38572.99513096939,
+                    "worker_validation_assertions": 27000,
+                    "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                    "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                    "memory_limit": "256M",
+                    "memory_limit_bytes": 268435456,
+                    "peak_allocated_memory_bytes": 6291456,
+                    "peak_allocated_memory_mib": 6,
+                    "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                    "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                    "worker_pid": 2762,
+                    "worker_php_binary": "/usr/bin/php7.4",
+                    "worker_php_version": "7.4.33",
+                    "framework_scope": {
+                        "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                        "composer_autoloader_loaded": true,
+                        "phpunit_assert_class_loaded": true,
+                        "phpunit_runner_started": false,
+                        "loaded_phpunit_runner_classes": [],
+                        "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                    },
+                    "captured_at_utc": "2026-10-16T19:14:15+00:00"
+                }
+            },
+            "statistics": {
+                "designed_report_cases": 24,
+                "selected_report_cases": 24,
+                "executed_report_cases": 24,
+                "phpunit_test_methods": 24,
+                "parent_phpunit_assertions": 5973,
+                "benchmark_worker_assertions": 54000,
+                "platform_executions_in_this_run": 1
+            },
+            "github": {
+                "run_id": "38953376535",
+                "run_attempt": "1",
+                "sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+                "runner_os": "Linux",
+                "runner_image": "ubuntu24",
+                "runner_image_version": "20261012.334.1"
+            }
+        }
+    },
+    "case_results": {
+        "F01": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F02": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F03": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F04": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F05": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F06": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F07": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F08": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F09": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F10": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F11": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F12": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F13": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F14": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F15": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F16": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F17": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F18": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F19": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F20": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F21": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "F22": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "N01": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        },
+        "N02": {
+            "local-Windows": "Not Run",
+            "local-Darwin": "Passed",
+            "local-Linux": "Not Run",
+            "github-Windows": "Passed",
+            "github-Darwin": "Passed",
+            "github-Linux": "Passed"
+        }
+    },
+    "sources": {
+        "local-Darwin": {
+            "run_id": "20261016T191427Z-darwin-report-8fc862",
+            "summary": "results/evidence/20261016T191427Z-darwin-report-8fc862/summary.json",
+            "junit_sha256": "05cd16b7e4fa3ae3e719880a6c0443f04a0317e69a4ff80ba9cc2f2a46662165"
+        },
+        "github-Windows": {
+            "run_id": "20261016T191433Z-windows-report-e68a07",
+            "summary": "results/evidence/20261016T191433Z-windows-report-e68a07/summary.json",
+            "junit_sha256": "1cc139f05ad09ea42cb0d94e1e814cb4ba778307b49c6672345347a781782d2e"
+        },
+        "github-Darwin": {
+            "run_id": "20261016T191431Z-darwin-report-dc014e",
+            "summary": "results/evidence/20261016T191431Z-darwin-report-dc014e/summary.json",
+            "junit_sha256": "3c71d4ab5de83db72878bf8843c774f7a83d62475aa8af2521e2d4b3685c9573"
+        },
+        "github-Linux": {
+            "run_id": "20261016T191414Z-linux-report-e4575b",
+            "summary": "results/evidence/20261016T191414Z-linux-report-e4575b/summary.json",
+            "junit_sha256": "708679c587baeb6da87d6145ed32c75ffd9218b670d8246c75c2ee46c1f070b8"
+        }
+    },
+    "statistics": {
+        "designed_report_cases": 24,
+        "required_platform_executions": 3,
+        "available_platform_executions": 1,
+        "required_case_executions": 72,
+        "available_case_executions": 24
+    },
+    "comparison_policy": "Compare current report IDs/statuses, raw evidence and controlled versions within one execution context. Local Windows and GitHub Windows CI are separate. Random samples, assertion totals and performance values need not be equal across platforms. No performance acceptance criterion is defined."
+}

@@ -1,0 +1,14 @@
+{
+  "purpose": "Intentional failure-path verification, not a report N02 measurement or performance threshold. The2M limit deliberately violates the production256M configuration.",
+  "actual_exit_code": 255,
+  "measurement_published": false,
+  "expected_failure_observed": true,
+  "arguments": [
+    "/opt/homebrew/opt/php@7.4/bin/php",
+    "-d",
+    "memory_limit=2M",
+    "scripts/benchmark-worker.php",
+    "--case=N02",
+    "--output=/Users/jiaqinglyu/Desktop/Faker-Testing-Project/results/fault-check-memory-20261016/N02-must-not-exist.json"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php" colors="true" cacheResult="false" failOnWarning="true" failOnRisky="true">
+    <testsuites>
+        <testsuite name="Supplemental legacy TC checks (not report cases)">
+            <directory suffix="Test.php">tests/Supplemental</directory>
+        </testsuite>
+    </testsuites>
+    <php><ini name="date.timezone" value="UTC"/><ini name="memory_limit" value="256M"/></php>
+</phpunit>

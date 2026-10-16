@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="6" assertions="1383" errors="0" warnings="0" failures="0" skipped="0" time="0.203115">
+    <testsuite name="Report cases F01-F22 and N01-N02" tests="6" assertions="1383" errors="0" warnings="0" failures="0" skipped="0" time="0.203115">
+      <testsuite name="FakerTesting\Report\AdditionalFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/AdditionalFunctionalReportTest.php" tests="4" assertions="1300" errors="0" warnings="0" failures="0" skipped="0" time="0.012094">
+        <testcase name="testF13UtcDateRangeOneHundredSamples" class="FakerTesting\Report\AdditionalFunctionalReportTest" classname="FakerTesting.Report.AdditionalFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/AdditionalFunctionalReportTest.php" line="11" assertions="600" time="0.005360"/>
+        <testcase name="testF14UuidFormatVersionAndVariant" class="FakerTesting\Report\AdditionalFunctionalReportTest" classname="FakerTesting.Report.AdditionalFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/AdditionalFunctionalReportTest.php" line="29" assertions="200" time="0.000442"/>
+        <testcase name="testF15ReservedSafeEmailAddresses" class="FakerTesting\Report\AdditionalFunctionalReportTest" classname="FakerTesting.Report.AdditionalFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/AdditionalFunctionalReportTest.php" line="41" assertions="300" time="0.006054"/>
+        <testcase name="testF16IndependentIpv4Validation" class="FakerTesting\Report\AdditionalFunctionalReportTest" classname="FakerTesting.Report.AdditionalFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/AdditionalFunctionalReportTest.php" line="53" assertions="200" time="0.000238"/>
+      </testsuite>
+      <testsuite name="FakerTesting\Report\NonFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/NonFunctionalReportTest.php" tests="2" assertions="83" errors="0" warnings="0" failures="0" skipped="0" time="0.191021">
+        <testcase name="testN01GenerationTimingAndThroughput" class="FakerTesting\Report\NonFunctionalReportTest" classname="FakerTesting.Report.NonFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/NonFunctionalReportTest.php" line="13" assertions="37" time="0.096317">
+          <system-out>N01: batches 0.010949 / 0.010478 / 0.011132 s; median 0.010949 s; 91328.72 records/s; worker assertions 27000.
+</system-out>
+        </testcase>
+        <testcase name="testN02IsolatedAllocatedMemoryPeak" class="FakerTesting\Report\NonFunctionalReportTest" classname="FakerTesting.Report.NonFunctionalReportTest" file="/Users/jiaqinglyu/Desktop/Faker-Testing-Project/tests/Report/NonFunctionalReportTest.php" line="24" assertions="46" time="0.094704">
+          <system-out>N02: isolated worker PID 49892; PHP allocated peak 6291456 bytes (6.00 MiB); memory_limit 256M; worker assertions 27000.
+</system-out>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,47 @@
+{
+    "case_id": "F11",
+    "observed_at_utc": "2026-10-16T19:14:28+00:00",
+    "data": {
+        "seed": 740011,
+        "locale": "en_US",
+        "validated_count": 8,
+        "samples_per_count_and_mode": 1,
+        "paragraphs_per_mode": 9,
+        "separator": "\n\n",
+        "outputs": [
+            {
+                "count": 0,
+                "array_count": 0,
+                "text_paragraph_count": 0,
+                "text_bytes": 0,
+                "example": "",
+                "paired_outputs_equal": true
+            },
+            {
+                "count": 1,
+                "array_count": 1,
+                "text_paragraph_count": 1,
+                "text_bytes": 164,
+                "example": "Qui quas sed culpa commodi. Corrupti a excepturi aliquid laborum. Voluptate temporibus ipsam excepturi neque aut. Numquam ea aut provident adipisci doloribus iusto.",
+                "paired_outputs_equal": true
+            },
+            {
+                "count": 3,
+                "array_count": 3,
+                "text_paragraph_count": 3,
+                "text_bytes": 438,
+                "example": "Qui quas sed culpa commodi. Corrupti a excepturi aliquid laborum. Voluptate temporibus ipsam excepturi neque aut. Numquam ea aut provident adipisci doloribus iusto.",
+                "paired_outputs_equal": true
+            },
+            {
+                "count": 5,
+                "array_count": 5,
+                "text_paragraph_count": 5,
+                "text_bytes": 651,
+                "example": "Qui quas sed culpa commodi. Corrupti a excepturi aliquid laborum. Voluptate temporibus ipsam excepturi neque aut. Numquam ea aut provident adipisci doloribus iusto.",
+                "paired_outputs_equal": true
+            }
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

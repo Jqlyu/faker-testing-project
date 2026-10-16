@@ -1,0 +1,9 @@
+PHPUnit 9.6.38 by Sebastian Bergmann and contributors.
+
+.......................N01: batches 0.021315 / 0.020757 / 0.021005 s; median 0.021005 s; 47607.49 records/s; worker assertions 27000.
+.                                          24 / 24 (100%)N02: isolated worker PID 3584; PHP allocated peak 6291456 bytes (6.00 MiB); memory_limit 256M; worker assertions 27000.
+
+
+Time: 00:00.347, Memory: 8.00 MB
+
+OK (24 tests, 5973 assertions)

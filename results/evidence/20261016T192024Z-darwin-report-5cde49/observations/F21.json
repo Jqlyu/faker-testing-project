@@ -1,0 +1,32 @@
+{
+    "case_id": "F21",
+    "observed_at_utc": "2026-10-16T19:20:25+00:00",
+    "data": {
+        "seed": 4160,
+        "pattern": "INV-##??",
+        "validated_count": 20,
+        "values": [
+            "INV-79rm",
+            "INV-00rc",
+            "INV-49gu",
+            "INV-03gi",
+            "INV-39fc",
+            "INV-72yb",
+            "INV-41og",
+            "INV-68ab",
+            "INV-04cp",
+            "INV-25nt",
+            "INV-76er",
+            "INV-24wy",
+            "INV-59de",
+            "INV-70nq",
+            "INV-72mb",
+            "INV-45ld",
+            "INV-65no",
+            "INV-01hy",
+            "INV-59dg",
+            "INV-98ue"
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

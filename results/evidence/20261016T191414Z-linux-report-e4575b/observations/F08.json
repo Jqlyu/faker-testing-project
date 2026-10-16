@@ -1,0 +1,94 @@
+{
+    "case_id": "F08",
+    "observed_at_utc": "2026-10-16T19:14:14+00:00",
+    "data": {
+        "seed": 740008,
+        "locale": "en_US",
+        "source": [
+            "alpha",
+            "beta",
+            "gamma",
+            "delta",
+            "epsilon"
+        ],
+        "validated_count": 7,
+        "expected_exception_count": 1,
+        "selections": [
+            {
+                "count": 0,
+                "allow_duplicates": false,
+                "selection": [],
+                "distinct_count": 0
+            },
+            {
+                "count": 3,
+                "allow_duplicates": false,
+                "selection": [
+                    "gamma",
+                    "alpha",
+                    "beta"
+                ],
+                "distinct_count": 3
+            },
+            {
+                "count": 5,
+                "allow_duplicates": false,
+                "selection": [
+                    "gamma",
+                    "delta",
+                    "epsilon",
+                    "beta",
+                    "alpha"
+                ],
+                "distinct_count": 5
+            },
+            {
+                "count": 6,
+                "allow_duplicates": false,
+                "exception": "LengthException"
+            },
+            {
+                "count": 0,
+                "allow_duplicates": true,
+                "selection": [],
+                "distinct_count": 0
+            },
+            {
+                "count": 3,
+                "allow_duplicates": true,
+                "selection": [
+                    "delta",
+                    "delta",
+                    "beta"
+                ],
+                "distinct_count": 2
+            },
+            {
+                "count": 5,
+                "allow_duplicates": true,
+                "selection": [
+                    "epsilon",
+                    "beta",
+                    "beta",
+                    "delta",
+                    "alpha"
+                ],
+                "distinct_count": 4
+            },
+            {
+                "count": 6,
+                "allow_duplicates": true,
+                "selection": [
+                    "epsilon",
+                    "alpha",
+                    "alpha",
+                    "epsilon",
+                    "alpha",
+                    "gamma"
+                ],
+                "distinct_count": 3
+            }
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}
