@@ -38,9 +38,11 @@ PHP 7.4.33、Composer 2.10.3、PHPUnit 9.6.38、固定 lock 和 Faker commit 是
 
 ## Entry, completion and evidence
 
-进入条件为兼容 PHP/扩展、工具 SHA256 验证、lock 安装及平台要求检查成功。完整报告运行需 24 个 F/N 身份全部执行、报告齐全，且按其各自条件判定；筛选六项/单项不能声明完成 24 项。新报告套件的实际运行数据在生成前保持待执行，不继承旧 TC 或 PDF 的通过数。
+进入条件为兼容 PHP/扩展、工具 SHA256 验证、lock 安装及平台要求检查成功。完整报告运行需 24 个 F/N 身份全部执行、报告齐全，且按其各自条件判定；筛选六项/单项不能声明完成 24 项。本次 [20261016T192024Z-darwin-report-5cde49](../results/evidence/20261016T192024Z-darwin-report-5cde49/summary.json) 已在 local-Darwin 完成 24/24 Passed，5973 个父 PHPUnit 断言、另有 54000 个子 worker 校验断言；这是新执行，不继承旧 TC 或 PDF 的通过数。
 
 跨平台完成需三份来自实际 Windows/macOS/Linux 的完整同基线报告，并通过比较。比较默认 `--context=github-actions`，本机设备使用 `--context=local-device`；六个 local-/github- 平台上下文分别显示，同一比较只要求一个 context 的三个 OS。CI 还需同一 workflow run/commit，不能与本机结果拼接。缺失的用例/平台为 Not Run，运行中断或损坏报告无法确认的计数为 null；失败/错误及非零退出码全部保留。对每个结论引用明确 run ID/context，父 PHPUnit 断言与子 worker 断言分别统计，证据归档不覆盖旧结果。
+
+本次 [CI run 38954165253](https://github.com/Jqlyu/faker-testing-project/actions/runs/38954165253) 的三个 OS 已各完成 24/24，通过同 context 的比较和下载后重新比较。它满足 github-actions 口径的本次完成条件：24 个逻辑 ID、3 次平台执行、72 次用例执行；原生 local-Windows/local-Linux 仍为 Not Run，local-device 三平台条件尚未满足。全部原始证据与下载 provenance 见 [当前证据索引](../results/evidence/REPORT_ALIGNMENT_20261016.md)。
 
 ## Risks
 

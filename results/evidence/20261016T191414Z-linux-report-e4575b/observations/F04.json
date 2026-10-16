@@ -1,0 +1,110 @@
+{
+    "case_id": "F04",
+    "observed_at_utc": "2026-10-16T19:14:14+00:00",
+    "data": {
+        "seed": 740004,
+        "locale": "en_US",
+        "validated_count": 160,
+        "samples_per_partition": 20,
+        "partitions": {
+            "positive": {
+                "inputs": [
+                    1,
+                    100
+                ],
+                "validated_count": 20,
+                "examples": [
+                    74,
+                    55,
+                    22
+                ]
+            },
+            "negative": {
+                "inputs": [
+                    -100,
+                    -1
+                ],
+                "validated_count": 20,
+                "examples": [
+                    -12,
+                    -13,
+                    -92
+                ]
+            },
+            "signed": {
+                "inputs": [
+                    -10,
+                    10
+                ],
+                "validated_count": 20,
+                "examples": [
+                    1,
+                    -6,
+                    8
+                ]
+            },
+            "zero_singleton": {
+                "inputs": [
+                    0,
+                    0
+                ],
+                "validated_count": 20,
+                "examples": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "positive_singleton": {
+                "inputs": [
+                    42,
+                    42
+                ],
+                "validated_count": 20,
+                "examples": [
+                    42,
+                    42,
+                    42
+                ]
+            },
+            "reversed": {
+                "inputs": [
+                    100,
+                    1
+                ],
+                "validated_count": 20,
+                "examples": [
+                    8,
+                    79,
+                    17
+                ]
+            },
+            "minimum_singleton": {
+                "inputs": [
+                    -9223372036854775808,
+                    -9223372036854775808
+                ],
+                "validated_count": 20,
+                "examples": [
+                    -9223372036854775808,
+                    -9223372036854775808,
+                    -9223372036854775808
+                ]
+            },
+            "maximum_singleton": {
+                "inputs": [
+                    9223372036854775807,
+                    9223372036854775807
+                ],
+                "validated_count": 20,
+                "examples": [
+                    9223372036854775807,
+                    9223372036854775807,
+                    9223372036854775807
+                ]
+            }
+        },
+        "integer_size_bytes": 8
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

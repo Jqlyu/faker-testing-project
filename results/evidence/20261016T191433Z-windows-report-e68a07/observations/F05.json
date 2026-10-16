@@ -1,0 +1,45 @@
+{
+    "case_id": "F05",
+    "observed_at_utc": "2026-10-16T19:14:34+00:00",
+    "data": {
+        "seed": 740005,
+        "locale": "fi_FI",
+        "validated_count": 100,
+        "pinned_states": [
+            "Ahvenanmaa",
+            "Etelä-Karjala",
+            "Etelä-Pohjanmaa",
+            "Etelä-Savo",
+            "Kainuu",
+            "Kanta-Häme",
+            "Keski-Pohjanmaa",
+            "Keski-Suomi",
+            "Kymenlaakso",
+            "Lappi",
+            "Pirkanmaa",
+            "Pohjanmaa",
+            "Pohjois-Karjala",
+            "Pohjois-Pohjanmaa",
+            "Pohjois-Savo",
+            "Päijät-Häme",
+            "Satakunta",
+            "Uusimaa",
+            "Varsinais-Suomi"
+        ],
+        "examples": [
+            {
+                "postcode": "94925",
+                "state": "Etelä-Pohjanmaa"
+            },
+            {
+                "postcode": "01807",
+                "state": "Ahvenanmaa"
+            },
+            {
+                "postcode": "29322",
+                "state": "Keski-Suomi"
+            }
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

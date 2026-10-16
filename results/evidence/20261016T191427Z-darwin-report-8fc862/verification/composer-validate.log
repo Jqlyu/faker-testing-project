@@ -1,0 +1,4 @@
+./composer.json is valid, but with a few warnings
+See https://getcomposer.org/doc/04-schema.md for details on the schema
+# General warnings
+- require.fzaninotto/faker : exact version constraints (1.9.2) should be avoided if the package follows semantic versioning

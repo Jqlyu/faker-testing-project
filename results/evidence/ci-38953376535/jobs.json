@@ -1,0 +1,421 @@
+{
+  "total_count": 4,
+  "jobs": [
+    {
+      "id": 117150061739,
+      "run_id": 38953376535,
+      "workflow_name": "Faker cross-platform report tests",
+      "head_branch": "codex/report-case-alignment",
+      "run_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/runs/38953376535",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVJ5i-M8AAAAbRrAUqw",
+      "head_sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+      "url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/jobs/117150061739",
+      "html_url": "https://github.com/Jqlyu/faker-testing-project/actions/runs/38953376535/job/117150061739",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-16T19:13:59Z",
+      "started_at": "2026-10-16T19:14:01Z",
+      "completed_at": "2026-10-16T19:14:45Z",
+      "name": "F01-F22 and N01-N02 (windows-latest)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-16T19:14:02Z",
+          "completed_at": "2026-10-16T19:14:03Z"
+        },
+        {
+          "name": "Checkout test project",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-16T19:14:03Z",
+          "completed_at": "2026-10-16T19:14:08Z"
+        },
+        {
+          "name": "Set up the same PHP version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-16T19:14:08Z",
+          "completed_at": "2026-10-16T19:14:23Z"
+        },
+        {
+          "name": "Download and verify pinned tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-16T19:14:23Z",
+          "completed_at": "2026-10-16T19:14:25Z"
+        },
+        {
+          "name": "Install exact locked dependencies and check real platform requirements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-16T19:14:25Z",
+          "completed_at": "2026-10-16T19:14:32Z"
+        },
+        {
+          "name": "Execute all 24 report cases and capture current platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-16T19:14:32Z",
+          "completed_at": "2026-10-16T19:14:35Z"
+        },
+        {
+          "name": "Verify reporting and comparison infrastructure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-16T19:14:35Z",
+          "completed_at": "2026-10-16T19:14:41Z"
+        },
+        {
+          "name": "Upload this platform's logs and reports even on failure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-16T19:14:41Z",
+          "completed_at": "2026-10-16T19:14:42Z"
+        },
+        {
+          "name": "Post Checkout test project",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-16T19:14:42Z",
+          "completed_at": "2026-10-16T19:14:44Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-16T19:14:44Z",
+          "completed_at": "2026-10-16T19:14:44Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/check-runs/117150061739",
+      "labels": [
+        "windows-latest"
+      ],
+      "runner_id": 1000000017,
+      "runner_name": "GitHub Actions 1000000017",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117150062033,
+      "run_id": 38953376535,
+      "workflow_name": "Faker cross-platform report tests",
+      "head_branch": "codex/report-case-alignment",
+      "run_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/runs/38953376535",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVJ5i-M8AAAAbRrAV0Q",
+      "head_sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+      "url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/jobs/117150062033",
+      "html_url": "https://github.com/Jqlyu/faker-testing-project/actions/runs/38953376535/job/117150062033",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-16T19:13:59Z",
+      "started_at": "2026-10-16T19:14:12Z",
+      "completed_at": "2026-10-16T19:14:42Z",
+      "name": "F01-F22 and N01-N02 (macos-latest)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-16T19:14:12Z",
+          "completed_at": "2026-10-16T19:14:13Z"
+        },
+        {
+          "name": "Checkout test project",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-16T19:14:13Z",
+          "completed_at": "2026-10-16T19:14:15Z"
+        },
+        {
+          "name": "Set up the same PHP version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-16T19:14:15Z",
+          "completed_at": "2026-10-16T19:14:23Z"
+        },
+        {
+          "name": "Download and verify pinned tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-16T19:14:23Z",
+          "completed_at": "2026-10-16T19:14:24Z"
+        },
+        {
+          "name": "Install exact locked dependencies and check real platform requirements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-16T19:14:24Z",
+          "completed_at": "2026-10-16T19:14:31Z"
+        },
+        {
+          "name": "Execute all 24 report cases and capture current platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-16T19:14:31Z",
+          "completed_at": "2026-10-16T19:14:33Z"
+        },
+        {
+          "name": "Verify reporting and comparison infrastructure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-16T19:14:33Z",
+          "completed_at": "2026-10-16T19:14:38Z"
+        },
+        {
+          "name": "Upload this platform's logs and reports even on failure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-16T19:14:38Z",
+          "completed_at": "2026-10-16T19:14:39Z"
+        },
+        {
+          "name": "Post Checkout test project",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-16T19:14:39Z",
+          "completed_at": "2026-10-16T19:14:40Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-16T19:14:40Z",
+          "completed_at": "2026-10-16T19:14:40Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/check-runs/117150062033",
+      "labels": [
+        "macos-latest"
+      ],
+      "runner_id": 1000000019,
+      "runner_name": "GitHub Actions 1000000019",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117150062037,
+      "run_id": 38953376535,
+      "workflow_name": "Faker cross-platform report tests",
+      "head_branch": "codex/report-case-alignment",
+      "run_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/runs/38953376535",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVJ5i-M8AAAAbRrAV1Q",
+      "head_sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+      "url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/jobs/117150062037",
+      "html_url": "https://github.com/Jqlyu/faker-testing-project/actions/runs/38953376535/job/117150062037",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-16T19:13:59Z",
+      "started_at": "2026-10-16T19:14:02Z",
+      "completed_at": "2026-10-16T19:14:22Z",
+      "name": "F01-F22 and N01-N02 (ubuntu-latest)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-16T19:14:03Z",
+          "completed_at": "2026-10-16T19:14:04Z"
+        },
+        {
+          "name": "Checkout test project",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-16T19:14:04Z",
+          "completed_at": "2026-10-16T19:14:05Z"
+        },
+        {
+          "name": "Set up the same PHP version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-16T19:14:05Z",
+          "completed_at": "2026-10-16T19:14:10Z"
+        },
+        {
+          "name": "Download and verify pinned tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-16T19:14:10Z",
+          "completed_at": "2026-10-16T19:14:11Z"
+        },
+        {
+          "name": "Install exact locked dependencies and check real platform requirements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-16T19:14:11Z",
+          "completed_at": "2026-10-16T19:14:14Z"
+        },
+        {
+          "name": "Execute all 24 report cases and capture current platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-16T19:14:14Z",
+          "completed_at": "2026-10-16T19:14:15Z"
+        },
+        {
+          "name": "Verify reporting and comparison infrastructure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-16T19:14:15Z",
+          "completed_at": "2026-10-16T19:14:17Z"
+        },
+        {
+          "name": "Upload this platform's logs and reports even on failure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-16T19:14:17Z",
+          "completed_at": "2026-10-16T19:14:19Z"
+        },
+        {
+          "name": "Post Checkout test project",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-16T19:14:19Z",
+          "completed_at": "2026-10-16T19:14:20Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-16T19:14:20Z",
+          "completed_at": "2026-10-16T19:14:20Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/check-runs/117150062037",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000018,
+      "runner_name": "GitHub Actions 1000000018",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117150389354,
+      "run_id": 38953376535,
+      "workflow_name": "Faker cross-platform report tests",
+      "head_branch": "codex/report-case-alignment",
+      "run_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/runs/38953376535",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVJ5i-M8AAAAbRrUUag",
+      "head_sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+      "url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/jobs/117150389354",
+      "html_url": "https://github.com/Jqlyu/faker-testing-project/actions/runs/38953376535/job/117150389354",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-16T19:14:45Z",
+      "started_at": "2026-10-16T19:14:48Z",
+      "completed_at": "2026-10-16T19:15:00Z",
+      "name": "Compare GitHub Actions results from three operating systems",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-16T19:14:49Z",
+          "completed_at": "2026-10-16T19:14:50Z"
+        },
+        {
+          "name": "Checkout comparison script",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-16T19:14:50Z",
+          "completed_at": "2026-10-16T19:14:51Z"
+        },
+        {
+          "name": "Set up PHP",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-16T19:14:51Z",
+          "completed_at": "2026-10-16T19:14:55Z"
+        },
+        {
+          "name": "Download all available OS reports",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-16T19:14:55Z",
+          "completed_at": "2026-10-16T19:14:56Z"
+        },
+        {
+          "name": "Require complete and consistent GitHub Actions report results",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-16T19:14:56Z",
+          "completed_at": "2026-10-16T19:14:56Z"
+        },
+        {
+          "name": "Upload comparison evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-16T19:14:56Z",
+          "completed_at": "2026-10-16T19:14:57Z"
+        },
+        {
+          "name": "Post Checkout comparison script",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-16T19:14:57Z",
+          "completed_at": "2026-10-16T19:14:58Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-16T19:14:58Z",
+          "completed_at": "2026-10-16T19:14:58Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/check-runs/117150389354",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000021,
+      "runner_name": "GitHub Actions 1000000021",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

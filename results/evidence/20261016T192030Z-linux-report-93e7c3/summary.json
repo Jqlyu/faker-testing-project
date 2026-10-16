@@ -1,0 +1,1861 @@
+{
+    "schema_version": 2,
+    "run_id": "20261016T192030Z-linux-report-93e7c3",
+    "suite": "report",
+    "filter": null,
+    "tester_selection": null,
+    "selected_case_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16",
+        "F17",
+        "F18",
+        "F19",
+        "F20",
+        "F21",
+        "F22",
+        "N01",
+        "N02"
+    ],
+    "full_report_run": true,
+    "started_at_utc": "2026-10-16T19:20:30+00:00",
+    "status": "Passed",
+    "exit_code": 0,
+    "phpunit_exit_code": 0,
+    "counts": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+    },
+    "cases": [
+        {
+            "id": "F13",
+            "name": "testF13UtcDateRangeOneHundredSamples",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 600,
+            "seconds": 0.008437
+        },
+        {
+            "id": "F14",
+            "name": "testF14UuidFormatVersionAndVariant",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 200,
+            "seconds": 0.000644
+        },
+        {
+            "id": "F15",
+            "name": "testF15ReservedSafeEmailAddresses",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 300,
+            "seconds": 0.303607
+        },
+        {
+            "id": "F16",
+            "name": "testF16IndependentIpv4Validation",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 200,
+            "seconds": 0.00038
+        },
+        {
+            "id": "F17",
+            "name": "testF17TenUniqueRandomDigits",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 52,
+            "seconds": 0.000701
+        },
+        {
+            "id": "F18",
+            "name": "testF18CorrectedOptionalWeightDesign",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 208,
+            "seconds": 0.000473
+        },
+        {
+            "id": "F19",
+            "name": "testF19ValidEvenRandomDigits",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 120,
+            "seconds": 0.000471
+        },
+        {
+            "id": "F20",
+            "name": "testF20Seed1234ReplaysTenRandomDigits",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 103,
+            "seconds": 0.000386
+        },
+        {
+            "id": "F21",
+            "name": "testF21BothifyInvoicePattern",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 40,
+            "seconds": 0.000204
+        },
+        {
+            "id": "F22",
+            "name": "testF22TwentyDatesWithReportDateOnlyEndpoints",
+            "class": "FakerTesting\\Report\\AdditionalFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 100,
+            "seconds": 0.00049
+        },
+        {
+            "id": "F01",
+            "name": "testF01NamesAndSeededReplay",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 182,
+            "seconds": 0.001102
+        },
+        {
+            "id": "F02",
+            "name": "testF02SafeEmailSyntaxAndReservedDomains",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 300,
+            "seconds": 0.002218
+        },
+        {
+            "id": "F03",
+            "name": "testF03UtcDateBoundariesAndRejectedReversal",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 604,
+            "seconds": 0.003112
+        },
+        {
+            "id": "F04",
+            "name": "testF04IntegerBoundaryPartitions",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 880,
+            "seconds": 0.001406
+        },
+        {
+            "id": "F05",
+            "name": "testF05FinnishPostcodeAndPinnedStates",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 400,
+            "seconds": 0.001368
+        },
+        {
+            "id": "F06",
+            "name": "testF06UuidVersionVariantAndSampleDiversity",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 201,
+            "seconds": 0.000503
+        },
+        {
+            "id": "F07",
+            "name": "testF07RegexifyMatchesThreePatterns",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 300,
+            "seconds": 0.002053
+        },
+        {
+            "id": "F08",
+            "name": "testF08RandomElementsCountsDuplicatesAndOversizedSelection",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 41,
+            "seconds": 0.000174
+        },
+        {
+            "id": "F09",
+            "name": "testF09Ipv4AndIpv6PassIndependentValidation",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 400,
+            "seconds": 0.000596
+        },
+        {
+            "id": "F10",
+            "name": "testF10CreditCardFormatsAndIndependentLuhnChecksum",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 300,
+            "seconds": 0.000976
+        },
+        {
+            "id": "F11",
+            "name": "testF11ParagraphCountsAndTextSeparators",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 57,
+            "seconds": 0.000512
+        },
+        {
+            "id": "F12",
+            "name": "testF12Ean13FormatChecksumAndValidatorControls",
+            "class": "FakerTesting\\Report\\FirstFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 302,
+            "seconds": 0.000669
+        },
+        {
+            "id": "N01",
+            "name": "testN01GenerationTimingAndThroughput",
+            "class": "FakerTesting\\Report\\NonFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 37,
+            "seconds": 0.179364
+        },
+        {
+            "id": "N02",
+            "name": "testN02IsolatedAllocatedMemoryPeak",
+            "class": "FakerTesting\\Report\\NonFunctionalReportTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 46,
+            "seconds": 0.172371
+        }
+    ],
+    "observations": {
+        "F13": {
+            "case_id": "F13",
+            "observed_at_utc": "2026-10-16T19:20:30+00:00",
+            "data": {
+                "seed": 4160,
+                "validated_count": 100,
+                "start": "2020-01-01T00:00:00+00:00",
+                "end": "2020-12-31T23:59:59+00:00",
+                "values": [
+                    "2020-10-19 05:47:30 UTC",
+                    "2020-08-28 14:29:51 UTC",
+                    "2020-06-20 18:26:33 UTC",
+                    "2020-01-01 12:57:30 UTC",
+                    "2020-09-09 20:20:25 UTC",
+                    "2020-02-09 18:14:28 UTC",
+                    "2020-06-30 09:08:09 UTC",
+                    "2020-03-26 05:45:02 UTC",
+                    "2020-10-17 16:45:16 UTC",
+                    "2020-01-14 19:42:12 UTC",
+                    "2020-03-28 01:55:07 UTC",
+                    "2020-05-03 05:45:49 UTC",
+                    "2020-05-25 15:30:19 UTC",
+                    "2020-03-25 06:45:58 UTC",
+                    "2020-02-09 17:56:27 UTC",
+                    "2020-09-22 06:18:26 UTC",
+                    "2020-12-16 22:44:29 UTC",
+                    "2020-01-18 22:17:35 UTC",
+                    "2020-05-30 23:05:46 UTC",
+                    "2020-07-19 19:44:20 UTC",
+                    "2020-03-29 21:48:57 UTC",
+                    "2020-09-08 06:46:14 UTC",
+                    "2020-01-14 00:02:54 UTC",
+                    "2020-01-20 06:20:55 UTC",
+                    "2020-01-17 08:34:58 UTC",
+                    "2020-01-31 20:53:22 UTC",
+                    "2020-08-01 04:49:14 UTC",
+                    "2020-04-03 15:35:30 UTC",
+                    "2020-07-05 18:10:29 UTC",
+                    "2020-09-27 20:24:36 UTC",
+                    "2020-10-05 15:40:21 UTC",
+                    "2020-03-08 05:48:47 UTC",
+                    "2020-09-04 12:10:15 UTC",
+                    "2020-04-01 00:38:45 UTC",
+                    "2020-11-15 15:08:28 UTC",
+                    "2020-12-11 03:30:49 UTC",
+                    "2020-08-06 01:35:41 UTC",
+                    "2020-02-22 21:03:38 UTC",
+                    "2020-03-04 10:27:55 UTC",
+                    "2020-09-14 14:09:35 UTC",
+                    "2020-07-12 22:25:41 UTC",
+                    "2020-08-24 01:29:15 UTC",
+                    "2020-09-22 22:15:27 UTC",
+                    "2020-07-01 05:34:57 UTC",
+                    "2020-01-15 17:51:00 UTC",
+                    "2020-06-16 21:11:23 UTC",
+                    "2020-06-14 05:25:19 UTC",
+                    "2020-02-23 04:42:25 UTC",
+                    "2020-08-28 22:25:45 UTC",
+                    "2020-07-12 07:25:12 UTC",
+                    "2020-07-29 02:16:44 UTC",
+                    "2020-01-05 06:12:53 UTC",
+                    "2020-04-12 15:18:08 UTC",
+                    "2020-12-16 15:04:53 UTC",
+                    "2020-08-07 01:52:23 UTC",
+                    "2020-02-20 11:33:12 UTC",
+                    "2020-03-28 19:20:21 UTC",
+                    "2020-12-25 00:57:19 UTC",
+                    "2020-10-13 15:47:26 UTC",
+                    "2020-03-02 08:25:19 UTC",
+                    "2020-03-21 22:25:27 UTC",
+                    "2020-01-24 13:53:11 UTC",
+                    "2020-12-31 07:23:45 UTC",
+                    "2020-09-05 21:17:22 UTC",
+                    "2020-07-04 15:52:42 UTC",
+                    "2020-07-19 03:13:16 UTC",
+                    "2020-07-13 03:24:54 UTC",
+                    "2020-12-01 23:11:09 UTC",
+                    "2020-07-07 18:16:39 UTC",
+                    "2020-02-22 19:45:46 UTC",
+                    "2020-01-13 14:28:36 UTC",
+                    "2020-02-29 06:46:22 UTC",
+                    "2020-07-05 03:48:15 UTC",
+                    "2020-02-06 19:46:01 UTC",
+                    "2020-06-06 20:19:27 UTC",
+                    "2020-08-06 18:16:03 UTC",
+                    "2020-10-28 15:02:24 UTC",
+                    "2020-02-07 07:59:19 UTC",
+                    "2020-11-09 10:22:06 UTC",
+                    "2020-03-07 00:40:41 UTC",
+                    "2020-08-09 01:33:00 UTC",
+                    "2020-05-26 10:18:53 UTC",
+                    "2020-10-30 20:37:24 UTC",
+                    "2020-05-31 23:04:47 UTC",
+                    "2020-07-25 18:00:05 UTC",
+                    "2020-06-03 18:28:27 UTC",
+                    "2020-08-29 22:55:34 UTC",
+                    "2020-08-31 11:04:04 UTC",
+                    "2020-12-18 04:46:42 UTC",
+                    "2020-08-17 05:20:11 UTC",
+                    "2020-10-14 02:31:51 UTC",
+                    "2020-01-24 13:53:21 UTC",
+                    "2020-11-15 23:21:21 UTC",
+                    "2020-10-11 09:50:39 UTC",
+                    "2020-06-25 18:37:07 UTC",
+                    "2020-10-10 11:36:58 UTC",
+                    "2020-06-11 09:19:48 UTC",
+                    "2020-09-16 08:45:31 UTC",
+                    "2020-06-05 04:59:31 UTC",
+                    "2020-01-31 21:14:41 UTC"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F14": {
+            "case_id": "F14",
+            "observed_at_utc": "2026-10-16T19:20:30+00:00",
+            "data": {
+                "seed": 4160,
+                "validated_count": 100,
+                "version": 3,
+                "variant": "RFC 4122",
+                "values": [
+                    "e2898011-51d2-35a5-bd18-ad4b335e502b",
+                    "8ba6d1ee-c190-3629-b071-33b90f499b2a",
+                    "291bf121-c9a6-3cb7-8e7a-0ce2dd805d1e",
+                    "daee557d-d99e-3bda-a819-46ec1b5354f3",
+                    "d48b7210-cc8b-35bf-85eb-f26934ce8c1c",
+                    "c6db657a-8029-3061-9f6a-f373025c60db",
+                    "50d62af3-8ad3-367c-8218-894024ad80de",
+                    "f338d8bd-2f66-3e79-80c8-d6a4f161f2e3",
+                    "133ad756-0b6d-3fa6-8efc-64f447ecc393",
+                    "845a4d05-9bdf-3be7-ab60-e06588ba5818",
+                    "c66ac3b2-1cd7-312a-900b-2e44c4b2dc1d",
+                    "03b1b285-7e3d-313e-92ad-0c5510c596bb",
+                    "f3646bf2-2df9-3217-9655-3921c9e8705d",
+                    "09837dbf-b99e-361e-96b1-5be312209b39",
+                    "a8173407-a287-3332-a333-d5c593adbdb3",
+                    "d8c82b6b-9190-3e53-9744-6be912211f6c",
+                    "141ff39d-19e3-3d19-98ba-09b3511a9487",
+                    "ac78f643-d18f-3d78-8dbe-59e949e3b7c3",
+                    "de6c674b-c2f4-3202-b8cb-fd94034c6b4a",
+                    "74de37c5-d970-3cae-a3a3-af1d8ef41cab",
+                    "74b9338b-5a6c-3edc-901c-17e1dbc424ba",
+                    "cd44c552-f41b-3e94-895a-15d4d502759c",
+                    "7f512b97-4acf-3636-81c7-293c5a9faca4",
+                    "b5b6368c-c8a3-379a-a546-172ebeded85a",
+                    "f9c20fa8-d000-3d9e-9b6a-6b99654b3633",
+                    "bd8e7bec-8da1-35d1-ae2c-1582e9579c47",
+                    "858601f3-2609-36bb-8f66-82565370f4df",
+                    "96f09445-5caf-3609-8978-4a35964e40f9",
+                    "8e59b8af-6f23-3cb2-bf04-78a92c381263",
+                    "4e0a7747-21f3-319b-8088-8a092f974469",
+                    "0a3f0d1e-36e3-315c-a0ee-9c846382a3e4",
+                    "877bb2d1-d440-3907-988f-1523cc816ef8",
+                    "25c7cd57-7975-3703-a877-63a1d72b6b39",
+                    "0d409377-36a1-3e4f-959c-218d4ca4b9ad",
+                    "7d25af74-6d31-3e02-a459-05938103ff15",
+                    "06d62546-b86b-36aa-8228-a311aad8c814",
+                    "402d3a44-e571-32d5-9bf3-0b85f147deba",
+                    "55f7cb4b-bef9-3a6d-8dca-092325882576",
+                    "f26b850b-7bea-3a10-836a-e3ec52553ce5",
+                    "a9ad3bdd-1609-346d-a51e-da30de6ce08b",
+                    "f4c394c1-c762-3177-919f-d8b70e5d3e75",
+                    "c24b8321-7477-387b-a3de-03c3df413aaa",
+                    "971f906d-184d-331c-ac76-529ca370afe5",
+                    "795ad43b-d57c-3cba-b926-747bf4ce6d98",
+                    "93de4f6a-8ba1-36cb-b5d9-bebd7d2835c4",
+                    "3a9919d1-d1d7-3aa5-95e6-dce53f258ab0",
+                    "b08bd0a2-86af-3529-ad6f-21d59b58d03c",
+                    "975cd100-9ff3-3b4f-9b0c-004fee4c2f9c",
+                    "fe973157-6e81-31a5-ac72-c85621d75daa",
+                    "01d6ec77-8161-38d5-a8d5-58d28b0ae0e9",
+                    "39562e75-479c-3043-a693-7d1254962861",
+                    "b401630a-28f7-3bce-bd86-1fcc98018128",
+                    "a164cbbb-e5d6-3da7-83cb-b256e10440a5",
+                    "798d135a-d5ac-3df8-8448-11586dcc4c84",
+                    "63400a4b-ab62-3289-9642-3aef026582af",
+                    "4003846e-2a09-3739-b3e7-934812404ca7",
+                    "469798d0-d5f0-3228-b3e6-ccc636b03b73",
+                    "6f48ae31-631f-3c0d-9b2d-016df1511519",
+                    "9b2c1979-f12e-322c-9967-0eb1e6f54783",
+                    "d8eb9e36-7aaa-3913-b8bc-acc6bad309e7",
+                    "38f8c376-b742-367f-ad47-c022bd9411ce",
+                    "adea265c-ff63-3d45-bd2b-6977779a5a5b",
+                    "5889520b-c27b-30c9-a955-8647b320bc16",
+                    "017b01bb-e18f-3f4a-99f4-0b2b3de91716",
+                    "07510063-d616-3a2a-b800-554ef6c717c3",
+                    "1d01e792-520b-313b-b346-4fff07e5591a",
+                    "5ed03f3c-a33d-3863-8949-a2f36de23183",
+                    "97cd58b8-0b93-3622-927c-dae8155d2431",
+                    "1357ad39-2604-3ee2-962f-16db969b5eeb",
+                    "34c9ddff-4405-3447-aa4e-5f78bb64326b",
+                    "05049a80-ae75-3b76-8e38-cec88adc40db",
+                    "f3ce3545-6ad0-389d-a6f8-48afb85ca686",
+                    "917a3fc3-31ef-3362-8ede-775d846a1de7",
+                    "bac70f8b-dc0d-35f5-9dd3-56bfae1b267c",
+                    "a96f9543-b8fe-3683-9731-b6e1af8f616d",
+                    "2c42a955-f80a-3dcf-8036-027155dac0c3",
+                    "5cf5317a-cd28-3c1d-93ea-c9f3e1f7f82d",
+                    "3a32fd1a-68c4-3b3d-aa26-c4762cb63d12",
+                    "5a7593db-7985-3f6c-b754-a48129e440a1",
+                    "60ed8b0b-8fdb-3e5f-b3da-835312cfe08e",
+                    "948e62de-7b40-3a1d-bfc8-e3a6d59cc4a9",
+                    "bd5bf742-7dd8-3018-a573-e104662c52a0",
+                    "b6edc7c4-21d2-33fd-baa0-6707dd330ba1",
+                    "c69aa8d8-4bce-35a3-aa75-708948c44b16",
+                    "2b879055-07c2-3e48-b615-c9ab27c76051",
+                    "8726c917-151e-35fb-8064-1b704f6d5ae3",
+                    "29928d81-48ae-3b6e-8ce1-537063252fb8",
+                    "74aa9d43-2ab2-3e8f-b4f5-16abca62b6b6",
+                    "b311e091-49e8-3f26-8161-abd5bfad16c8",
+                    "00792a96-d3cb-3394-964e-99be0997123b",
+                    "df529d68-3bb4-3516-b753-c1ccd18264c9",
+                    "1e98c20d-0725-3cf1-9f02-e5e410301ac9",
+                    "926356d0-6e4a-3c73-9c97-a9d613dda3f2",
+                    "8a0333bb-6c0f-3eb5-ab8d-6ecd1c937cd7",
+                    "e0eac1bf-6e23-3f93-8901-fb786a986250",
+                    "97e4e53e-ed1a-3c31-bec4-98424222d18a",
+                    "0ab1c894-bca8-370f-94fa-1b7aed310dbf",
+                    "c4af6650-f869-3273-bbaf-042de002bc99",
+                    "cbd2120c-2afa-3478-885c-df3f307247fc",
+                    "abfd19aa-9034-39be-a8ae-0fac8a538ff1"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F15": {
+            "case_id": "F15",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 4160,
+                "locale": "en_US",
+                "validated_count": 100,
+                "allowed_domains": [
+                    "example.com",
+                    "example.net",
+                    "example.org"
+                ],
+                "values": [
+                    "mokon@example.com",
+                    "jaylan23@example.net",
+                    "feil.grady@example.com",
+                    "reilly.allie@example.org",
+                    "matt03@example.com",
+                    "boehm.dayna@example.org",
+                    "carole67@example.com",
+                    "pwelch@example.com",
+                    "prosacco.madeline@example.net",
+                    "israel.kirlin@example.com",
+                    "lavinia01@example.com",
+                    "dmiller@example.com",
+                    "esawayn@example.com",
+                    "zulauf.kailyn@example.org",
+                    "karine14@example.com",
+                    "lakin.hermann@example.org",
+                    "wbrakus@example.com",
+                    "rigoberto41@example.org",
+                    "marcella.windler@example.org",
+                    "wbergnaum@example.net",
+                    "ivy.quitzon@example.org",
+                    "funk.dante@example.net",
+                    "jarrod.dooley@example.org",
+                    "eldora.maggio@example.com",
+                    "skshlerin@example.com",
+                    "ron.sipes@example.org",
+                    "oma69@example.org",
+                    "ywolff@example.org",
+                    "deven.funk@example.org",
+                    "ike74@example.net",
+                    "noelia95@example.com",
+                    "duncan.rosenbaum@example.net",
+                    "xturner@example.org",
+                    "ekub@example.com",
+                    "elisha55@example.org",
+                    "hirthe.dewayne@example.net",
+                    "eschowalter@example.com",
+                    "frederic.bruen@example.com",
+                    "msanford@example.net",
+                    "lacy96@example.com",
+                    "anderson.christa@example.org",
+                    "boyd.feest@example.net",
+                    "mariela58@example.org",
+                    "uwiza@example.net",
+                    "balistreri.angus@example.org",
+                    "gabriella86@example.net",
+                    "winnifred05@example.com",
+                    "rwolff@example.net",
+                    "lukas96@example.org",
+                    "pstanton@example.net",
+                    "pfannerstill.ollie@example.org",
+                    "zemlak.ottis@example.org",
+                    "jane75@example.com",
+                    "windler.rose@example.org",
+                    "deshaun.steuber@example.org",
+                    "lhirthe@example.net",
+                    "jaron52@example.org",
+                    "kelli56@example.org",
+                    "glenda.murray@example.com",
+                    "delfina.williamson@example.com",
+                    "jenkins.madilyn@example.org",
+                    "barton.orn@example.org",
+                    "ara72@example.net",
+                    "margarita94@example.org",
+                    "kuhic.crawford@example.net",
+                    "abrakus@example.net",
+                    "darrell72@example.net",
+                    "shanahan.alejandrin@example.net",
+                    "jeramie59@example.net",
+                    "rosanna12@example.org",
+                    "tspencer@example.net",
+                    "julie01@example.net",
+                    "claude.casper@example.org",
+                    "mjakubowski@example.net",
+                    "icollins@example.org",
+                    "yhagenes@example.org",
+                    "lbergstrom@example.net",
+                    "brennon66@example.com",
+                    "julien54@example.net",
+                    "kshlerin.frankie@example.com",
+                    "lois.mayer@example.org",
+                    "jking@example.org",
+                    "mayer.jevon@example.net",
+                    "upton.george@example.net",
+                    "sipes.emory@example.com",
+                    "jamel.stark@example.org",
+                    "rhill@example.net",
+                    "kortiz@example.org",
+                    "anjali.hodkiewicz@example.org",
+                    "lowe.erwin@example.org",
+                    "hcruickshank@example.org",
+                    "cronin.mozelle@example.net",
+                    "hertha02@example.net",
+                    "bryce86@example.net",
+                    "kemmer.ola@example.org",
+                    "nickolas.jenkins@example.net",
+                    "vickie63@example.org",
+                    "bauch.archibald@example.com",
+                    "nicole63@example.org",
+                    "jolie.beer@example.org"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F16": {
+            "case_id": "F16",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 4160,
+                "validated_count": 100,
+                "values": [
+                    "84.125.1.12",
+                    "128.48.87.44",
+                    "14.203.232.184",
+                    "157.207.129.179",
+                    "5.203.185.197",
+                    "171.25.178.139",
+                    "157.121.196.27",
+                    "220.196.254.94",
+                    "7.56.162.43",
+                    "198.59.165.90",
+                    "215.225.77.39",
+                    "134.188.193.15",
+                    "138.203.212.0",
+                    "33.126.244.151",
+                    "94.251.206.103",
+                    "24.85.42.128",
+                    "32.149.249.208",
+                    "120.195.144.41",
+                    "19.89.36.121",
+                    "218.22.11.202",
+                    "82.233.135.54",
+                    "64.59.213.12",
+                    "186.182.144.240",
+                    "146.154.166.253",
+                    "68.19.197.17",
+                    "2.122.83.100",
+                    "250.159.199.177",
+                    "18.132.74.246",
+                    "253.144.218.147",
+                    "22.73.214.206",
+                    "136.62.254.97",
+                    "87.92.201.164",
+                    "70.114.11.26",
+                    "117.148.17.180",
+                    "19.84.86.183",
+                    "148.187.137.238",
+                    "13.199.16.154",
+                    "204.129.178.187",
+                    "13.244.77.33",
+                    "23.233.84.89",
+                    "51.207.114.11",
+                    "53.186.216.143",
+                    "54.180.74.146",
+                    "85.122.205.34",
+                    "80.137.245.166",
+                    "9.46.131.36",
+                    "99.176.83.170",
+                    "227.36.86.185",
+                    "218.180.245.65",
+                    "138.205.39.73",
+                    "168.139.90.45",
+                    "240.8.74.136",
+                    "165.39.160.77",
+                    "153.149.151.44",
+                    "179.204.93.217",
+                    "38.110.229.92",
+                    "15.244.68.212",
+                    "62.98.220.214",
+                    "36.149.79.153",
+                    "142.114.1.217",
+                    "106.174.203.167",
+                    "197.220.19.97",
+                    "100.146.131.245",
+                    "80.39.229.156",
+                    "125.77.104.79",
+                    "59.10.19.71",
+                    "163.49.103.121",
+                    "160.169.46.44",
+                    "211.138.237.89",
+                    "185.150.133.150",
+                    "87.80.117.3",
+                    "92.205.217.147",
+                    "121.171.31.57",
+                    "167.30.103.208",
+                    "163.24.215.210",
+                    "99.159.118.222",
+                    "115.201.11.167",
+                    "74.169.121.128",
+                    "62.174.220.56",
+                    "128.134.91.182",
+                    "72.45.205.112",
+                    "199.150.100.91",
+                    "28.178.0.239",
+                    "177.80.241.151",
+                    "235.99.193.83",
+                    "103.177.63.238",
+                    "161.136.170.61",
+                    "185.140.197.148",
+                    "142.110.74.165",
+                    "251.183.251.91",
+                    "61.204.39.97",
+                    "78.60.49.124",
+                    "72.102.59.66",
+                    "1.123.184.227",
+                    "129.136.49.199",
+                    "27.153.86.15",
+                    "181.36.156.52",
+                    "140.162.205.130",
+                    "236.144.249.194",
+                    "124.222.202.246"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F17": {
+            "case_id": "F17",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 4160,
+                "seed_origin": "New implementation choice",
+                "validated_count": 10,
+                "values": [
+                    7,
+                    6,
+                    4,
+                    0,
+                    1,
+                    2,
+                    3,
+                    9,
+                    5,
+                    8
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F18": {
+            "case_id": "F18",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 4160,
+                "seed_origin": "New implementation choice",
+                "weight_0": "DEFAULT",
+                "weight_100": "PROVIDER",
+                "fractional_weight": 0.5,
+                "trials": 200,
+                "provider_count": 103,
+                "default_count": 97,
+                "expected_provider_count_interval": [
+                    50,
+                    150
+                ],
+                "values": [
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "PROVIDER",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT",
+                    "DEFAULT"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F19": {
+            "case_id": "F19",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 4160,
+                "validated_count": 20,
+                "values": [
+                    6,
+                    4,
+                    0,
+                    6,
+                    4,
+                    2,
+                    0,
+                    2,
+                    2,
+                    0,
+                    4,
+                    2,
+                    6,
+                    0,
+                    0,
+                    0,
+                    0,
+                    2,
+                    6,
+                    2
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F20": {
+            "case_id": "F20",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 1234,
+                "sequence_length": 10,
+                "first": [
+                    8,
+                    4,
+                    6,
+                    1,
+                    5,
+                    6,
+                    2,
+                    7,
+                    7,
+                    1
+                ],
+                "second": [
+                    8,
+                    4,
+                    6,
+                    1,
+                    5,
+                    6,
+                    2,
+                    7,
+                    7,
+                    1
+                ],
+                "identical": true
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F21": {
+            "case_id": "F21",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 4160,
+                "pattern": "INV-##??",
+                "validated_count": 20,
+                "values": [
+                    "INV-79rm",
+                    "INV-00rc",
+                    "INV-49gu",
+                    "INV-03gi",
+                    "INV-39fc",
+                    "INV-72yb",
+                    "INV-41og",
+                    "INV-68ab",
+                    "INV-04cp",
+                    "INV-25nt",
+                    "INV-76er",
+                    "INV-24wy",
+                    "INV-59de",
+                    "INV-70nq",
+                    "INV-72mb",
+                    "INV-45ld",
+                    "INV-65no",
+                    "INV-01hy",
+                    "INV-59dg",
+                    "INV-98ue"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F22": {
+            "case_id": "F22",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 4160,
+                "validated_count": 20,
+                "timezone_choice": "UTC; report omits timezone",
+                "start": "2020-01-01T00:00:00+00:00",
+                "end": "2020-12-31T00:00:00+00:00",
+                "values": [
+                    "2020-10-18T10:37:43+00:00",
+                    "2020-08-27T22:43:13+00:00",
+                    "2020-06-20T07:10:45+00:00",
+                    "2020-01-01T12:55:23+00:00",
+                    "2020-09-09T03:45:37+00:00",
+                    "2020-02-09T15:38:02+00:00",
+                    "2020-06-29T21:14:31+00:00",
+                    "2020-03-26T00:09:40+00:00",
+                    "2020-10-16T21:41:33+00:00",
+                    "2020-01-14T18:47:49+00:00",
+                    "2020-03-27T20:12:31+00:00",
+                    "2020-05-02T21:40:56+00:00",
+                    "2020-05-25T05:57:17+00:00",
+                    "2020-03-25T01:14:23+00:00",
+                    "2020-02-09T15:20:04+00:00",
+                    "2020-09-21T12:54:47+00:00",
+                    "2020-12-15T23:43:44+00:00",
+                    "2020-01-18T21:07:03+00:00",
+                    "2020-05-30T13:11:50+00:00",
+                    "2020-07-19T06:34:13+00:00"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F01": {
+            "case_id": "F01",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740001,
+                "locale": "en_US",
+                "genders": [
+                    null,
+                    "male",
+                    "female"
+                ],
+                "samples_per_gender": 20,
+                "validated_count": 60,
+                "replay_identical": true,
+                "examples": [
+                    "Mr. Demarco Quitzon V",
+                    "Bianka Smith",
+                    "Triston Treutel"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F02": {
+            "case_id": "F02",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740002,
+                "locale": "en_US",
+                "validated_count": 100,
+                "allowed_domains": [
+                    "example.com",
+                    "example.net",
+                    "example.org"
+                ],
+                "examples": [
+                    "collins.amani@example.org",
+                    "gtowne@example.com",
+                    "milton26@example.com"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F03": {
+            "case_id": "F03",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740003,
+                "locale": "en_US",
+                "timezone": "UTC",
+                "start": "2020-02-28 00:00:00",
+                "end": "2020-03-01 23:59:59",
+                "validated_count": 100,
+                "examples": [
+                    "2020-02-29 04:01:29 UTC",
+                    "2020-03-01 15:58:31 UTC",
+                    "2020-02-28 05:41:39 UTC"
+                ],
+                "equal_endpoint": "2020-02-29 12:00:00 UTC",
+                "reversed_interval_exception": "InvalidArgumentException"
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F04": {
+            "case_id": "F04",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740004,
+                "locale": "en_US",
+                "validated_count": 160,
+                "samples_per_partition": 20,
+                "partitions": {
+                    "positive": {
+                        "inputs": [
+                            1,
+                            100
+                        ],
+                        "validated_count": 20,
+                        "examples": [
+                            74,
+                            55,
+                            22
+                        ]
+                    },
+                    "negative": {
+                        "inputs": [
+                            -100,
+                            -1
+                        ],
+                        "validated_count": 20,
+                        "examples": [
+                            -12,
+                            -13,
+                            -92
+                        ]
+                    },
+                    "signed": {
+                        "inputs": [
+                            -10,
+                            10
+                        ],
+                        "validated_count": 20,
+                        "examples": [
+                            1,
+                            -6,
+                            8
+                        ]
+                    },
+                    "zero_singleton": {
+                        "inputs": [
+                            0,
+                            0
+                        ],
+                        "validated_count": 20,
+                        "examples": [
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "positive_singleton": {
+                        "inputs": [
+                            42,
+                            42
+                        ],
+                        "validated_count": 20,
+                        "examples": [
+                            42,
+                            42,
+                            42
+                        ]
+                    },
+                    "reversed": {
+                        "inputs": [
+                            100,
+                            1
+                        ],
+                        "validated_count": 20,
+                        "examples": [
+                            8,
+                            79,
+                            17
+                        ]
+                    },
+                    "minimum_singleton": {
+                        "inputs": [
+                            -9223372036854775808,
+                            -9223372036854775808
+                        ],
+                        "validated_count": 20,
+                        "examples": [
+                            -9223372036854775808,
+                            -9223372036854775808,
+                            -9223372036854775808
+                        ]
+                    },
+                    "maximum_singleton": {
+                        "inputs": [
+                            9223372036854775807,
+                            9223372036854775807
+                        ],
+                        "validated_count": 20,
+                        "examples": [
+                            9223372036854775807,
+                            9223372036854775807,
+                            9223372036854775807
+                        ]
+                    }
+                },
+                "integer_size_bytes": 8
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F05": {
+            "case_id": "F05",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740005,
+                "locale": "fi_FI",
+                "validated_count": 100,
+                "pinned_states": [
+                    "Ahvenanmaa",
+                    "Etelä-Karjala",
+                    "Etelä-Pohjanmaa",
+                    "Etelä-Savo",
+                    "Kainuu",
+                    "Kanta-Häme",
+                    "Keski-Pohjanmaa",
+                    "Keski-Suomi",
+                    "Kymenlaakso",
+                    "Lappi",
+                    "Pirkanmaa",
+                    "Pohjanmaa",
+                    "Pohjois-Karjala",
+                    "Pohjois-Pohjanmaa",
+                    "Pohjois-Savo",
+                    "Päijät-Häme",
+                    "Satakunta",
+                    "Uusimaa",
+                    "Varsinais-Suomi"
+                ],
+                "examples": [
+                    {
+                        "postcode": "94925",
+                        "state": "Etelä-Pohjanmaa"
+                    },
+                    {
+                        "postcode": "01807",
+                        "state": "Ahvenanmaa"
+                    },
+                    {
+                        "postcode": "29322",
+                        "state": "Keski-Suomi"
+                    }
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F06": {
+            "case_id": "F06",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740006,
+                "locale": "en_US",
+                "validated_count": 100,
+                "version": 3,
+                "variant": "RFC",
+                "distinct_count": 100,
+                "examples": [
+                    "81a29b5a-2204-3531-b0bf-f051d1c18e9d",
+                    "daf95bbe-0323-3998-84a3-a8e90c9b88a6",
+                    "7e11bb4c-8101-35e3-b8fe-2338ca897bfe"
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F07": {
+            "case_id": "F07",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740007,
+                "locale": "en_US",
+                "validated_count": 150,
+                "patterns": [
+                    {
+                        "pattern": "[A-Z]{2}[0-9]{3}",
+                        "validated_count": 50,
+                        "examples": [
+                            "QK539",
+                            "PP858",
+                            "DS711"
+                        ]
+                    },
+                    {
+                        "pattern": "(cat|dog)-[0-9]{2}",
+                        "validated_count": 50,
+                        "examples": [
+                            "dog-09",
+                            "cat-11",
+                            "dog-39"
+                        ]
+                    },
+                    {
+                        "pattern": "[A-F]{1,4}",
+                        "validated_count": 50,
+                        "examples": [
+                            "D",
+                            "DC",
+                            "ECFA"
+                        ]
+                    }
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F08": {
+            "case_id": "F08",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740008,
+                "locale": "en_US",
+                "source": [
+                    "alpha",
+                    "beta",
+                    "gamma",
+                    "delta",
+                    "epsilon"
+                ],
+                "validated_count": 7,
+                "expected_exception_count": 1,
+                "selections": [
+                    {
+                        "count": 0,
+                        "allow_duplicates": false,
+                        "selection": [],
+                        "distinct_count": 0
+                    },
+                    {
+                        "count": 3,
+                        "allow_duplicates": false,
+                        "selection": [
+                            "gamma",
+                            "alpha",
+                            "beta"
+                        ],
+                        "distinct_count": 3
+                    },
+                    {
+                        "count": 5,
+                        "allow_duplicates": false,
+                        "selection": [
+                            "gamma",
+                            "delta",
+                            "epsilon",
+                            "beta",
+                            "alpha"
+                        ],
+                        "distinct_count": 5
+                    },
+                    {
+                        "count": 6,
+                        "allow_duplicates": false,
+                        "exception": "LengthException"
+                    },
+                    {
+                        "count": 0,
+                        "allow_duplicates": true,
+                        "selection": [],
+                        "distinct_count": 0
+                    },
+                    {
+                        "count": 3,
+                        "allow_duplicates": true,
+                        "selection": [
+                            "delta",
+                            "delta",
+                            "beta"
+                        ],
+                        "distinct_count": 2
+                    },
+                    {
+                        "count": 5,
+                        "allow_duplicates": true,
+                        "selection": [
+                            "epsilon",
+                            "beta",
+                            "beta",
+                            "delta",
+                            "alpha"
+                        ],
+                        "distinct_count": 4
+                    },
+                    {
+                        "count": 6,
+                        "allow_duplicates": true,
+                        "selection": [
+                            "epsilon",
+                            "alpha",
+                            "alpha",
+                            "epsilon",
+                            "alpha",
+                            "gamma"
+                        ],
+                        "distinct_count": 3
+                    }
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F09": {
+            "case_id": "F09",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740009,
+                "locale": "en_US",
+                "validated_count": 200,
+                "address_versions": {
+                    "ipv4": {
+                        "validated_count": 100,
+                        "examples": [
+                            "247.156.230.188",
+                            "9.27.197.73",
+                            "89.145.242.28"
+                        ]
+                    },
+                    "ipv6": {
+                        "validated_count": 100,
+                        "examples": [
+                            "3902:397a:969f:c74b:2b50:ec0a:24db:f6de",
+                            "fa2f:daa8:7e5c:af40:4a46:e360:6178:1bfe",
+                            "9c24:1c3c:1c7b:4bf6:3d76:9ae1:f714:a34e"
+                        ]
+                    }
+                }
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F10": {
+            "case_id": "F10",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740010,
+                "locale": "en_US",
+                "validated_count": 100,
+                "cards": {
+                    "Visa": {
+                        "validated_count": 25,
+                        "format": "/\\A4[0-9]{15}\\z/",
+                        "examples": [
+                            "4556808551867571",
+                            "4539129898437495",
+                            "4994965526698489"
+                        ]
+                    },
+                    "MasterCard": {
+                        "validated_count": 25,
+                        "format": "/\\A(?:5[1-5][0-9]{14}|(?:2221|2720)[0-9]{12}|2[3-6][0-9]{14})\\z/",
+                        "examples": [
+                            "5396560945542755",
+                            "2720529928863854",
+                            "5255330282885542"
+                        ]
+                    },
+                    "American Express": {
+                        "validated_count": 25,
+                        "format": "/\\A3[47][0-9]{13}\\z/",
+                        "examples": [
+                            "348335386145487",
+                            "346414429031061",
+                            "342148963705730"
+                        ]
+                    },
+                    "Discover Card": {
+                        "validated_count": 25,
+                        "format": "/\\A6011[0-9]{12}\\z/",
+                        "examples": [
+                            "6011621962808363",
+                            "6011610147161525",
+                            "6011324257468809"
+                        ]
+                    }
+                },
+                "checksum_validator": "independent Luhn implementation"
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F11": {
+            "case_id": "F11",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740011,
+                "locale": "en_US",
+                "validated_count": 8,
+                "samples_per_count_and_mode": 1,
+                "paragraphs_per_mode": 9,
+                "separator": "\n\n",
+                "outputs": [
+                    {
+                        "count": 0,
+                        "array_count": 0,
+                        "text_paragraph_count": 0,
+                        "text_bytes": 0,
+                        "example": "",
+                        "paired_outputs_equal": true
+                    },
+                    {
+                        "count": 1,
+                        "array_count": 1,
+                        "text_paragraph_count": 1,
+                        "text_bytes": 164,
+                        "example": "Qui quas sed culpa commodi. Corrupti a excepturi aliquid laborum. Voluptate temporibus ipsam excepturi neque aut. Numquam ea aut provident adipisci doloribus iusto.",
+                        "paired_outputs_equal": true
+                    },
+                    {
+                        "count": 3,
+                        "array_count": 3,
+                        "text_paragraph_count": 3,
+                        "text_bytes": 438,
+                        "example": "Qui quas sed culpa commodi. Corrupti a excepturi aliquid laborum. Voluptate temporibus ipsam excepturi neque aut. Numquam ea aut provident adipisci doloribus iusto.",
+                        "paired_outputs_equal": true
+                    },
+                    {
+                        "count": 5,
+                        "array_count": 5,
+                        "text_paragraph_count": 5,
+                        "text_bytes": 651,
+                        "example": "Qui quas sed culpa commodi. Corrupti a excepturi aliquid laborum. Voluptate temporibus ipsam excepturi neque aut. Numquam ea aut provident adipisci doloribus iusto.",
+                        "paired_outputs_equal": true
+                    }
+                ]
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "F12": {
+            "case_id": "F12",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "seed": 740012,
+                "locale": "en_US",
+                "validated_count": 100,
+                "examples": [
+                    "6831319019896",
+                    "3293551401540",
+                    "7778654913658"
+                ],
+                "known_valid_control": "4006381333931",
+                "known_invalid_control": "4006381333932",
+                "checksum_validator": "independent EAN13 implementation"
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "N01": {
+            "case_id": "N01",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "schema_version": 1,
+                "case_id": "N01",
+                "measurement_status": "completed",
+                "performance_acceptance": "not_assessed",
+                "locale": "en_US",
+                "timezone": "UTC",
+                "locale_setting": "C",
+                "seed": 4160,
+                "warmup_seed": 4160,
+                "seed_reset_after_warmup": true,
+                "workload": {
+                    "fields": [
+                        "name",
+                        "email",
+                        "uuid"
+                    ],
+                    "warmup_rows": 100,
+                    "warmup_generation_calls": 300,
+                    "batch_count": 3,
+                    "rows_per_batch": 1000,
+                    "measured_rows": 3000,
+                    "validated_rows": 3000,
+                    "generation_calls": 9000,
+                    "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                    "max_retained_measured_rows": 1000
+                },
+                "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                "timer": "hrtime(true)",
+                "batch_seconds": [
+                    0.026351397,
+                    0.026285274,
+                    0.029148044
+                ],
+                "median_seconds": 0.026351397,
+                "records_per_second": 37948.652209975815,
+                "worker_validation_assertions": 27000,
+                "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                "memory_limit": "256M",
+                "memory_limit_bytes": 268435456,
+                "peak_allocated_memory_bytes": 6291456,
+                "peak_allocated_memory_mib": 6,
+                "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                "worker_pid": 2765,
+                "worker_php_binary": "/usr/bin/php7.4",
+                "worker_php_version": "7.4.33",
+                "framework_scope": {
+                    "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                    "composer_autoloader_loaded": true,
+                    "phpunit_assert_class_loaded": true,
+                    "phpunit_runner_started": false,
+                    "loaded_phpunit_runner_classes": [],
+                    "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                },
+                "captured_at_utc": "2026-10-16T19:20:31+00:00"
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        },
+        "N02": {
+            "case_id": "N02",
+            "observed_at_utc": "2026-10-16T19:20:31+00:00",
+            "data": {
+                "schema_version": 1,
+                "case_id": "N02",
+                "measurement_status": "completed",
+                "performance_acceptance": "not_assessed",
+                "locale": "en_US",
+                "timezone": "UTC",
+                "locale_setting": "C",
+                "seed": 4160,
+                "warmup_seed": 4160,
+                "seed_reset_after_warmup": true,
+                "workload": {
+                    "fields": [
+                        "name",
+                        "email",
+                        "uuid"
+                    ],
+                    "warmup_rows": 100,
+                    "warmup_generation_calls": 300,
+                    "batch_count": 3,
+                    "rows_per_batch": 1000,
+                    "measured_rows": 3000,
+                    "validated_rows": 3000,
+                    "generation_calls": 9000,
+                    "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                    "max_retained_measured_rows": 1000
+                },
+                "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+                "timer": "hrtime(true)",
+                "batch_seconds": [
+                    0.027008905,
+                    0.025923156,
+                    0.026616904
+                ],
+                "median_seconds": 0.026616904,
+                "records_per_second": 37570.10958149002,
+                "worker_validation_assertions": 27000,
+                "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+                "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+                "memory_limit": "256M",
+                "memory_limit_bytes": 268435456,
+                "peak_allocated_memory_bytes": 6291456,
+                "peak_allocated_memory_mib": 6,
+                "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+                "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+                "worker_pid": 2769,
+                "worker_php_binary": "/usr/bin/php7.4",
+                "worker_php_version": "7.4.33",
+                "framework_scope": {
+                    "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                    "composer_autoloader_loaded": true,
+                    "phpunit_assert_class_loaded": true,
+                    "phpunit_runner_started": false,
+                    "loaded_phpunit_runner_classes": [],
+                    "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+                },
+                "captured_at_utc": "2026-10-16T19:20:31+00:00"
+            },
+            "provenance": "New implementation and current execution; not historical teammate output"
+        }
+    },
+    "measurements": {
+        "N01": {
+            "schema_version": 1,
+            "case_id": "N01",
+            "measurement_status": "completed",
+            "performance_acceptance": "not_assessed",
+            "locale": "en_US",
+            "timezone": "UTC",
+            "locale_setting": "C",
+            "seed": 4160,
+            "warmup_seed": 4160,
+            "seed_reset_after_warmup": true,
+            "workload": {
+                "fields": [
+                    "name",
+                    "email",
+                    "uuid"
+                ],
+                "warmup_rows": 100,
+                "warmup_generation_calls": 300,
+                "batch_count": 3,
+                "rows_per_batch": 1000,
+                "measured_rows": 3000,
+                "validated_rows": 3000,
+                "generation_calls": 9000,
+                "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                "max_retained_measured_rows": 1000
+            },
+            "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+            "timer": "hrtime(true)",
+            "batch_seconds": [
+                0.026351397,
+                0.026285274,
+                0.029148044
+            ],
+            "median_seconds": 0.026351397,
+            "records_per_second": 37948.652209975815,
+            "worker_validation_assertions": 27000,
+            "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+            "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+            "memory_limit": "256M",
+            "memory_limit_bytes": 268435456,
+            "peak_allocated_memory_bytes": 6291456,
+            "peak_allocated_memory_mib": 6,
+            "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+            "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+            "worker_pid": 2765,
+            "worker_php_binary": "/usr/bin/php7.4",
+            "worker_php_version": "7.4.33",
+            "framework_scope": {
+                "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                "composer_autoloader_loaded": true,
+                "phpunit_assert_class_loaded": true,
+                "phpunit_runner_started": false,
+                "loaded_phpunit_runner_classes": [],
+                "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+            },
+            "captured_at_utc": "2026-10-16T19:20:31+00:00"
+        },
+        "N02": {
+            "schema_version": 1,
+            "case_id": "N02",
+            "measurement_status": "completed",
+            "performance_acceptance": "not_assessed",
+            "locale": "en_US",
+            "timezone": "UTC",
+            "locale_setting": "C",
+            "seed": 4160,
+            "warmup_seed": 4160,
+            "seed_reset_after_warmup": true,
+            "workload": {
+                "fields": [
+                    "name",
+                    "email",
+                    "uuid"
+                ],
+                "warmup_rows": 100,
+                "warmup_generation_calls": 300,
+                "batch_count": 3,
+                "rows_per_batch": 1000,
+                "measured_rows": 3000,
+                "validated_rows": 3000,
+                "generation_calls": 9000,
+                "retention": "One 1000-row measured batch at a time; validate and hash after timing, then release before the next batch.",
+                "max_retained_measured_rows": 1000
+            },
+            "timing_scope": "Row generation and retention only; excludes warm-up, validation, hashing, printing, and report writes.",
+            "timer": "hrtime(true)",
+            "batch_seconds": [
+                0.027008905,
+                0.025923156,
+                0.026616904
+            ],
+            "median_seconds": 0.026616904,
+            "records_per_second": 37570.10958149002,
+            "worker_validation_assertions": 27000,
+            "worker_assertion_scope": "Child process assertions only; not included in parent PHPUnit/JUnit assertion counts.",
+            "validated_outputs_sha256": "504e876122809984131bbe6a6d997e01f41a2c63e2799865499e21f8ae52e98b",
+            "memory_limit": "256M",
+            "memory_limit_bytes": 268435456,
+            "peak_allocated_memory_bytes": 6291456,
+            "peak_allocated_memory_mib": 6,
+            "memory_metric": "memory_get_peak_usage(true): PHP allocated process peak, not OS RSS or Faker-exclusive memory.",
+            "peak_capture_point": "After all measured batches are validated, hashed, and released; before measurement serialization and report writes.",
+            "worker_pid": 2769,
+            "worker_php_binary": "/usr/bin/php7.4",
+            "worker_php_version": "7.4.33",
+            "framework_scope": {
+                "description": "Composer autoloader plus PHPUnit assertion classes and their loaded dependencies; no PHPUnit runner is started.",
+                "composer_autoloader_loaded": true,
+                "phpunit_assert_class_loaded": true,
+                "phpunit_runner_started": false,
+                "loaded_phpunit_runner_classes": [],
+                "memory_includes": "PHP runtime allocations, Composer, Faker, PHPUnit assertion classes, and loaded dependencies."
+            },
+            "captured_at_utc": "2026-10-16T19:20:31+00:00"
+        }
+    },
+    "report_error": null,
+    "statistics": {
+        "designed_report_cases": 24,
+        "selected_report_cases": 24,
+        "executed_report_cases": 24,
+        "phpunit_test_methods": 24,
+        "parent_phpunit_assertions": 5973,
+        "benchmark_worker_assertions": 54000,
+        "platform_executions_in_this_run": 1
+    },
+    "counts_source": "Native PHPUnit JUnit",
+    "finished_at_utc": "2026-10-16T19:20:31+00:00",
+    "elapsed_seconds": 1.2919731140136719,
+    "evidence_path": "results/evidence/20261016T192030Z-linux-report-93e7c3"
+}

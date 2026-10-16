@@ -1,0 +1,18 @@
+{
+    "case_id": "F12",
+    "observed_at_utc": "2026-10-16T19:14:14+00:00",
+    "data": {
+        "seed": 740012,
+        "locale": "en_US",
+        "validated_count": 100,
+        "examples": [
+            "6831319019896",
+            "3293551401540",
+            "7778654913658"
+        ],
+        "known_valid_control": "4006381333931",
+        "known_invalid_control": "4006381333932",
+        "checksum_validator": "independent EAN13 implementation"
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

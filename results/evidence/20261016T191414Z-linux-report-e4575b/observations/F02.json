@@ -1,0 +1,20 @@
+{
+    "case_id": "F02",
+    "observed_at_utc": "2026-10-16T19:14:14+00:00",
+    "data": {
+        "seed": 740002,
+        "locale": "en_US",
+        "validated_count": 100,
+        "allowed_domains": [
+            "example.com",
+            "example.net",
+            "example.org"
+        ],
+        "examples": [
+            "collins.amani@example.org",
+            "gtowne@example.com",
+            "milton26@example.com"
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

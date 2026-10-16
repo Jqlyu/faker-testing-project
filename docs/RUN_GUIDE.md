@@ -4,9 +4,13 @@
 
 固定基线为 Faker 1.9.2 / commit `848d8125239d7dbf8ab25cb7f054f1a630e68c2e`、PHP 7.4.33、Composer 2.10.3、报告套件 PHPUnit 9.6.38。`composer.lock` 固定 29 个包。没有修改 Faker 的业务源码。
 
-本次报告对齐代码使用 `codex/report-case-alignment` 分支；草稿 PR 审阅合并前，首次克隆和 CI 手动运行均选择该分支。合并前的 `main` 可能仍是旧 TC 主套件。以下 clone 命令已明确分支，不把未合并版本当作 main。
+本次报告对齐代码使用 `codex/report-case-alignment` 分支；[草稿 PR #1](https://github.com/Jqlyu/faker-testing-project/pull/1) 审阅合并前，首次克隆和 CI 手动运行均选择该分支。合并前的 `main` 可能仍是旧 TC 主套件。以下 clone 命令已明确分支，不把未合并版本当作 main。
 
 PDF 中的 PASS、示例输出、断言数和耗时属于原报告，不能复制为这次执行结果。原成员 F 编号代码没有随当前仓库提供，本次根据报告设计重新实现；对应关系和未明确输入的选择见 [REPORT_CASE_MAPPING.md](REPORT_CASE_MAPPING.md)。本机重跑其他成员负责的用例仍只证明本机环境。报告原文需要修正的地方见 [REPORT_CORRECTIONS.md](REPORT_CORRECTIONS.md)。
+
+2026-10-16 的真实新执行已在本机 macOS 26.3 / arm64 / PHP 7.4.33 完成：[完整报告运行](../results/evidence/20261016T192024Z-darwin-report-5cde49/summary.json)为 24/24 Passed、5973 个父 PHPUnit 断言，另有 54000 个子 worker 校验断言；[Jiaqing 六项运行](../results/evidence/20261016T192025Z-darwin-report-09eaaf/summary.json)为 6/6 Passed、1383 个父断言，另有 54000 个子 worker 断言。六项运行的 N01 中位数为 0.011390125 s、87795.34904138454 records/s，N02 为 6291456 bytes / 6 MiB、256M 配置。它们都是 `local-Darwin` 新证据；**原生 Windows/Linux 尚未执行本次报告套件**。完整数字和运行区分见 [FINAL_REPORT_NOTES.md](FINAL_REPORT_NOTES.md)。
+
+新 [GitHub Actions run 38954165253](https://github.com/Jqlyu/faker-testing-project/actions/runs/38954165253) 的 Windows/macOS/Linux CI 已各完成 24/24 Passed，三平台比较 Passed。三个 CI OS 是 72 次用例执行，报告仍是 24 个逻辑用例。当前所有新运行、下载校验和比较证据见 [REPORT_ALIGNMENT_20261016.md](../results/evidence/REPORT_ALIGNMENT_20261016.md)；旧 evidence README 仅索引历史 TC/upstream 快照。CI Windows 通过不代表用户原生 Windows 11 已执行，下一节原生安装/截图步骤仍需在相应设备完成。
 
 ## Project files and suites
 
@@ -24,7 +28,7 @@ PDF 中的 PASS、示例输出、断言数和耗时属于原报告，不能复�
 | `scripts/archive-evidence.php` | 保存证据副本，拒绝覆盖已有归档 |
 | `.github/workflows/cross-platform.yml` | 三平台 CI 和报告比较 |
 | `results/<run-id>/` | 每次运行独立目录 |
-| `results/evidence/` | 不可改写的历史课程证据；其 README 是证据索引，应保留 |
+| `results/evidence/` | 历史及本次运行归档；当前索引为 REPORT_ALIGNMENT_20261016.md，旧 README 是历史索引，应保留 |
 | `docs/TEST_CASES.md` | 当前生成的报告 24 用例表；以其中标注的 run ID/context 为准 |
 
 `vendor/`、`tools/*.phar` 和 `upstream/faker/` 由安装命令生成，保持依赖/上游自己的 README。项目根 README 的安装说明已迁到本文；历史证据内的旧链接按当时快照保留，阅读时改用本文，不修改归档文件。

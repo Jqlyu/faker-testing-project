@@ -1,0 +1,39 @@
+{
+    "case_id": "F07",
+    "observed_at_utc": "2026-10-16T19:14:34+00:00",
+    "data": {
+        "seed": 740007,
+        "locale": "en_US",
+        "validated_count": 150,
+        "patterns": [
+            {
+                "pattern": "[A-Z]{2}[0-9]{3}",
+                "validated_count": 50,
+                "examples": [
+                    "QK539",
+                    "PP858",
+                    "DS711"
+                ]
+            },
+            {
+                "pattern": "(cat|dog)-[0-9]{2}",
+                "validated_count": 50,
+                "examples": [
+                    "dog-09",
+                    "cat-11",
+                    "dog-39"
+                ]
+            },
+            {
+                "pattern": "[A-F]{1,4}",
+                "validated_count": 50,
+                "examples": [
+                    "D",
+                    "DC",
+                    "ECFA"
+                ]
+            }
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

@@ -1,0 +1,18 @@
+{
+    "case_id": "F06",
+    "observed_at_utc": "2026-10-16T19:14:32+00:00",
+    "data": {
+        "seed": 740006,
+        "locale": "en_US",
+        "validated_count": 100,
+        "version": 3,
+        "variant": "RFC",
+        "distinct_count": 100,
+        "examples": [
+            "81a29b5a-2204-3531-b0bf-f051d1c18e9d",
+            "daf95bbe-0323-3998-84a3-a8e90c9b88a6",
+            "7e11bb4c-8101-35e3-b8fe-2338ca897bfe"
+        ]
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

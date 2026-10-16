@@ -1,0 +1,217 @@
+{
+    "schema_version": 2,
+    "run_id": "20261016T190913Z-darwin-supplemental-bc813e",
+    "suite": "supplemental",
+    "filter": null,
+    "tester_selection": null,
+    "selected_case_ids": [],
+    "full_report_run": false,
+    "started_at_utc": "2026-10-16T19:09:13+00:00",
+    "status": "Passed",
+    "exit_code": 0,
+    "phpunit_exit_code": 0,
+    "counts": {
+        "total": 20,
+        "passed": 20,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+    },
+    "cases": [
+        {
+            "id": "TC01",
+            "name": "testTC01NameIsNonEmptyString",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 400,
+            "seconds": 0.006197
+        },
+        {
+            "id": "TC02",
+            "name": "testTC02EmailHasValidSyntax",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 200,
+            "seconds": 0.014555
+        },
+        {
+            "id": "TC03",
+            "name": "testTC03AddressIsNonEmptyString",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 500,
+            "seconds": 0.001499
+        },
+        {
+            "id": "TC04",
+            "name": "testTC04PhoneNumberHasBasicFormat",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 600,
+            "seconds": 0.001027
+        },
+        {
+            "id": "TC05",
+            "name": "testTC05IntegersStayWithinOneToOneHundred",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 2500,
+            "seconds": 0.003722
+        },
+        {
+            "id": "TC06",
+            "name": "testTC06EqualIntegerBoundsReturnThatValue",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 4,
+            "seconds": 8.5e-5
+        },
+        {
+            "id": "TC07",
+            "name": "testTC07FloatRangeAndPrecision",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 3500,
+            "seconds": 0.00328
+        },
+        {
+            "id": "TC08",
+            "name": "testTC08DocumentedNumericBoundaries",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 1200,
+            "seconds": 0.001229
+        },
+        {
+            "id": "TC09",
+            "name": "testTC09DateHasRequestedFormatAndIsValid",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 500,
+            "seconds": 0.000848
+        },
+        {
+            "id": "TC10",
+            "name": "testTC10DatesStayInExplicitInterval",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 600,
+            "seconds": 0.000924
+        },
+        {
+            "id": "TC11",
+            "name": "testTC11Ipv4IsSyntacticallyValid",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 200,
+            "seconds": 0.000161
+        },
+        {
+            "id": "TC12",
+            "name": "testTC12UuidHasVersionThreeAndRfcVariant",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 100,
+            "seconds": 0.00021
+        },
+        {
+            "id": "TC13",
+            "name": "testTC13EnUsUsesLocaleProvidersAndPostalFormat",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 602,
+            "seconds": 0.000961
+        },
+        {
+            "id": "TC14",
+            "name": "testTC14FiFiUsesLocaleProvidersAndUtf8",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 902,
+            "seconds": 0.001988
+        },
+        {
+            "id": "TC15",
+            "name": "testTC15FixedSeedReproducesWholeSequence",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 3,
+            "seconds": 0.001258
+        },
+        {
+            "id": "TC16",
+            "name": "testTC16UniqueValuesAndExhaustion",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 503,
+            "seconds": 0.003827
+        },
+        {
+            "id": "TC17",
+            "name": "testTC17InvalidParameterRaisesSpecificException",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 2,
+            "seconds": 6.0e-5
+        },
+        {
+            "id": "TC18",
+            "name": "testTC18UnknownFormatterHasClearException",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 2,
+            "seconds": 9.3e-5
+        },
+        {
+            "id": "TC19",
+            "name": "testTC19ThousandCompositeRecordsRemainValid",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 11000,
+            "seconds": 0.026989
+        },
+        {
+            "id": "TC20",
+            "name": "testTC20PerformanceIsMeasuredWithValidatedOutput",
+            "class": "FakerTesting\\Supplemental\\FakerSystemTest",
+            "status": "Passed",
+            "failure_reason": null,
+            "assertions": 18004,
+            "seconds": 0.04385
+        }
+    ],
+    "observations": [],
+    "measurements": [],
+    "report_error": null,
+    "statistics": {
+        "designed_report_cases": 24,
+        "selected_report_cases": 0,
+        "executed_report_cases": 0,
+        "phpunit_test_methods": 20,
+        "parent_phpunit_assertions": 41322,
+        "benchmark_worker_assertions": 0,
+        "platform_executions_in_this_run": 1
+    },
+    "counts_source": "Native PHPUnit JUnit",
+    "finished_at_utc": "2026-10-16T19:09:14+00:00",
+    "elapsed_seconds": 0.5675539970397949
+}

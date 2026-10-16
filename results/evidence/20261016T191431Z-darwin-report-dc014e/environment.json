@@ -1,0 +1,314 @@
+{
+    "captured_at_utc": "2026-10-16T19:14:31+00:00",
+    "os_family": "Darwin",
+    "os_version": "25.6.0",
+    "architecture": "arm64",
+    "php_version": "7.4.33",
+    "execution_context": {
+        "kind": "github-actions",
+        "platform_key": "github-Darwin",
+        "label": "GitHub macOS CI",
+        "reported_historical_platform": false
+    },
+    "capture_complete": true,
+    "os_name": "Darwin",
+    "os_detail": "Darwin Kernel Version 25.6.0: Fri Jul 31 19:16:43 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_VMAPPLE",
+    "product_version": "26.6.2",
+    "php_binary": "/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php",
+    "php_int_size": 8,
+    "php_ini": "/opt/homebrew/etc/php/7.4/php.ini",
+    "php_extensions": {
+        "Core": "7.4.33",
+        "FFI": "7.4.33",
+        "PDO": "7.4.33",
+        "PDO_ODBC": "7.4.33",
+        "Phar": "7.4.33",
+        "Reflection": "7.4.33",
+        "SPL": "7.4.33",
+        "SimpleXML": "7.4.33",
+        "Zend OPcache": "7.4.33",
+        "bcmath": "7.4.33",
+        "bz2": "7.4.33",
+        "calendar": "7.4.33",
+        "ctype": "7.4.33",
+        "curl": "7.4.33",
+        "date": "7.4.33",
+        "dba": "7.4.33",
+        "dom": "20031129",
+        "exif": "7.4.33",
+        "fileinfo": "7.4.33",
+        "filter": "7.4.33",
+        "ftp": "7.4.33",
+        "gd": "7.4.33",
+        "gettext": "7.4.33",
+        "gmp": "7.4.33",
+        "hash": "7.4.33",
+        "iconv": "7.4.33",
+        "intl": "7.4.33",
+        "json": "7.4.33",
+        "ldap": "7.4.33",
+        "libxml": "7.4.33",
+        "mbstring": "7.4.33",
+        "mysqli": "7.4.33",
+        "mysqlnd": "mysqlnd 7.4.33",
+        "odbc": "7.4.33",
+        "openssl": "7.4.33",
+        "pcntl": "7.4.33",
+        "pcre": "7.4.33",
+        "pdo_dblib": "7.4.33",
+        "pdo_mysql": "7.4.33",
+        "pdo_pgsql": "7.4.33",
+        "pdo_sqlite": "7.4.33",
+        "pgsql": "7.4.33",
+        "phpdbg_webhelper": "7.4.33",
+        "posix": "7.4.33",
+        "pspell": "7.4.33",
+        "readline": "7.4.33",
+        "session": "7.4.33",
+        "shmop": "7.4.33",
+        "soap": "7.4.33",
+        "sockets": "7.4.33",
+        "sodium": "7.4.33",
+        "sqlite3": "7.4.33",
+        "standard": "7.4.33",
+        "sysvmsg": "7.4.33",
+        "sysvsem": "7.4.33",
+        "sysvshm": "7.4.33",
+        "tidy": "7.4.33",
+        "tokenizer": "7.4.33",
+        "xml": "7.4.33",
+        "xmlreader": "7.4.33",
+        "xmlrpc": "7.4.33",
+        "xmlwriter": "7.4.33",
+        "xsl": "7.4.33",
+        "zip": "1.15.6",
+        "zlib": "7.4.33"
+    },
+    "composer_version": "Composer version 2.10.3 2026-08-27 13:34:23\nPHP version 7.4.33 (/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php)\nRun the \"diagnose\" command to get more detailed diagnostics output.",
+    "phpunit_version": "PHPUnit 9.6.38 by Sebastian Bergmann and contributors.",
+    "faker": {
+        "package": "fzaninotto/faker",
+        "version": "1.9.2",
+        "commit": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+        "src_sha256": "fc7b3e5cee6e6973db4d182c33b4006ab66e04d1f8e99967284e846760558b91"
+    },
+    "dependencies": {
+        "doctrine/instantiator": {
+            "version": "1.5.0",
+            "reference": "0a0fa9780f5d4e507415a065172d26a98d02047b"
+        },
+        "fzaninotto/faker": {
+            "version": "v1.9.2",
+            "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e"
+        },
+        "myclabs/deep-copy": {
+            "version": "1.13.4",
+            "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a"
+        },
+        "nikic/php-parser": {
+            "version": "v5.9.0",
+            "reference": "9e33da9553fe7786f0962b35f4e4ecf01be89def"
+        },
+        "phar-io/manifest": {
+            "version": "2.0.4",
+            "reference": "54750ef60c58e43759730615a392c31c80e23176"
+        },
+        "phar-io/version": {
+            "version": "3.2.1",
+            "reference": "4f7fd7836c6f332bb2933569e566a0d6c4cbed74"
+        },
+        "phpunit/php-code-coverage": {
+            "version": "9.2.32",
+            "reference": "85402a822d1ecf1db1096959413d35e1c37cf1a5"
+        },
+        "phpunit/php-file-iterator": {
+            "version": "3.0.6",
+            "reference": "cf1c2e7c203ac650e352f4cc675a7021e7d1b3cf"
+        },
+        "phpunit/php-invoker": {
+            "version": "3.1.1",
+            "reference": "5a10147d0aaf65b58940a0b72f71c9ac0423cc67"
+        },
+        "phpunit/php-text-template": {
+            "version": "2.0.4",
+            "reference": "5da5f67fc95621df9ff4c4e5a84d6a8a2acf7c28"
+        },
+        "phpunit/php-timer": {
+            "version": "5.0.3",
+            "reference": "5a63ce20ed1b5bf577850e2c4e87f4aa902afbd2"
+        },
+        "phpunit/phpunit": {
+            "version": "9.6.38",
+            "reference": "8b5f757e8e92071bfdbfa93943f94f84c4e31007"
+        },
+        "sebastian/cli-parser": {
+            "version": "1.0.2",
+            "reference": "2b56bea83a09de3ac06bb18b92f068e60cc6f50b"
+        },
+        "sebastian/code-unit": {
+            "version": "1.0.8",
+            "reference": "1fc9f64c0927627ef78ba436c9b17d967e68e120"
+        },
+        "sebastian/code-unit-reverse-lookup": {
+            "version": "2.0.3",
+            "reference": "ac91f01ccec49fb77bdc6fd1e548bc70f7faa3e5"
+        },
+        "sebastian/comparator": {
+            "version": "4.0.10",
+            "reference": "e4df00b9b3571187db2831ae9aada2c6efbd715d"
+        },
+        "sebastian/complexity": {
+            "version": "2.0.3",
+            "reference": "25f207c40d62b8b7aa32f5ab026c53561964053a"
+        },
+        "sebastian/diff": {
+            "version": "4.0.6",
+            "reference": "ba01945089c3a293b01ba9badc29ad55b106b0bc"
+        },
+        "sebastian/environment": {
+            "version": "5.1.5",
+            "reference": "830c43a844f1f8d5b7a1f6d6076b784454d8b7ed"
+        },
+        "sebastian/exporter": {
+            "version": "4.0.9",
+            "reference": "4352c1a3df741a7ba9e61af6fed51d1fee41cbf7"
+        },
+        "sebastian/global-state": {
+            "version": "5.0.8",
+            "reference": "b6781316bdcd28260904e7cc18ec983d0d2ef4f6"
+        },
+        "sebastian/lines-of-code": {
+            "version": "1.0.4",
+            "reference": "e1e4a170560925c26d424b6a03aed157e7dcc5c5"
+        },
+        "sebastian/object-enumerator": {
+            "version": "4.0.4",
+            "reference": "5c9eeac41b290a3712d88851518825ad78f45c71"
+        },
+        "sebastian/object-reflector": {
+            "version": "2.0.4",
+            "reference": "b4f479ebdbf63ac605d183ece17d8d7fe49c15c7"
+        },
+        "sebastian/recursion-context": {
+            "version": "4.0.7",
+            "reference": "c85be6922b7fd365942b986b9a50397d65407611"
+        },
+        "sebastian/resource-operations": {
+            "version": "3.0.4",
+            "reference": "05d5692a7993ecccd56a03e40cd7e5b09b1d404e"
+        },
+        "sebastian/type": {
+            "version": "3.2.1",
+            "reference": "75e2c2a32f5e0b3aef905b9ed0b179b953b3d7c7"
+        },
+        "sebastian/version": {
+            "version": "3.0.2",
+            "reference": "c6c1022351a901512170118436c764e473f6de8c"
+        },
+        "theseer/tokenizer": {
+            "version": "1.3.1",
+            "reference": "b7489ce515e168639d17feec34b8847c326b0b3c"
+        }
+    },
+    "composer_lock_sha256": "7aae265501eaedeb48c37792effcc4fc7ffa10325c3a3ef5e59910ec45f42aa1",
+    "test_contract_sha256": "d42557d24f3ad335131bbcc075da5ab50659cc426570b50d5ba0dde3b450a4fe",
+    "report_design_source": {
+        "filename": "Group666 - Software Testing Final Report.docx (1).pdf",
+        "sha256": "b30906b79ead0de7af84df27fe2ca142333551da5408e4c234ac1fde16e082bc",
+        "pages": 28,
+        "design_table_pages": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+        ],
+        "historical_results_reused": false
+    },
+    "case_seeds": {
+        "F01": 740001,
+        "F02": 740002,
+        "F03": 740003,
+        "F04": 740004,
+        "F05": 740005,
+        "F06": 740006,
+        "F07": 740007,
+        "F08": 740008,
+        "F09": 740009,
+        "F10": 740010,
+        "F11": 740011,
+        "F12": 740012,
+        "F13": 4160,
+        "F14": 4160,
+        "F15": 4160,
+        "F16": 4160,
+        "F17": 4160,
+        "F18": 4160,
+        "F19": 4160,
+        "F20": 1234,
+        "F21": 4160,
+        "F22": 4160,
+        "N01": 4160,
+        "N02": 4160
+    },
+    "case_locales": {
+        "F01": "en_US",
+        "F02": "en_US",
+        "F03": "en_US",
+        "F04": "en_US",
+        "F05": "fi_FI",
+        "F06": "en_US",
+        "F07": "en_US",
+        "F08": "en_US",
+        "F09": "en_US",
+        "F10": "en_US",
+        "F11": "en_US",
+        "F12": "en_US",
+        "F13": "en_US",
+        "F14": "en_US",
+        "F15": "en_US",
+        "F16": "en_US",
+        "F17": "en_US",
+        "F18": "en_US",
+        "F19": "en_US",
+        "F20": "en_US",
+        "F21": "en_US",
+        "F22": "en_US",
+        "N01": "en_US",
+        "N02": "en_US"
+    },
+    "timezone": "UTC",
+    "locale_setting": "C",
+    "precision": 14,
+    "serialize_precision": -1,
+    "test_memory_limit": "256M",
+    "benchmark_memory_scope": "Fresh PHP CLI worker with Composer and PHPUnit assertion classes; not OS process RSS or Faker-exclusive memory",
+    "project_commit": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+    "project_worktree_status": "",
+    "github": {
+        "run_id": "38953376535",
+        "run_attempt": "1",
+        "sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393",
+        "runner_os": "macOS",
+        "runner_image": "macos26",
+        "runner_image_version": "20261013.0424.1"
+    },
+    "hardware": {
+        "architecture": "arm64",
+        "cpu_model": null,
+        "total_ram_bytes": null
+    },
+    "unknown_fields": "null means unavailable/not applicable; no historical environment values are substituted",
+    "execution_arguments": [
+        "/opt/homebrew/Cellar/php@7.4/7.4.33_15/bin/php",
+        "/Users/runner/work/faker-testing-project/faker-testing-project/vendor/phpunit/phpunit/phpunit",
+        "--configuration",
+        "/Users/runner/work/faker-testing-project/faker-testing-project/phpunit.xml",
+        "--colors=never",
+        "--log-junit",
+        "/Users/runner/work/faker-testing-project/faker-testing-project/results/20261016T191431Z-darwin-report-dc014e/junit.xml"
+    ]
+}

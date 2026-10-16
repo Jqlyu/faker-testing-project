@@ -6,7 +6,7 @@
 
 | Location / claim | Evidence conflict | Supported wording / required action |
 |---|---|---|
-| pp3–4 “all 24 newly designed test cases passed” / “completed and passed” | pp25–26 尚无 N01 时间/吞吐量数值；N02 明确 Not Run；p28 也限定为 22 reported functional passes | 写为“设计了 24 项，报告列出 22 项功能通过，但 F14/F15 CI 细节需确认；两项非功能证据尚未完整”，待真实证据后更新 |
+| pp3–4 “all 24 newly designed test cases passed” / “completed and passed” | pp25–26 尚无 N01 时间/吞吐量数值；N02 明确 Not Run；p28 也限定为 22 reported functional passes | 说明原报告列出 22 项功能通过但 F14/F15 需确认、非功能证据未完整；本次新增执行另列日期/run ID/context，不把新证据追溯写成原报告已具备 |
 | p25 N01 Windows CI execution completed | 同表说明 numerical timing/throughput 要从 performance.json 核对；p27/p28 明确缺少测量数字 | 只有“原报告称运行完成”；不能填入速度、使用 PHPUnit 总耗时或写性能达标。新 N01 引用自己 measurements/N01.json 的三批时间、中位数、records/second |
 | p26 N02 peak memory | Actual Output 为 Not Run as an isolated benchmark，已有 full-suite peak 无法独立归因 | 保留历史 N02 Not Run；新执行必须用 fresh PHP worker，记录 allocated peak bytes/MiB、memory_limit、workload 和开销。旧 TC20/全套峰值不得改名为 N02 |
 | p23 F14 UUID Windows CI | 原表承认 UUID-specific output/assertion details need confirmation against run log；p28 再次要求核对 | 需对应 Windows CI 原始 UUID 样本和 JUnit 记录；相关旧 TC12 不能单靠名字认证历史 F14。新 F14 单独执行，只证明其实际 OS/context |
@@ -40,7 +40,11 @@ PDF 并未给出所有可执行输入；以下选择在实现前登记，不能�
 
 ## New execution status and evidence
 
-迁移文档时本次新实现实际运行数据待生成，不能预填 PASS、assertions、timing、throughput 或 memory。报告结果只引用明确的新 run ID；筛选运行只支持自己的范围。八列英文 REPORT_TABLE.md 的 Actual Output 从同目录 JUnit/summary、observations、measurements 和日志生成，未运行为 Not Run，无法确认的计数为 null。
+本次新实现已有真实 local-Darwin 补充执行：[20261016T192024Z-darwin-report-5cde49](../results/evidence/20261016T192024Z-darwin-report-5cde49/summary.json) 为 24/24 Passed，5973 个父 PHPUnit 断言、另有 54000 个子 worker 断言。N01 中位数 0.011278417 s、88664.92522842523 records/s；N02 独立 worker 为 6291456 bytes / 6 MiB、256M 配置。[Jiaqing 六项独立运行](../results/evidence/20261016T192025Z-darwin-report-09eaaf/summary.json) 也为 6/6 Passed，1383 个父断言、另有 54000 个子 worker 断言；其 N01 有自己的时间，不能与完整运行混用。这些是 2026-10-16 的新 macOS 结果，历史 N02/F14/F15 Windows 证据缺口仍须按原上下文处理，原生 Windows/Linux 的本次报告套件仍为 Not Run。
+
+报告结果只引用明确的新 run ID；筛选运行只支持自己的范围。八列英文 REPORT_TABLE.md 的 Actual Output 从同目录 JUnit/summary、observations、measurements 和日志生成，未运行为 Not Run，无法确认的计数为 null。
+
+新的 [CI run 38954165253](https://github.com/Jqlyu/faker-testing-project/actions/runs/38954165253) 已在 Windows/macOS/Linux 托管 runner 各完成 24/24 Passed，github-actions 比较和下载后重比均 Passed。三个 OS 各有 5973 个父 PHPUnit 断言和单独的 54000 个 worker 断言，N02 均为 6291456 bytes / 6 MiB、256M 配置。新 Windows CI 的 F14/F15 现在各有自己的 UUID/safeEmail 观察和 JUnit，可在修订报告中引用这一新 run 补充真实证据；不能据此追溯声称原历史 run 已核实。CI Windows 的 PHP 原始系统文本包含旧 Server 2016 标签，实际记录另含 build 26100 和 ImageOS win25-vs2026；保留全部字段，不称为原生 Windows 11。新证据及 provenance 见 [REPORT_ALIGNMENT_20261016.md](../results/evidence/REPORT_ALIGNMENT_20261016.md)。
 
 N01/N02 的 Passed 仅表示测量工作负载完成且输出/数值有效，需同时保留 **performance criteria not assessed**。没有预设 acceptance threshold，就不能从任何单次测量宣布速度或内存“达标”。
 

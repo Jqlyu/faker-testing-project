@@ -1,6 +1,8 @@
 # Bug Report and Observations
 
-本仓库历史 macOS supplemental/upstream 执行没有确认新的 Faker 功能缺陷；其计数属于原运行，不能作为新 F01–F22/N01–N02 的结果。新报告套件实际结论待真实执行及对应证据。PDF 中的框架错误、F18 预期修正和证据缺口分别处理，不能统一标为 Faker Bug。
+本次新报告实现于 local-Darwin 的 [20261016T192024Z-darwin-report-5cde49](../results/evidence/20261016T192024Z-darwin-report-5cde49/summary.json) 为 24/24 Passed，0 failed/errors/skipped，没有确认新的 Faker 功能缺陷；结论限于 macOS 26.3 / arm64 / PHP 7.4.33 的这些样本和输入。本仓库历史 supplemental/upstream 计数属于原运行。PDF 中的框架错误、F18 预期修正和证据缺口分别处理，不能统一标为 Faker Bug，也不能由本次 macOS 通过推断原生 Windows/Linux 已执行。
+
+新的 [CI run 38954165253](https://github.com/Jqlyu/faker-testing-project/actions/runs/38954165253) 在 Windows/macOS/Linux 托管 runner 也各为 24/24 Passed，比较 Passed，没有本次测试失败。当前证据与下载校验见 [REPORT_ALIGNMENT_20261016.md](../results/evidence/REPORT_ALIGNMENT_20261016.md)。这补充了新的三平台 CI 证据，原生 Windows/Linux 状态仍为 Not Run。
 
 ## ENV-001 — Historical upstream suite exceeds 128M configuration
 
@@ -34,6 +36,10 @@ PDF 第 24 页说明初始整数 weight 1 的预期错误，改用整数 0/100 �
 ## EVIDENCE-001 — PDF result claims need correction
 
 PDF 前文“all 24 passed”与 N01 数值待核对、N02 Not Run、F14/F15 Windows CI 证据未确认冲突。原报告属于历史来源，新 macOS 实现的通过不能认证旧 Windows 执行。需要具体日志/数值及上下文后才能更新相应结论；详见 [REPORT_CORRECTIONS.md](REPORT_CORRECTIONS.md)。
+
+## TOOL-002 — Desktop metadata entered the test contract fingerprint
+
+归档后核对发现，较早本机运行时已有 `tests/.DS_Store`，测试契约摘要把 Finder 元数据算入，导致本机与 CI 摘要不同，尽管 Git 测试代码一致。较早记录的实际 Passed 仍成立，但不能把不同契约摘要写成同一摘要。修正后仅在测试契约 fingerprint 排除 `.DS_Store` 和 `Thumbs.db`，Faker SUT 严格源码摘要保持原样；重新执行并归档本机 full/six/F13，旧归档不修改。最终运行与重测说明见 [当前证据索引](../results/evidence/REPORT_ALIGNMENT_20261016.md)。这属于证据工具修正，非 Faker 功能缺陷。
 
 ## New defect template
 

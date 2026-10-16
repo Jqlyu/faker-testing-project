@@ -1,0 +1,20 @@
+{
+    "case_id": "F03",
+    "observed_at_utc": "2026-10-16T19:14:28+00:00",
+    "data": {
+        "seed": 740003,
+        "locale": "en_US",
+        "timezone": "UTC",
+        "start": "2020-02-28 00:00:00",
+        "end": "2020-03-01 23:59:59",
+        "validated_count": 100,
+        "examples": [
+            "2020-02-29 04:01:29 UTC",
+            "2020-03-01 15:58:31 UTC",
+            "2020-02-28 05:41:39 UTC"
+        ],
+        "equal_endpoint": "2020-02-29 12:00:00 UTC",
+        "reversed_interval_exception": "InvalidArgumentException"
+    },
+    "provenance": "New implementation and current execution; not historical teammate output"
+}

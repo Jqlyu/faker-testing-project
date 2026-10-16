@@ -1,0 +1,85 @@
+{
+  "total_count": 4,
+  "artifacts": [
+    {
+      "id": 12070375054,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA3MDM3NTA1NA==",
+      "name": "faker-results-macos-latest",
+      "size_in_bytes": 57833,
+      "url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/artifacts/12070375054",
+      "archive_download_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/artifacts/12070375054/zip",
+      "expired": false,
+      "digest": "sha256:d67e2b7d4477c36f958343f2fbbfc1809727be4418a702cacd2864d38a392eff",
+      "created_at": "2026-10-16T19:14:39Z",
+      "updated_at": "2026-10-16T19:14:39Z",
+      "expires_at": "2026-11-15T19:14:38Z",
+      "workflow_run": {
+        "id": 38953376535,
+        "repository_id": 1419666168,
+        "head_repository_id": 1419666168,
+        "head_branch": "codex/report-case-alignment",
+        "head_sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393"
+      }
+    },
+    {
+      "id": 12069925249,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2OTkyNTI0OQ==",
+      "name": "faker-cross-platform-comparison",
+      "size_in_bytes": 3871,
+      "url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/artifacts/12069925249",
+      "archive_download_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/artifacts/12069925249/zip",
+      "expired": false,
+      "digest": "sha256:1153132a2fcad3fbd1dd9b56b07391bfa960629b4daa71949c0e3f10f4fb5716",
+      "created_at": "2026-10-16T19:14:57Z",
+      "updated_at": "2026-10-16T19:14:57Z",
+      "expires_at": "2026-11-15T19:14:56Z",
+      "workflow_run": {
+        "id": 38953376535,
+        "repository_id": 1419666168,
+        "head_repository_id": 1419666168,
+        "head_branch": "codex/report-case-alignment",
+        "head_sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393"
+      }
+    },
+    {
+      "id": 12069880596,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2OTg4MDU5Ng==",
+      "name": "faker-results-windows-latest",
+      "size_in_bytes": 57507,
+      "url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/artifacts/12069880596",
+      "archive_download_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/artifacts/12069880596/zip",
+      "expired": false,
+      "digest": "sha256:d051191d7405b4351404df57532c1ab01a5bc1e550834cdfdeb8ae5cba3a4594",
+      "created_at": "2026-10-16T19:14:42Z",
+      "updated_at": "2026-10-16T19:14:42Z",
+      "expires_at": "2026-11-15T19:14:41Z",
+      "workflow_run": {
+        "id": 38953376535,
+        "repository_id": 1419666168,
+        "head_repository_id": 1419666168,
+        "head_branch": "codex/report-case-alignment",
+        "head_sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393"
+      }
+    },
+    {
+      "id": 12069138720,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2OTEzODcyMA==",
+      "name": "faker-results-ubuntu-latest",
+      "size_in_bytes": 57659,
+      "url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/artifacts/12069138720",
+      "archive_download_url": "https://api.github.com/repos/Jqlyu/faker-testing-project/actions/artifacts/12069138720/zip",
+      "expired": false,
+      "digest": "sha256:a4f0e797e005b7aa56071bf8d78ec4c3cdf19f1574b7e89b9dd9abe485f160ef",
+      "created_at": "2026-10-16T19:14:19Z",
+      "updated_at": "2026-10-16T19:14:19Z",
+      "expires_at": "2026-11-15T19:14:18Z",
+      "workflow_run": {
+        "id": 38953376535,
+        "repository_id": 1419666168,
+        "head_repository_id": 1419666168,
+        "head_branch": "codex/report-case-alignment",
+        "head_sha": "4595ec4616e25bd364bea0a90b29bc64ed7f1393"
+      }
+    }
+  ]
+}

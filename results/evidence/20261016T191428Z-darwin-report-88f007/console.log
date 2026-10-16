@@ -1,0 +1,12 @@
+
+================ CURRENT EXECUTION ================
+Local macOS | PHP 7.4.33 | Faker1.9.2 | 2026-10-16T19:14:28+00:00
+
+F13 | UTC date range: 100 samples | Passed | parent PHPUnit assertions=600
+  Inputs: 100 dates: 2020-01-01 00:00:00 to2020-12-31 23:59:59 UTC
+  Actual: Validated 100; examples=["2020-10-19 05:47:30 UTC","2020-08-28 14:29:51 UTC","2020-06-20 18:26:33 UTC"]
+
+Run status: Passed; method counts: {"total":1,"passed":1,"failed":0,"errors":0,"skipped":0}
+Separate statistics: {"designed_report_cases":24,"selected_report_cases":1,"executed_report_cases":1,"phpunit_test_methods":1,"parent_phpunit_assertions":600,"benchmark_worker_assertions":0,"platform_executions_in_this_run":1}
+Full evidence directory: /Users/jiaqinglyu/Desktop/Faker-Testing-Project/results/20261016T191428Z-darwin-report-88f007
+===================================================

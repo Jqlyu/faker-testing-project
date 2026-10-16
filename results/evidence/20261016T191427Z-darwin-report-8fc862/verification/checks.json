@@ -1,0 +1,48 @@
+{
+  "syntax": {
+    "files": 20,
+    "exit_code": 0
+  },
+  "composer-validate": {
+    "exit_code": 0,
+    "arguments": [
+      "/opt/homebrew/opt/php@7.4/bin/php",
+      "tools/composer.phar",
+      "validate"
+    ]
+  },
+  "platform-requirements": {
+    "exit_code": 0,
+    "arguments": [
+      "/opt/homebrew/opt/php@7.4/bin/php",
+      "tools/composer.phar",
+      "check-platform-reqs"
+    ]
+  },
+  "infrastructure": {
+    "exit_code": 0,
+    "arguments": [
+      "/opt/homebrew/opt/php@7.4/bin/php",
+      "vendor/phpunit/phpunit/phpunit",
+      "--configuration",
+      "phpunit-infrastructure.xml",
+      "--colors=never",
+      "--log-junit",
+      "/Users/jiaqinglyu/Desktop/Faker-Testing-Project/results/20261016T191427Z-darwin-report-8fc862/verification/infrastructure-junit.xml"
+    ]
+  },
+  "actionlint": {
+    "exit_code": 0,
+    "arguments": [
+      "/tmp/faker-actionlint/actionlint",
+      ".github/workflows/cross-platform.yml"
+    ]
+  },
+  "historical_integrity": {
+    "unchanged_evidence_files": 46,
+    "baseline_commit": "a2148a9",
+    "dependency_and_SUT_manifests_unchanged": true,
+    "root_README_absent": true
+  },
+  "scope": "Local macOS verification. Infrastructure uses synthetic temporary fixtures, not OS execution evidence. Composer exact-version warning is intentional; no dependency was changed."
+}

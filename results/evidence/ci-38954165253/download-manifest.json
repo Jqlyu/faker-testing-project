@@ -1,0 +1,30 @@
+[
+  {
+    "id": 12070345819,
+    "name": "faker-results-ubuntu-latest",
+    "sha256": "34519554db75410b88641de47bfcc06ef0f1d967fd20be65173cd3e13c8a199d",
+    "downloaded_bytes": 57718,
+    "artifact_digest": "sha256:34519554db75410b88641de47bfcc06ef0f1d967fd20be65173cd3e13c8a199d"
+  },
+  {
+    "id": 12069776949,
+    "name": "faker-cross-platform-comparison",
+    "sha256": "fc49723f10d2a78d17e33231d752e6fa109d8379016acbabfecbce8df5f7d69a",
+    "downloaded_bytes": 3885,
+    "artifact_digest": "sha256:fc49723f10d2a78d17e33231d752e6fa109d8379016acbabfecbce8df5f7d69a"
+  },
+  {
+    "id": 12069761965,
+    "name": "faker-results-macos-latest",
+    "sha256": "123a70dbdd07abc26b1a6f34b2936b4d272b7258f1977752e24e996fb9027054",
+    "downloaded_bytes": 57834,
+    "artifact_digest": "sha256:123a70dbdd07abc26b1a6f34b2936b4d272b7258f1977752e24e996fb9027054"
+  },
+  {
+    "id": 12069727049,
+    "name": "faker-results-windows-latest",
+    "sha256": "2f6c1e3dbc449b0b1e599ae1cb5c3bc5dd5159466610a827ad69ca73f09eb6f6",
+    "downloaded_bytes": 57581,
+    "artifact_digest": "sha256:2f6c1e3dbc449b0b1e599ae1cb5c3bc5dd5159466610a827ad69ca73f09eb6f6"
+  }
+]

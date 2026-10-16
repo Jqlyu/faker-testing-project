@@ -1,0 +1,32 @@
+
+================ CURRENT EXECUTION ================
+Local macOS | PHP 7.4.33 | Faker1.9.2 | 2026-10-16T19:20:25+00:00
+
+F13 | UTC date range: 100 samples | Passed | parent PHPUnit assertions=600
+  Inputs: 100 dates: 2020-01-01 00:00:00 to2020-12-31 23:59:59 UTC
+  Actual: Validated 100; examples=["2020-10-19 05:47:30 UTC","2020-08-28 14:29:51 UTC","2020-06-20 18:26:33 UTC"]
+
+F14 | UUID lowercase format, version and variant | Passed | parent PHPUnit assertions=200
+  Inputs: 100 uuid() values
+  Actual: Validated 100; examples=["e2898011-51d2-35a5-bd18-ad4b335e502b","8ba6d1ee-c190-3629-b071-33b90f499b2a","291bf121-c9a6-3cb7-8e7a-0ce2dd805d1e"]
+
+F15 | Dedicated safeEmail evidence: 100 samples | Passed | parent PHPUnit assertions=300
+  Inputs: 100 safeEmail() values
+  Actual: Validated 100; examples=["mokon@example.com","jaylan23@example.net","feil.grady@example.com"]
+
+F16 | Independent IPv4 validation: 100 samples | Passed | parent PHPUnit assertions=200
+  Inputs: 100 ipv4() values
+  Actual: Validated 100; examples=["84.125.1.12","128.48.87.44","14.203.232.184"]
+
+N01 | Fixed-workload generation time and throughput | Passed | parent PHPUnit assertions=37
+  Inputs: 100 warm-up;3 batches x1000 rows; name,email,uuid; one retained batch; generation only timed
+  Actual: Measurement completed; batches=[0.011390125,0.010932375,0.011538667] s; median=0.011390125 s; 87795.35 records/s; no speed criterion assessed
+
+N02 | Isolated fixed-workload PHP allocated memory peak | Passed | parent PHPUnit assertions=46
+  Inputs: Fresh PHP worker,256M config;100 warm-up;3x1000 name/email/uuid rows; one retained batch
+  Actual: Measurement completed; PHP allocated peak=6291456 bytes (6.000 MiB); limit=256M; worker PID=50580; no memory criterion assessed
+
+Run status: Passed; method counts: {"total":6,"passed":6,"failed":0,"errors":0,"skipped":0}
+Separate statistics: {"designed_report_cases":24,"selected_report_cases":6,"executed_report_cases":6,"phpunit_test_methods":6,"parent_phpunit_assertions":1383,"benchmark_worker_assertions":54000,"platform_executions_in_this_run":1}
+Full evidence directory: /Users/jiaqinglyu/Desktop/Faker-Testing-Project/results/20261016T192025Z-darwin-report-09eaaf
+===================================================
