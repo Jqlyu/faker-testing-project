@@ -109,13 +109,13 @@ function optionalCommand(array $arguments, string $cwd): ?string
     }
 }
 
-function treeHash(string $directory): string
+function treeHash(string $directory, array $ignoredBasenames = []): string
 {
     $files = [];
     $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory,
         FilesystemIterator::SKIP_DOTS));
     foreach ($iterator as $file) {
-        if ($file->isFile()) {
+        if ($file->isFile() && !in_array($file->getFilename(), $ignoredBasenames, true)) {
             $relative = str_replace('\\', '/', substr($file->getPathname(), strlen($directory) + 1));
             $files[$relative] = hash_file('sha256', $file->getPathname());
         }
@@ -127,7 +127,10 @@ function treeHash(string $directory): string
 function contractHash(): string
 {
     $root = projectRoot();
-    $files = ['tests' => treeHash($root . '/tests'), 'scripts' => treeHash($root . '/scripts'),
+    // Finder/Explorer metadata are ignored by Git and are not executable test inputs.
+    // SUT identity keeps the strict unfiltered treeHash default.
+    $metadata = ['.DS_Store', 'Thumbs.db'];
+    $files = ['tests' => treeHash($root . '/tests', $metadata), 'scripts' => treeHash($root . '/scripts', $metadata),
         'phpunit.xml' => hash_file('sha256', $root . '/phpunit.xml'),
         'phpunit-supplemental.xml' => hash_file('sha256', $root . '/phpunit-supplemental.xml'),
         'phpunit-infrastructure.xml' => hash_file('sha256', $root . '/phpunit-infrastructure.xml'),

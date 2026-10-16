@@ -104,6 +104,32 @@ final class ReportingTest extends SyntheticFixtureTestCase
         $this->assertSame('intentional reporting self-check', $result['output']);
     }
 
+    public function testContractHashCanIgnoreOsMetadataWhileDefaultTreeHashRetainsEveryFile(): void
+    {
+        $source = $this->fixture('synthetic-contract/nested/Example.php', "<?php\nreturn 'first synthetic source';\n");
+        $directory = $this->temporary . '/synthetic-contract';
+        $ignored = ['.DS_Store', 'Thumbs.db'];
+        $sourceOnlyHash = \treeHash($directory, $ignored);
+        $this->assertSame(\treeHash($directory), $sourceOnlyHash);
+
+        $macMetadata = $this->fixture('synthetic-contract/.DS_Store', 'synthetic Finder metadata v1');
+        $windowsMetadata = $this->fixture('synthetic-contract/nested/Thumbs.db', 'synthetic thumbnail metadata v1');
+        $withMetadataHash = \treeHash($directory);
+        $this->assertSame($sourceOnlyHash, \treeHash($directory, $ignored));
+        $this->assertNotSame($sourceOnlyHash, $withMetadataHash);
+
+        file_put_contents($macMetadata, 'synthetic Finder metadata v2');
+        file_put_contents($windowsMetadata, 'synthetic thumbnail metadata v2');
+        $changedMetadataHash = \treeHash($directory);
+        $this->assertSame($sourceOnlyHash, \treeHash($directory, $ignored));
+        $this->assertNotSame($withMetadataHash, $changedMetadataHash);
+        $this->assertSame(\treeHash($directory, []), $changedMetadataHash);
+
+        file_put_contents($source, "<?php\nreturn 'changed meaningful synthetic source';\n");
+        $this->assertNotSame($sourceOnlyHash, \treeHash($directory, $ignored));
+        $this->assertNotSame($changedMetadataHash, \treeHash($directory));
+    }
+
     public function testLegacyNativeEventsRetainSkippedCases(): void
     {
         $path = $this->temporary . '/synthetic-legacy-events.json';
